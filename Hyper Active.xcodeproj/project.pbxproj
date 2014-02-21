@@ -19,6 +19,7 @@
 		BD270AE518B7AF2100B81773 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD270AE318B7AF2100B81773 /* InfoPlist.strings */; };
 		BD270AE718B7AF2100B81773 /* Hyper_ActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */; };
 		BD270AF218B7B73A00B81773 /* HYPPlugInsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */; };
+		BD270AF518B7B8E200B81773 /* HYPPlugInsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hyper_ActiveTests.m; sourceTree = "<group>"; };
 		BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPPlugInsController.h; sourceTree = "<group>"; };
 		BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsController.m; sourceTree = "<group>"; };
+		BD270AF318B7B8E200B81773 /* HYPPlugInsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPPlugInsLoader.h; sourceTree = "<group>"; };
+		BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				BD270ACF18B7AF2100B81773 /* HYPAppDelegate.m */,
 				BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */,
 				BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */,
+				BD270AF318B7B8E200B81773 /* HYPPlugInsLoader.h */,
+				BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */,
 				BD270AD118B7AF2100B81773 /* MainMenu.xib */,
 				BD270AD418B7AF2100B81773 /* Images.xcassets */,
 				BD270AC318B7AF2100B81773 /* Supporting Files */,
@@ -261,6 +266,7 @@
 				BD270AD018B7AF2100B81773 /* HYPAppDelegate.m in Sources */,
 				BD270AC918B7AF2100B81773 /* main.m in Sources */,
 				BD270AF218B7B73A00B81773 /* HYPPlugInsController.m in Sources */,
+				BD270AF518B7B8E200B81773 /* HYPPlugInsLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

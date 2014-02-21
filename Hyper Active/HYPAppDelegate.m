@@ -7,12 +7,13 @@
 //
 
 #import "HYPAppDelegate.h"
+#import "HYPPlugInsLoader.h"
 
 @implementation HYPAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  // Insert code here to initialize your application
+  HYPPlugInsLoader *pluginLoader = [[HYPPlugInsLoader alloc] init];
 }
 
 @end
