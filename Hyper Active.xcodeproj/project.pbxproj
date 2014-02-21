@@ -18,6 +18,7 @@
 		BD270ADD18B7AF2100B81773 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ABC18B7AF2100B81773 /* Cocoa.framework */; };
 		BD270AE518B7AF2100B81773 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD270AE318B7AF2100B81773 /* InfoPlist.strings */; };
 		BD270AE718B7AF2100B81773 /* Hyper_ActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */; };
+		BD270AF218B7B73A00B81773 /* HYPPlugInsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		BD270AE218B7AF2100B81773 /* Hyper ActiveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hyper ActiveTests-Info.plist"; sourceTree = "<group>"; };
 		BD270AE418B7AF2100B81773 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hyper_ActiveTests.m; sourceTree = "<group>"; };
+		BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPPlugInsController.h; sourceTree = "<group>"; };
+		BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 			children = (
 				BD270ACE18B7AF2100B81773 /* HYPAppDelegate.h */,
 				BD270ACF18B7AF2100B81773 /* HYPAppDelegate.m */,
+				BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */,
+				BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */,
 				BD270AD118B7AF2100B81773 /* MainMenu.xib */,
 				BD270AD418B7AF2100B81773 /* Images.xcassets */,
 				BD270AC318B7AF2100B81773 /* Supporting Files */,
@@ -255,6 +260,7 @@
 			files = (
 				BD270AD018B7AF2100B81773 /* HYPAppDelegate.m in Sources */,
 				BD270AC918B7AF2100B81773 /* main.m in Sources */,
+				BD270AF218B7B73A00B81773 /* HYPPlugInsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +471,7 @@
 				BD270AEC18B7AF2100B81773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD270AED18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Hyper ActiveTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +480,7 @@
 				BD270AEF18B7AF2100B81773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
