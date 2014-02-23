@@ -14,6 +14,7 @@
 {
 	return [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
+
 - (NSUInteger)apiVersion
 {
 	return 1.0;
