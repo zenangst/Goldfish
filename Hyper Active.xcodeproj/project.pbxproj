@@ -56,6 +56,7 @@
 		BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsController.m; sourceTree = "<group>"; };
 		BD270AF318B7B8E200B81773 /* HYPPlugInsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPPlugInsLoader.h; sourceTree = "<group>"; };
 		BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsLoader.m; sourceTree = "<group>"; };
+		BDF240F118BA7134004E3BB9 /* HYPPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPPlugin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				BD270ACE18B7AF2100B81773 /* HYPAppDelegate.h */,
+				BDF240F118BA7134004E3BB9 /* HYPPlugin.h */,
 				BD270ACF18B7AF2100B81773 /* HYPAppDelegate.m */,
 				BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */,
 				BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */,
