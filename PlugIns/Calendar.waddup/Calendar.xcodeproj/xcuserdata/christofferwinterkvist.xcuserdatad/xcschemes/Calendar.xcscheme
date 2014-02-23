@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BDF240FA18BA7641004E3BB9"
-               BuildableName = "Calendar.waddup.bundle"
-               BlueprintName = "Calendar.waddup"
-               ReferencedContainer = "container:Calendar.waddup.xcodeproj">
+               BuildableName = "Calendar.bundle"
+               BlueprintName = "Calendar"
+               ReferencedContainer = "container:Calendar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

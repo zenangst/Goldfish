@@ -13,7 +13,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  HYPPlugInsLoader *pluginLoader = [[HYPPlugInsLoader alloc] init];
+  HYPPlugInsLoader *plugInsLoader = [[HYPPlugInsLoader alloc] init];
+  [plugInsLoader loadPlugIns];
 }
 
 @end

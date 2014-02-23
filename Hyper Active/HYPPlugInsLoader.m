@@ -8,11 +8,13 @@
 
 #import "HYPPlugInsLoader.h"
 #import "HYPPlugInsController.h"
-#import "HYPPlugin.h"
+#import "HYPPlugIn.h"
+
+static NSString * const kHyperFileExtension = @"bundle";
 
 @implementation HYPPlugInsLoader
 
-@synthesize loadedPlugins;
+@synthesize loadedPlugIns;
 
 + (instancetype)sharedLoader
 {
@@ -26,19 +28,39 @@
    return sharedInstance;
 }
 
-- (void)loadPlugins
+- (void)loadPlugIns
 {
-	NSArray *plugins;
-	plugins = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self applicationDirectory] error:nil];
-	if (plugins) {
-	  NSMutableSet *mutableSet;
-		for (NSString *filename in plugins) {
-			if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/%@", [self applicationDirectory], filename]]) {
-			  NSObject <HYPPlugin>* plugin;
-			  
-			}
-		}
-	}
+  NSString *builtInPluginsPath = [[NSBundle mainBundle] builtInPlugInsPath];
+  NSMutableArray *plugInsArray = [[NSMutableArray alloc] init];
+  NSArray *builtInPlugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInPluginsPath error:nil];
+
+  NSBundle *bundle;
+  Class plugInClassName;
+  NSObject <HYPPlugIn> *plugIn;
+  for (NSString *filename in builtInPlugIns) {
+    bundle = [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", builtInPluginsPath, filename]];
+    if ([bundle load]) {
+      plugInClassName = [bundle principalClass];
+      plugIn = [[plugInClassName alloc] init];
+      [plugInsArray addObject:plugIn];
+    }
+  }
+
+  if (self.loadedPlugIns) {
+    self.loadedPlugIns = nil;
+  }
+  self.loadedPlugIns = [[NSSet alloc] initWithArray:plugInsArray];
+  plugInsArray = nil;
+}
+
+- (void)configurePlugIns
+{
+	
+}
+
+- (void)runPlugIns
+{
+  
 }
 
 - (NSURL *)applicationDirectory

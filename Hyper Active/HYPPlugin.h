@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HYPPlugInsController.h"
 
-@protocol HYPPlugin <NSObject>
+@protocol HYPPlugIn <NSObject>
 
 - (NSString *)name;
 

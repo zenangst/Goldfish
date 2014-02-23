@@ -10,4 +10,8 @@
 
 @implementation HYPCalendarPlugin
 
+- (NSString *)name {
+	return @"Calendar";
+}
+
 @end

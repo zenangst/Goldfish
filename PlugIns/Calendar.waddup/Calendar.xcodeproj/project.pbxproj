@@ -14,14 +14,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BDF240FB18BA7641004E3BB9 /* Calendar.waddup.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Calendar.waddup.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF240FB18BA7641004E3BB9 /* Calendar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Calendar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF240FE18BA7641004E3BB9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BDF2410118BA7641004E3BB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BDF2410218BA7641004E3BB9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BDF2410318BA7641004E3BB9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		BDF2410618BA7641004E3BB9 /* Calendar.waddup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calendar.waddup-Info.plist"; sourceTree = "<group>"; };
+		BDF2410618BA7641004E3BB9 /* Calendar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calendar-Info.plist"; sourceTree = "<group>"; };
 		BDF2410818BA7641004E3BB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BDF2410A18BA7641004E3BB9 /* Calendar.waddup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calendar.waddup-Prefix.pch"; sourceTree = "<group>"; };
+		BDF2410A18BA7641004E3BB9 /* Calendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calendar-Prefix.pch"; sourceTree = "<group>"; };
 		BDF2411618BA7659004E3BB9 /* HYPPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = file; name = HYPPlugin.h; path = "../../../Hyper Active/HYPPlugin.h"; sourceTree = "<group>"; };
 		BDF2411818BA76B7004E3BB9 /* HYPCalendarPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPCalendarPlugin.h; sourceTree = "<group>"; };
 		BDF2411918BA76B7004E3BB9 /* HYPCalendarPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPCalendarPlugin.m; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		BDF240FC18BA7641004E3BB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDF240FB18BA7641004E3BB9 /* Calendar.waddup.bundle */,
+				BDF240FB18BA7641004E3BB9 /* Calendar.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,9 +89,9 @@
 		BDF2410518BA7641004E3BB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BDF2410618BA7641004E3BB9 /* Calendar.waddup-Info.plist */,
+				BDF2410618BA7641004E3BB9 /* Calendar-Info.plist */,
 				BDF2410718BA7641004E3BB9 /* InfoPlist.strings */,
-				BDF2410A18BA7641004E3BB9 /* Calendar.waddup-Prefix.pch */,
+				BDF2410A18BA7641004E3BB9 /* Calendar-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -99,9 +99,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BDF240FA18BA7641004E3BB9 /* Calendar.waddup */ = {
+		BDF240FA18BA7641004E3BB9 /* Calendar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDF2410D18BA7641004E3BB9 /* Build configuration list for PBXNativeTarget "Calendar.waddup" */;
+			buildConfigurationList = BDF2410D18BA7641004E3BB9 /* Build configuration list for PBXNativeTarget "Calendar" */;
 			buildPhases = (
 				BDF240F718BA7641004E3BB9 /* Sources */,
 				BDF240F818BA7641004E3BB9 /* Frameworks */,
@@ -111,9 +111,9 @@
 			);
 			dependencies = (
 			);
-			name = Calendar.waddup;
+			name = Calendar;
 			productName = Calendar.waddup;
-			productReference = BDF240FB18BA7641004E3BB9 /* Calendar.waddup.bundle */;
+			productReference = BDF240FB18BA7641004E3BB9 /* Calendar.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Hyper;
 			};
-			buildConfigurationList = BDF240F618BA7641004E3BB9 /* Build configuration list for PBXProject "Calendar.waddup" */;
+			buildConfigurationList = BDF240F618BA7641004E3BB9 /* Build configuration list for PBXProject "Calendar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -137,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDF240FA18BA7641004E3BB9 /* Calendar.waddup */,
+				BDF240FA18BA7641004E3BB9 /* Calendar */,
 			);
 		};
 /* End PBXProject section */
@@ -250,10 +250,10 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Calendar.waddup/Calendar.waddup-Prefix.pch";
-				INFOPLIST_FILE = "Calendar.waddup/Calendar.waddup-Info.plist";
+				GCC_PREFIX_HEADER = "Calendar.waddup/Calendar-Prefix.pch";
+				INFOPLIST_FILE = "Calendar.waddup/Calendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Calendar;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -263,10 +263,10 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Calendar.waddup/Calendar.waddup-Prefix.pch";
-				INFOPLIST_FILE = "Calendar.waddup/Calendar.waddup-Info.plist";
+				GCC_PREFIX_HEADER = "Calendar.waddup/Calendar-Prefix.pch";
+				INFOPLIST_FILE = "Calendar.waddup/Calendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Calendar;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -274,7 +274,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BDF240F618BA7641004E3BB9 /* Build configuration list for PBXProject "Calendar.waddup" */ = {
+		BDF240F618BA7641004E3BB9 /* Build configuration list for PBXProject "Calendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDF2410B18BA7641004E3BB9 /* Debug */,
@@ -283,7 +283,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDF2410D18BA7641004E3BB9 /* Build configuration list for PBXNativeTarget "Calendar.waddup" */ = {
+		BDF2410D18BA7641004E3BB9 /* Build configuration list for PBXNativeTarget "Calendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDF2410E18BA7641004E3BB9 /* Debug */,

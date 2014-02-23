@@ -20,7 +20,7 @@
 		BD270AE718B7AF2100B81773 /* Hyper_ActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */; };
 		BD270AF218B7B73A00B81773 /* HYPPlugInsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */; };
 		BD270AF518B7B8E200B81773 /* HYPPlugInsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */; };
-		BDF2411F18BA772A004E3BB9 /* Calendar.waddup.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDF2411518BA7641004E3BB9 /* Calendar.waddup.bundle */; };
+		BDF2412418BA7CBA004E3BB9 /* Calendar.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD270AFE18BA7C5B00B81773 /* Calendar.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,19 +31,19 @@
 			remoteGlobalIDString = BD270AB818B7AF2100B81773;
 			remoteInfo = "Hyper Active";
 		};
-		BDF2411418BA7641004E3BB9 /* PBXContainerItemProxy */ = {
+		BD270AFD18BA7C5B00B81773 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BDF2411018BA7641004E3BB9 /* Calendar.waddup.xcodeproj */;
+			containerPortal = BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BDF240FB18BA7641004E3BB9;
-			remoteInfo = Calendar.waddup;
+			remoteInfo = Calendar;
 		};
-		BDF2411B18BA76E5004E3BB9 /* PBXContainerItemProxy */ = {
+		BDF2412518BA7D36004E3BB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BDF2411018BA7641004E3BB9 /* Calendar.waddup.xcodeproj */;
+			containerPortal = BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = BDF240FA18BA7641004E3BB9;
-			remoteInfo = Calendar.waddup;
+			remoteInfo = Calendar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -54,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BDF2411F18BA772A004E3BB9 /* Calendar.waddup.bundle in CopyFiles */,
+				BDF2412418BA7CBA004E3BB9 /* Calendar.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +84,8 @@
 		BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsController.m; sourceTree = "<group>"; };
 		BD270AF318B7B8E200B81773 /* HYPPlugInsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPPlugInsLoader.h; sourceTree = "<group>"; };
 		BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsLoader.m; sourceTree = "<group>"; };
-		BDF240F118BA7134004E3BB9 /* HYPPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPPlugin.h; sourceTree = "<group>"; };
-		BDF2411018BA7641004E3BB9 /* Calendar.waddup.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Calendar.waddup.xcodeproj; path = PlugIns/Calendar.waddup/Calendar.waddup.xcodeproj; sourceTree = "<group>"; };
+		BDF240F118BA7134004E3BB9 /* HYPPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPPlugIn.h; sourceTree = "<group>"; };
+		BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Calendar.xcodeproj; path = PlugIns/Calendar.waddup/Calendar.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 		BD270AB018B7AF2100B81773 = {
 			isa = PBXGroup;
 			children = (
-				BDF2411018BA7641004E3BB9 /* Calendar.waddup.xcodeproj */,
+				BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */,
 				BD270AC218B7AF2100B81773 /* Hyper Active */,
 				BD270AE018B7AF2100B81773 /* Hyper ActiveTests */,
 				BD270ABB18B7AF2100B81773 /* Frameworks */,
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				BD270ACE18B7AF2100B81773 /* HYPAppDelegate.h */,
-				BDF240F118BA7134004E3BB9 /* HYPPlugin.h */,
+				BDF240F118BA7134004E3BB9 /* HYPPlugIn.h */,
 				BD270ACF18B7AF2100B81773 /* HYPAppDelegate.m */,
 				BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */,
 				BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */,
@@ -196,10 +196,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BDF2411118BA7641004E3BB9 /* Products */ = {
+		BD270AFA18BA7C5B00B81773 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDF2411518BA7641004E3BB9 /* Calendar.waddup.bundle */,
+				BD270AFE18BA7C5B00B81773 /* Calendar.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BDF2411C18BA76E5004E3BB9 /* PBXTargetDependency */,
+				BDF2412618BA7D36004E3BB9 /* PBXTargetDependency */,
 			);
 			name = "Hyper Active";
 			productName = "Hyper Active";
@@ -272,8 +272,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BDF2411118BA7641004E3BB9 /* Products */;
-					ProjectRef = BDF2411018BA7641004E3BB9 /* Calendar.waddup.xcodeproj */;
+					ProductGroup = BD270AFA18BA7C5B00B81773 /* Products */;
+					ProjectRef = BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -285,11 +285,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BDF2411518BA7641004E3BB9 /* Calendar.waddup.bundle */ = {
+		BD270AFE18BA7C5B00B81773 /* Calendar.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = Calendar.waddup.bundle;
-			remoteRef = BDF2411418BA7641004E3BB9 /* PBXContainerItemProxy */;
+			path = Calendar.bundle;
+			remoteRef = BD270AFD18BA7C5B00B81773 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -344,10 +344,10 @@
 			target = BD270AB818B7AF2100B81773 /* Hyper Active */;
 			targetProxy = BD270ADE18B7AF2100B81773 /* PBXContainerItemProxy */;
 		};
-		BDF2411C18BA76E5004E3BB9 /* PBXTargetDependency */ = {
+		BDF2412618BA7D36004E3BB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Calendar.waddup;
-			targetProxy = BDF2411B18BA76E5004E3BB9 /* PBXContainerItemProxy */;
+			name = Calendar;
+			targetProxy = BDF2412518BA7D36004E3BB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

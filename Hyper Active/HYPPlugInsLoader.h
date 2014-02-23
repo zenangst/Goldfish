@@ -10,10 +10,11 @@
 
 @interface HYPPlugInsLoader : NSObject
 
-@property (nonatomic, retain) NSSet *loadedPlugins;
+@property (nonatomic, retain) NSSet *loadedPlugIns;
 
 + (instancetype)sharedLoader;
-- (void)loadPlugins;
+- (void)loadPlugIns;
+- (void)runPlugIns;
 - (NSURL *)applicationDirectory;
 
 @end

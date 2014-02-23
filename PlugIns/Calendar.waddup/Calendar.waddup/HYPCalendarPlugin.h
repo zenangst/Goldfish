@@ -10,4 +10,6 @@
 
 @interface HYPCalendarPlugin : NSObject
 
+- (NSString *)name;
+
 @end
