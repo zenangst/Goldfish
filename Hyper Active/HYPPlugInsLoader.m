@@ -8,6 +8,7 @@
 
 #import "HYPPlugInsLoader.h"
 #import "HYPPlugInsController.h"
+#import "HYPPlugin.h"
 
 @implementation HYPPlugInsLoader
 
@@ -33,7 +34,8 @@
 	  NSMutableSet *mutableSet;
 		for (NSString *filename in plugins) {
 			if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/%@", [self applicationDirectory], filename]]) {
-			  // TODO Create new instance of HYPPlugInsController and add it to self.loadedPlugins
+			  NSObject <HYPPlugin>* plugin;
+			  
 			}
 		}
 	}
