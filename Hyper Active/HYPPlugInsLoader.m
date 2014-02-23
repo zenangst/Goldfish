@@ -33,10 +33,10 @@ static NSString * const kHyperFileExtension = @"bundle";
   NSString *builtInPluginsPath = [[NSBundle mainBundle] builtInPlugInsPath];
   NSMutableArray *plugInsArray = [[NSMutableArray alloc] init];
   NSArray *builtInPlugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInPluginsPath error:nil];
-
   NSBundle *bundle;
   Class plugInClassName;
   NSObject <HYPPlugIn> *plugIn;
+
   for (NSString *filename in builtInPlugIns) {
     bundle = [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", builtInPluginsPath, filename]];
     if ([bundle load]) {

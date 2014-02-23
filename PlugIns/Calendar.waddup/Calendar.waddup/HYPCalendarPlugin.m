@@ -7,8 +7,13 @@
 //
 
 #import "HYPCalendarPlugin.h"
+#import "HYPPlugInsController.h"
 
 @implementation HYPCalendarPlugin
+
+- (id)initWithPlugInsController:(HYPPlugInsController *)plugInsController {
+	
+}
 
 - (NSString *)name {
 	return @"Calendar";
