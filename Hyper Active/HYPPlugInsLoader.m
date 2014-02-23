@@ -28,11 +28,11 @@
 - (void)loadPlugins
 {
 	NSArray *plugins;
-	plugins = [[NSFileManager sharedManager] contentsOfDirectoryAtPath:[self applicationDirectory] error:nil];
+	plugins = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self applicationDirectory] error:nil];
 	if (plugins) {
 	  NSMutableSet *mutableSet;
 		for (NSString *filename in plugins) {
-			if ([[NSFileManager sharedManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/%@", [self applicationDirectory], filename]]) {
+			if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/%@", [self applicationDirectory], filename]]) {
 			  // TODO Create new instance of HYPPlugInsController and add it to self.loadedPlugins
 			}
 		}
