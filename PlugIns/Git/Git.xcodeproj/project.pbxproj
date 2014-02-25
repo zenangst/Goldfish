@@ -11,6 +11,7 @@
 		BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B6D18BD1EF500DFF497 /* InfoPlist.strings */; };
 		BDDE4B7D18BD1F9600DFF497 /* HYPPlugIn.h in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */; };
 		BDDE4B8018BD1FAF00DFF497 /* HYPGitPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */; };
+		BDDE4B8518BD206500DFF497 /* HYPPlugInsController.h in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B8418BD206500DFF497 /* HYPPlugInsController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = file; name = HYPPlugIn.h; path = "../../../Hyper Active/HYPPlugIn.h"; sourceTree = "<group>"; };
 		BDDE4B7E18BD1FAF00DFF497 /* HYPGitPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPGitPlugin.h; sourceTree = "<group>"; };
 		BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPGitPlugin.m; sourceTree = "<group>"; };
+		BDDE4B8418BD206500DFF497 /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = HYPPlugInsController.h; path = "../../../Hyper Active/HYPPlugInsController.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		BDDE4B6A18BD1EF400DFF497 /* Git */ = {
 			isa = PBXGroup;
 			children = (
+				BDDE4B8418BD206500DFF497 /* HYPPlugInsController.h */,
 				BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */,
 				BDDE4B7E18BD1FAF00DFF497 /* HYPGitPlugin.h */,
 				BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */,
+				BDDE4B8518BD206500DFF497 /* HYPPlugInsController.h in Resources */,
 				BDDE4B7D18BD1F9600DFF497 /* HYPPlugIn.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

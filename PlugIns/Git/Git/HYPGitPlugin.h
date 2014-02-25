@@ -10,4 +10,6 @@
 
 @interface HYPGitPlugin : NSObject
 
+- (NSString *)name;
+
 @end

@@ -7,7 +7,13 @@
 //
 
 #import "HYPGitPlugin.h"
+#import "HYPPlugInsController.h"
 
 @implementation HYPGitPlugin
+
+- (NSString *)name
+{
+	return @"Git";
+}
 
 @end
