@@ -15,6 +15,7 @@
 {
   HYPPlugInsLoader *plugInsLoader = [[HYPPlugInsLoader alloc] init];
   [plugInsLoader loadPlugIns];
+  [plugInsLoader configurePlugIns];
 }
 
 @end

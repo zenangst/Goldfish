@@ -15,5 +15,6 @@
 - (void)loadPlugIns;
 - (void)runPlugIns;
 - (NSURL *)applicationDirectory;
+- (void)configurePlugIns;
 
 @end

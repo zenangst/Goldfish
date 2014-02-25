@@ -16,4 +16,7 @@
 
 @optional
 
+- (NSView *)mainView;
+- (NSView *)preferenceView;
+
 @end

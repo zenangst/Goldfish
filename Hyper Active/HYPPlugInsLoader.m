@@ -24,9 +24,11 @@ static NSString * const kHyperFileExtension = @"bundle";
   NSBundle *bundle;
   Class plugInClassName;
   NSObject <HYPPlugIn> *plugIn;
+  NSString *bundlePath;
 
   for (NSString *filename in builtInPlugIns) {
-    bundle = [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", builtInPluginsPath, filename]];
+    bundlePath = [NSString stringWithFormat:@"%@/%@", builtInPluginsPath, filename];
+    bundle = [NSBundle bundleWithPath:bundlePath];
     if ([bundle load]) {
       plugInClassName = [bundle principalClass];
       plugIn = [[plugInClassName alloc] initWithPlugInsController:[HYPPlugInsController sharedPlugInsController]];
@@ -39,13 +41,16 @@ static NSString * const kHyperFileExtension = @"bundle";
   }
   self.loadedPlugIns = [[NSSet alloc] initWithArray:plugInsArray];
   plugInsArray = nil;
-  
-  NSLog(@"loadedPlugIns: %@", loadedPlugIns);  
 }
 
 - (void)configurePlugIns
 {
-	
+  NSWindow *mainWindow = [[NSApplication sharedApplication] mainWindow];
+  for (NSObject <HYPPlugIn> *plugIn in self.loadedPlugIns) {
+  	if ([plugIn respondsToSelector:@selector(mainView)]) {
+    	[[mainWindow contentView] addSubview:[plugIn mainView]];
+  	}
+  }
 }
 
 - (void)runPlugIns

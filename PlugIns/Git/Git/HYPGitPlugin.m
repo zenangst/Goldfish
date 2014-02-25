@@ -26,4 +26,16 @@
 	return @"Git";
 }
 
+- (NSView *)mainView
+{
+  NSView *mainView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,0,0)];
+  return mainView;
+}
+
+- (NSView *)preferenceView
+{
+	NSView *preferenceView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,0,0)];
+  return preferenceView;
+}
+
 @end
