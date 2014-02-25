@@ -12,9 +12,8 @@
 @protocol HYPPlugIn <NSObject>
 
 - (NSString *)name;
+- (id)initWithPlugInsController:(HYPPlugInsController *)plugInsController;
 
 @optional
-
-- (id)initWithPlugInsController:(HYPPlugInsController *)plugInsController;
 
 @end

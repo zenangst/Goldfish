@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BDDE4B6518BD1EF400DFF497 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */; };
+		BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B6D18BD1EF500DFF497 /* InfoPlist.strings */; };
+		BDDE4B7D18BD1F9600DFF497 /* HYPPlugIn.h in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */; };
+		BDDE4B8018BD1FAF00DFF497 /* HYPGitPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BDDE4B6118BD1EF400DFF497 /* Git.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Git.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BDDE4B6718BD1EF400DFF497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BDDE4B6818BD1EF400DFF497 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BDDE4B6918BD1EF400DFF497 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BDDE4B6C18BD1EF400DFF497 /* Git-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Git-Info.plist"; sourceTree = "<group>"; };
+		BDDE4B6E18BD1EF500DFF497 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BDDE4B7018BD1EF500DFF497 /* Git-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Git-Prefix.pch"; sourceTree = "<group>"; };
+		BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = file; name = HYPPlugIn.h; path = "../../../Hyper Active/HYPPlugIn.h"; sourceTree = "<group>"; };
+		BDDE4B7E18BD1FAF00DFF497 /* HYPGitPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPGitPlugin.h; sourceTree = "<group>"; };
+		BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPGitPlugin.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDDE4B5E18BD1EF400DFF497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDDE4B6518BD1EF400DFF497 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDDE4B5818BD1EF400DFF497 = {
+			isa = PBXGroup;
+			children = (
+				BDDE4B6A18BD1EF400DFF497 /* Git */,
+				BDDE4B6318BD1EF400DFF497 /* Frameworks */,
+				BDDE4B6218BD1EF400DFF497 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDDE4B6218BD1EF400DFF497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDDE4B6118BD1EF400DFF497 /* Git.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDDE4B6318BD1EF400DFF497 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */,
+				BDDE4B6618BD1EF400DFF497 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDDE4B6618BD1EF400DFF497 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDDE4B6718BD1EF400DFF497 /* Foundation.framework */,
+				BDDE4B6818BD1EF400DFF497 /* CoreData.framework */,
+				BDDE4B6918BD1EF400DFF497 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BDDE4B6A18BD1EF400DFF497 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */,
+				BDDE4B7E18BD1FAF00DFF497 /* HYPGitPlugin.h */,
+				BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */,
+				BDDE4B6B18BD1EF400DFF497 /* Supporting Files */,
+			);
+			path = Git;
+			sourceTree = "<group>";
+		};
+		BDDE4B6B18BD1EF400DFF497 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDDE4B6C18BD1EF400DFF497 /* Git-Info.plist */,
+				BDDE4B6D18BD1EF500DFF497 /* InfoPlist.strings */,
+				BDDE4B7018BD1EF500DFF497 /* Git-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDDE4B6018BD1EF400DFF497 /* Git */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDDE4B7318BD1EF500DFF497 /* Build configuration list for PBXNativeTarget "Git" */;
+			buildPhases = (
+				BDDE4B5D18BD1EF400DFF497 /* Sources */,
+				BDDE4B5E18BD1EF400DFF497 /* Frameworks */,
+				BDDE4B5F18BD1EF400DFF497 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Git;
+			productName = Git;
+			productReference = BDDE4B6118BD1EF400DFF497 /* Git.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDDE4B5918BD1EF400DFF497 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Hyper;
+			};
+			buildConfigurationList = BDDE4B5C18BD1EF400DFF497 /* Build configuration list for PBXProject "Git" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BDDE4B5818BD1EF400DFF497;
+			productRefGroup = BDDE4B6218BD1EF400DFF497 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDDE4B6018BD1EF400DFF497 /* Git */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDDE4B5F18BD1EF400DFF497 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */,
+				BDDE4B7D18BD1F9600DFF497 /* HYPPlugIn.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDDE4B5D18BD1EF400DFF497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDDE4B8018BD1FAF00DFF497 /* HYPGitPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BDDE4B6D18BD1EF500DFF497 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDDE4B6E18BD1EF500DFF497 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDDE4B7118BD1EF500DFF497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BDDE4B7218BD1EF500DFF497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BDDE4B7418BD1EF500DFF497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Git/Git-Prefix.pch";
+				INFOPLIST_FILE = "Git/Git-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BDDE4B7518BD1EF500DFF497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Git/Git-Prefix.pch";
+				INFOPLIST_FILE = "Git/Git-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDDE4B5C18BD1EF400DFF497 /* Build configuration list for PBXProject "Git" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDDE4B7118BD1EF500DFF497 /* Debug */,
+				BDDE4B7218BD1EF500DFF497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDDE4B7318BD1EF500DFF497 /* Build configuration list for PBXNativeTarget "Git" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDDE4B7418BD1EF500DFF497 /* Debug */,
+				BDDE4B7518BD1EF500DFF497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDDE4B5918BD1EF400DFF497 /* Project object */;
+}

@@ -20,6 +20,7 @@
 		BD270AE718B7AF2100B81773 /* Hyper_ActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */; };
 		BD270AF218B7B73A00B81773 /* HYPPlugInsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */; };
 		BD270AF518B7B8E200B81773 /* HYPPlugInsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */; };
+		BDDE4B8318BD1FDD00DFF497 /* Git.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B7B18BD1EF500DFF497 /* Git.bundle */; };
 		BDF2412418BA7CBA004E3BB9 /* Calendar.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD270AFE18BA7C5B00B81773 /* Calendar.bundle */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,20 @@
 			remoteGlobalIDString = BDF240FB18BA7641004E3BB9;
 			remoteInfo = Calendar;
 		};
+		BDDE4B7A18BD1EF500DFF497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BDDE4B6118BD1EF400DFF497;
+			remoteInfo = Git;
+		};
+		BDDE4B8118BD1FDA00DFF497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BDDE4B6018BD1EF400DFF497;
+			remoteInfo = Git;
+		};
 		BDF2412518BA7D36004E3BB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */;
@@ -54,6 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				BDDE4B8318BD1FDD00DFF497 /* Git.bundle in CopyFiles */,
 				BDF2412418BA7CBA004E3BB9 /* Calendar.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +100,7 @@
 		BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsController.m; sourceTree = "<group>"; };
 		BD270AF318B7B8E200B81773 /* HYPPlugInsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPPlugInsLoader.h; sourceTree = "<group>"; };
 		BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsLoader.m; sourceTree = "<group>"; };
+		BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Git.xcodeproj; path = PlugIns/Git/Git.xcodeproj; sourceTree = "<group>"; };
 		BDF240F118BA7134004E3BB9 /* HYPPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPPlugIn.h; sourceTree = "<group>"; };
 		BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Calendar.xcodeproj; path = PlugIns/Calendar.waddup/Calendar.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +129,7 @@
 		BD270AB018B7AF2100B81773 = {
 			isa = PBXGroup;
 			children = (
+				BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */,
 				BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */,
 				BD270AC218B7AF2100B81773 /* Hyper Active */,
 				BD270AE018B7AF2100B81773 /* Hyper ActiveTests */,
@@ -204,6 +222,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BDDE4B7718BD1EF500DFF497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDDE4B7B18BD1EF500DFF497 /* Git.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,6 +245,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BDDE4B8218BD1FDA00DFF497 /* PBXTargetDependency */,
 				BDF2412618BA7D36004E3BB9 /* PBXTargetDependency */,
 			);
 			name = "Hyper Active";
@@ -252,7 +279,7 @@
 			attributes = {
 				CLASSPREFIX = HYP;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Christoffer Winterkvist";
+				ORGANIZATIONNAME = Hyper;
 				TargetAttributes = {
 					BD270AD918B7AF2100B81773 = {
 						TestTargetID = BD270AB818B7AF2100B81773;
@@ -275,6 +302,10 @@
 					ProductGroup = BD270AFA18BA7C5B00B81773 /* Products */;
 					ProjectRef = BDF2411018BA7641004E3BB9 /* Calendar.xcodeproj */;
 				},
+				{
+					ProductGroup = BDDE4B7718BD1EF500DFF497 /* Products */;
+					ProjectRef = BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -290,6 +321,13 @@
 			fileType = wrapper.cfbundle;
 			path = Calendar.bundle;
 			remoteRef = BD270AFD18BA7C5B00B81773 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDDE4B7B18BD1EF500DFF497 /* Git.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Git.bundle;
+			remoteRef = BDDE4B7A18BD1EF500DFF497 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -343,6 +381,11 @@
 			isa = PBXTargetDependency;
 			target = BD270AB818B7AF2100B81773 /* Hyper Active */;
 			targetProxy = BD270ADE18B7AF2100B81773 /* PBXContainerItemProxy */;
+		};
+		BDDE4B8218BD1FDA00DFF497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Git;
+			targetProxy = BDDE4B8118BD1FDA00DFF497 /* PBXContainerItemProxy */;
 		};
 		BDF2412618BA7D36004E3BB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

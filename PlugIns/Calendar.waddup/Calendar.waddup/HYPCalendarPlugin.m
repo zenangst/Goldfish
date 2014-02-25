@@ -12,7 +12,7 @@
 @implementation HYPCalendarPlugin
 
 - (id)initWithPlugInsController:(HYPPlugInsController *)plugInsController {
-	
+	return self;
 }
 
 - (NSString *)name {
