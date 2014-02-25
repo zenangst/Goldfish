@@ -6,10 +6,14 @@
 //  Copyright (c) 2014 Hyper. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
+#import "HYPPlugInsController.h"
 
 @interface HYPGitPlugin : NSObject
 
+@property (nonatomic, retain) HYPPlugInsController *plugInsController;
+
+- (id)initWithPlugInsController:(HYPPlugInsController *)hyperPlugInsController;
 - (NSString *)name;
 
 @end

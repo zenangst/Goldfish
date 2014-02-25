@@ -7,11 +7,16 @@
 //
 
 #import "HYPCalendarPlugin.h"
-#import "HYPPlugInsController.h"
 
 @implementation HYPCalendarPlugin
 
-- (id)initWithPlugInsController:(HYPPlugInsController *)plugInsController {
+@synthesize plugInsController;
+
+- (id)initWithPlugInsController:(HYPPlugInsController *)hyperPlugInsController {
+  self = [super init];
+	if (self) {
+		self.plugInsController = hyperPlugInsController;
+	}
 	return self;
 }
 

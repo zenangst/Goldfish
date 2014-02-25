@@ -52,7 +52,7 @@ static NSString * const kHyperFileExtension = @"bundle";
   self.loadedPlugIns = [[NSSet alloc] initWithArray:plugInsArray];
   plugInsArray = nil;
   
-  
+  NSLog(@"loadedPlugIns: %@", loadedPlugIns);  
 }
 
 - (void)configurePlugIns

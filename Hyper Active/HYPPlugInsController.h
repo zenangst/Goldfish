@@ -10,6 +10,8 @@
 
 @interface HYPPlugInsController : NSObject
 
++ (instancetype)sharedPlugInsController;
+
 - (NSString *)hyperActiveVersion;
 - (NSUInteger)apiVersion;
 - (NSString *)pluginKey;

@@ -10,6 +10,18 @@
 
 @implementation HYPPlugInsController
 
++ (instancetype)sharedPlugInsController
+{
+   static id sharedInstance = nil;
+
+   static dispatch_once_t onceToken;
+   dispatch_once(&onceToken, ^{
+      sharedInstance = [[self alloc] init];
+   });
+
+   return sharedInstance;
+}
+
 - (NSString *)hyperActiveVersion
 {
 	return [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"];

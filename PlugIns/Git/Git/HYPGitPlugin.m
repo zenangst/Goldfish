@@ -7,9 +7,18 @@
 //
 
 #import "HYPGitPlugin.h"
-#import "HYPPlugInsController.h"
 
 @implementation HYPGitPlugin
+
+@synthesize plugInsController;
+
+- (id)initWithPlugInsController:(HYPPlugInsController *)hyperPlugInsController {
+  self = [super init];
+	if (self) {
+		self.plugInsController = hyperPlugInsController;
+	}
+	return self;
+}
 
 - (NSString *)name
 {
