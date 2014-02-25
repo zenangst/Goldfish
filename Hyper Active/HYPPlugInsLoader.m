@@ -16,18 +16,6 @@ static NSString * const kHyperFileExtension = @"bundle";
 
 @synthesize loadedPlugIns;
 
-+ (instancetype)sharedLoader
-{
-   static id sharedInstance = nil;
-
-   static dispatch_once_t onceToken;
-   dispatch_once(&onceToken, ^{
-      sharedInstance = [[self alloc] init];
-   });
-
-   return sharedInstance;
-}
-
 - (void)loadPlugIns
 {
   NSString *builtInPluginsPath = [[NSBundle mainBundle] builtInPlugInsPath];
@@ -41,7 +29,7 @@ static NSString * const kHyperFileExtension = @"bundle";
     bundle = [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", builtInPluginsPath, filename]];
     if ([bundle load]) {
       plugInClassName = [bundle principalClass];
-      plugIn = [[plugInClassName alloc] init];
+      plugIn = [[plugInClassName alloc] initWithPlugInsController:[HYPPlugInsController sharedPlugInsController]];
       [plugInsArray addObject:plugIn];
     }
   }

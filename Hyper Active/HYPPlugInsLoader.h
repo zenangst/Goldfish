@@ -12,7 +12,6 @@
 
 @property (nonatomic, retain) NSSet *loadedPlugIns;
 
-+ (instancetype)sharedLoader;
 - (void)loadPlugIns;
 - (void)runPlugIns;
 - (NSURL *)applicationDirectory;

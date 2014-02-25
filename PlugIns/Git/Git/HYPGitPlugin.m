@@ -16,6 +16,7 @@
   self = [super init];
 	if (self) {
 		self.plugInsController = hyperPlugInsController;
+    NSLog(@"%@: loaded", [self name]);
 	}
 	return self;
 }

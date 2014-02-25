@@ -14,6 +14,5 @@
 
 - (NSString *)hyperActiveVersion;
 - (NSUInteger)apiVersion;
-- (NSString *)pluginKey;
 
 @end

@@ -14,10 +14,11 @@
 
 - (id)initWithPlugInsController:(HYPPlugInsController *)hyperPlugInsController {
   self = [super init];
-	if (self) {
-		self.plugInsController = hyperPlugInsController;
-	}
-	return self;
+  if (self) {
+    self.plugInsController = hyperPlugInsController;
+    NSLog(@"%@: loaded", [self name]);
+  }
+  return self;
 }
 
 - (NSString *)name {
