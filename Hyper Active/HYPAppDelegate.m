@@ -16,7 +16,7 @@
   HYPPlugInsLoader *plugInsLoader = [[HYPPlugInsLoader alloc] init];
   [plugInsLoader loadPlugIns];
   [plugInsLoader drawViews];
-  [plugInsLoader exectuePlugInWithName:@"Git"];
+  [plugInsLoader executePlugInWithName:@"Git"];
 }
 
 @end

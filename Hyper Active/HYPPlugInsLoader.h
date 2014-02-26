@@ -15,7 +15,7 @@
 - (void)loadPlugIns;
 - (void)drawViews;
 - (void)executePlugIns;
-- (void)exectuePlugInWithName:(NSString *)plugInName;
+- (void)executePlugInWithName:(NSString *)plugInName;
 - (NSURL *)applicationDirectory;
 
 @end

@@ -57,10 +57,14 @@ static NSString * const kHyperFileExtension = @"bundle";
 
 - (void)executePlugIns
 {
-  
+  if (self.loadedPlugIns) {
+  	for (NSString *plugInName in self.loadedPlugIns) {
+  		[self executePlugInWithName:plugInName];
+  	}
+  }
 }
 
-- (void)exectuePlugInWithName:(NSString *)plugInName
+- (void)executePlugInWithName:(NSString *)plugInName
 {
 	NSObject <HYPPlugIn> *plugIn;
   plugIn = [loadedPlugIns objectForKey:plugInName];
