@@ -28,7 +28,11 @@
 
 - (NSView *)mainView
 {
-  NSView *mainView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,0,0)];
+  NSView *mainView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,20,20)];
+  CALayer *viewLayer = [CALayer layer];
+  [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel
+  [mainView setWantsLayer:YES]; // view's backing store is using a Core Animation Layer
+  [mainView setLayer:viewLayer];
   return mainView;
 }
 

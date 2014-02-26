@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDA8D7D418BDD0BB00F71CFE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA8D7D318BDD0BB00F71CFE /* QuartzCore.framework */; };
 		BDDE4B6518BD1EF400DFF497 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */; };
 		BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B6D18BD1EF500DFF497 /* InfoPlist.strings */; };
 		BDDE4B7D18BD1F9600DFF497 /* HYPPlugIn.h in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDA8D7D318BDD0BB00F71CFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BDDE4B6118BD1EF400DFF497 /* Git.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Git.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BDDE4B6718BD1EF400DFF497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -23,10 +25,10 @@
 		BDDE4B6C18BD1EF400DFF497 /* Git-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Git-Info.plist"; sourceTree = "<group>"; };
 		BDDE4B6E18BD1EF500DFF497 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BDDE4B7018BD1EF500DFF497 /* Git-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Git-Prefix.pch"; sourceTree = "<group>"; };
-		BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = file; name = HYPPlugIn.h; path = "../../../Hyper Active/HYPPlugIn.h"; sourceTree = "<group>"; };
+		BDDE4B7C18BD1F9600DFF497 /* HYPPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HYPPlugIn.h; path = "../../../Hyper Active/HYPPlugIn.h"; sourceTree = "<group>"; };
 		BDDE4B7E18BD1FAF00DFF497 /* HYPGitPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPGitPlugin.h; sourceTree = "<group>"; };
 		BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPGitPlugin.m; sourceTree = "<group>"; };
-		BDDE4B8418BD206500DFF497 /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = HYPPlugInsController.h; path = "../../../Hyper Active/HYPPlugInsController.h"; sourceTree = "<group>"; };
+		BDDE4B8418BD206500DFF497 /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYPPlugInsController.h; path = "../../../Hyper Active/HYPPlugInsController.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA8D7D418BDD0BB00F71CFE /* QuartzCore.framework in Frameworks */,
 				BDDE4B6518BD1EF400DFF497 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +64,7 @@
 		BDDE4B6318BD1EF400DFF497 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDA8D7D318BDD0BB00F71CFE /* QuartzCore.framework */,
 				BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */,
 				BDDE4B6618BD1EF400DFF497 /* Other Frameworks */,
 			);
@@ -294,6 +298,7 @@
 				BDDE4B7518BD1EF500DFF497 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

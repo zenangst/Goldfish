@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Christoffer Winterkvist. All rights reserved.
 //
 
+#import "HYPAppDelegate.h"
 #import "HYPPlugInsLoader.h"
 #import "HYPPlugInsController.h"
 #import "HYPPlugIn.h"
@@ -45,10 +46,10 @@ static NSString * const kHyperFileExtension = @"bundle";
 
 - (void)configurePlugIns
 {
-  NSWindow *mainWindow = [[NSApplication sharedApplication] mainWindow];
+  HYPAppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
   for (NSObject <HYPPlugIn> *plugIn in self.loadedPlugIns) {
   	if ([plugIn respondsToSelector:@selector(mainView)]) {
-    	[[mainWindow contentView] addSubview:[plugIn mainView]];
+    	[[appDelegate.window contentView] addSubview:[plugIn mainView]];
   	}
   }
 }
