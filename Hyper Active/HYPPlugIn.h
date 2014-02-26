@@ -13,6 +13,7 @@
 
 - (NSString *)name;
 - (id)initWithPlugInsController:(HYPPlugInsController *)plugInsController;
+- (void)execute;
 
 @optional
 

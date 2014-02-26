@@ -15,5 +15,6 @@
 
 - (id)initWithPlugInsController:(HYPPlugInsController *)hyperPlugInsController;
 - (NSString *)name;
+- (void)execute;
 
 @end

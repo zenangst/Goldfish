@@ -10,11 +10,12 @@
 
 @interface HYPPlugInsLoader : NSObject
 
-@property (nonatomic, retain) NSSet *loadedPlugIns;
+@property (nonatomic, retain) NSDictionary *loadedPlugIns;
 
 - (void)loadPlugIns;
-- (void)runPlugIns;
+- (void)drawViews;
+- (void)executePlugIns;
+- (void)exectuePlugInWithName:(NSString *)plugInName;
 - (NSURL *)applicationDirectory;
-- (void)configurePlugIns;
 
 @end

@@ -19,32 +19,33 @@ static NSString * const kHyperFileExtension = @"bundle";
 
 - (void)loadPlugIns
 {
-  NSString *builtInPluginsPath = [[NSBundle mainBundle] builtInPlugInsPath];
-  NSMutableArray *plugInsArray = [[NSMutableArray alloc] init];
-  NSArray *builtInPlugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInPluginsPath error:nil];
+  NSString *builtInplugInsPath = [[NSBundle mainBundle] builtInPlugInsPath];
+  NSMutableDictionary *plugInsDictionary = [[NSMutableDictionary alloc] init];
+  NSArray *builtInplugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInplugInsPath error:nil];
   NSBundle *bundle;
   Class plugInClassName;
   NSObject <HYPPlugIn> *plugIn;
   NSString *bundlePath;
 
-  for (NSString *filename in builtInPlugIns) {
-    bundlePath = [NSString stringWithFormat:@"%@/%@", builtInPluginsPath, filename];
+  for (NSString *filename in builtInplugIns) {
+    bundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, filename];
     bundle = [NSBundle bundleWithPath:bundlePath];
     if ([bundle load]) {
       plugInClassName = [bundle principalClass];
       plugIn = [[plugInClassName alloc] initWithPlugInsController:[HYPPlugInsController sharedPlugInsController]];
-      [plugInsArray addObject:plugIn];
+      if (![loadedPlugIns objectForKey:[plugIn name]])
+      [plugInsDictionary setObject:plugIn forKey:[plugIn name]];
     }
   }
 
   if (self.loadedPlugIns) {
     self.loadedPlugIns = nil;
   }
-  self.loadedPlugIns = [[NSSet alloc] initWithArray:plugInsArray];
-  plugInsArray = nil;
+  self.loadedPlugIns = [[NSDictionary alloc] initWithDictionary:plugInsDictionary];
+  plugInsDictionary = nil;
 }
 
-- (void)configurePlugIns
+- (void)drawViews
 {
   HYPAppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
   for (NSObject <HYPPlugIn> *plugIn in self.loadedPlugIns) {
@@ -54,9 +55,20 @@ static NSString * const kHyperFileExtension = @"bundle";
   }
 }
 
-- (void)runPlugIns
+- (void)executePlugIns
 {
   
+}
+
+- (void)exectuePlugInWithName:(NSString *)plugInName
+{
+	NSObject <HYPPlugIn> *plugIn;
+  plugIn = [loadedPlugIns objectForKey:plugInName];
+	if (plugIn) {
+    if ([plugIn respondsToSelector:@selector(execute)]) {
+  		[plugIn execute];
+    }
+	}
 }
 
 - (NSURL *)applicationDirectory

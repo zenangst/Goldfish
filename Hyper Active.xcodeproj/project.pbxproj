@@ -171,12 +171,12 @@
 			isa = PBXGroup;
 			children = (
 				BD270ACE18B7AF2100B81773 /* HYPAppDelegate.h */,
-				BDF240F118BA7134004E3BB9 /* HYPPlugIn.h */,
 				BD270ACF18B7AF2100B81773 /* HYPAppDelegate.m */,
-				BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */,
 				BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */,
 				BD270AF318B7B8E200B81773 /* HYPPlugInsLoader.h */,
 				BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */,
+				BDF240F118BA7134004E3BB9 /* HYPPlugIn.h */,
+				BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */,
 				BD270AD118B7AF2100B81773 /* MainMenu.xib */,
 				BD270AD418B7AF2100B81773 /* Images.xcassets */,
 				BD270AC318B7AF2100B81773 /* Supporting Files */,
