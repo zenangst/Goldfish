@@ -13,8 +13,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD95184B18BE97B6006005CC /* HYPPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYPPlugIn.h; path = "/Users/christofferwinterkvist/Library/Mobile Documents/iCloud/Developer/Cocoa/hyper-active/PlugIns/Git/Git/../../../Hyper Active/HYPPlugIn.h"; sourceTree = "<absolute>"; };
-		BD95184C18BE97B6006005CC /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYPPlugInsController.h; path = "/Users/christofferwinterkvist/Library/Mobile Documents/iCloud/Developer/Cocoa/hyper-active/PlugIns/Git/Git/../../../Hyper Active/HYPPlugInsController.h"; sourceTree = "<absolute>"; };
+		BD95184B18BE97B6006005CC /* HYPPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYPPlugIn.h; path = "../../../Hyper Active/HYPPlugIn.h"; sourceTree = "<group>"; };
+		BD95184C18BE97B6006005CC /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYPPlugInsController.h; path = "../../../Hyper Active/HYPPlugInsController.h"; sourceTree = "<group>"; };
 		BDF240FB18BA7641004E3BB9 /* Calendar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Calendar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF240FE18BA7641004E3BB9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BDF2410118BA7641004E3BB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
