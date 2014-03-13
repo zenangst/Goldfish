@@ -19,67 +19,67 @@ static NSString * const kHyperFileExtension = @"bundle";
 
 - (void)loadPlugIns
 {
-  NSString *builtInplugInsPath = [[NSBundle mainBundle] builtInPlugInsPath];
-  NSMutableDictionary *plugInsDictionary = [[NSMutableDictionary alloc] init];
-  NSArray *builtInplugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInplugInsPath error:nil];
-  NSBundle *bundle;
-  Class plugInClassName;
-  NSObject <HYPPlugIn> *plugIn;
-  NSString *bundlePath;
+    NSString *builtInplugInsPath = [[NSBundle mainBundle] builtInPlugInsPath];
+    NSMutableDictionary *plugInsDictionary = [[NSMutableDictionary alloc] init];
+    NSArray *builtInplugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInplugInsPath error:nil];
+    NSBundle *bundle;
+    Class plugInClassName;
+    NSObject <HYPPlugIn> *plugIn;
+    NSString *bundlePath;
 
-  for (NSString *filename in builtInplugIns) {
-    bundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, filename];
-    bundle = [NSBundle bundleWithPath:bundlePath];
-    if ([bundle load]) {
-      plugInClassName = [bundle principalClass];
-      plugIn = [[plugInClassName alloc] initWithPlugInsController:[HYPPlugInsController sharedPlugInsController]];
-      if (![loadedPlugIns objectForKey:[plugIn name]])
-      [plugInsDictionary setObject:plugIn forKey:[plugIn name]];
+    for (NSString *filename in builtInplugIns) {
+        bundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, filename];
+        bundle = [NSBundle bundleWithPath:bundlePath];
+        if ([bundle load]) {
+            plugInClassName = [bundle principalClass];
+            plugIn = [[plugInClassName alloc] initWithPlugInsController:[HYPPlugInsController sharedPlugInsController]];
+            if (![loadedPlugIns objectForKey:[plugIn name]])
+            [plugInsDictionary setObject:plugIn forKey:[plugIn name]];
+        }
     }
-  }
 
-  if (self.loadedPlugIns) {
-    self.loadedPlugIns = nil;
-  }
-  self.loadedPlugIns = [[NSDictionary alloc] initWithDictionary:plugInsDictionary];
-  plugInsDictionary = nil;
+    if (self.loadedPlugIns) {
+        self.loadedPlugIns = nil;
+    }
+    self.loadedPlugIns = [[NSDictionary alloc] initWithDictionary:plugInsDictionary];
+    plugInsDictionary = nil;
 }
 
 - (void)drawViews
 {
-  HYPAppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
-  for (NSObject <HYPPlugIn> *plugIn in self.loadedPlugIns) {
-  	if ([plugIn respondsToSelector:@selector(mainView)]) {
-    	[[appDelegate.window contentView] addSubview:[plugIn mainView]];
-  	}
-  }
+    HYPAppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
+    for (NSObject <HYPPlugIn> *plugIn in self.loadedPlugIns) {
+    	if ([plugIn respondsToSelector:@selector(mainView)]) {
+        	[[appDelegate.window contentView] addSubview:[plugIn mainView]];
+    	}
+    }
 }
 
 - (void)executePlugIns
 {
-  if (self.loadedPlugIns) {
-  	for (NSString *plugInName in self.loadedPlugIns) {
-  		[self executePlugInWithName:plugInName];
-  	}
-  }
+    if (self.loadedPlugIns) {
+    	for (NSString *plugInName in self.loadedPlugIns) {
+    		[self executePlugInWithName:plugInName];
+    	}
+    }
 }
 
 - (void)executePlugInWithName:(NSString *)plugInName
 {
-	NSObject <HYPPlugIn> *plugIn;
-  plugIn = [loadedPlugIns objectForKey:plugInName];
+    NSObject <HYPPlugIn> *plugIn;
+    plugIn = [loadedPlugIns objectForKey:plugInName];
 	if (plugIn) {
-    if ([plugIn respondsToSelector:@selector(execute)]) {
-  		[plugIn execute];
-    }
+        if ([plugIn respondsToSelector:@selector(execute)]) {
+      		[plugIn execute];
+        }
 	}
 }
 
 - (NSURL *)applicationDirectory
 {
-  NSFileManager *fileManager = [NSFileManager defaultManager];
-  NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-  return [appSupportURL URLByAppendingPathComponent:@"com.zenangst.Keyboard_Cowboy_2"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
+    return [appSupportURL URLByAppendingPathComponent:@"com.zenangst.Keyboard_Cowboy_2"];
 }
 
 @end

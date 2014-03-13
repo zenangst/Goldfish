@@ -13,10 +13,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  HYPPlugInsLoader *plugInsLoader = [[HYPPlugInsLoader alloc] init];
-  [plugInsLoader loadPlugIns];
-  [plugInsLoader drawViews];
-  [plugInsLoader executePlugInWithName:@"Git"];
+    HYPPlugInsLoader *plugInsLoader = [[HYPPlugInsLoader alloc] init];
+    [plugInsLoader loadPlugIns];
+    [plugInsLoader drawViews];
+    [plugInsLoader executePlugInWithName:@"Git"];
 }
 
 @end
