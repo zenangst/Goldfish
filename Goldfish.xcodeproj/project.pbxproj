@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		BD270ABD18B7AF2100B81773 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ABC18B7AF2100B81773 /* Cocoa.framework */; };
-		BD270AC718B7AF2100B81773 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD270AC518B7AF2100B81773 /* InfoPlist.strings */; };
-		BD270AC918B7AF2100B81773 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AC818B7AF2100B81773 /* main.m */; };
-		BD270ACD18B7AF2100B81773 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BD270ACB18B7AF2100B81773 /* Credits.rtf */; };
-		BD270AD018B7AF2100B81773 /* HYPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270ACF18B7AF2100B81773 /* HYPAppDelegate.m */; };
-		BD270AD318B7AF2100B81773 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD270AD118B7AF2100B81773 /* MainMenu.xib */; };
-		BD270AD518B7AF2100B81773 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD270AD418B7AF2100B81773 /* Images.xcassets */; };
 		BD270ADC18B7AF2100B81773 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ADB18B7AF2100B81773 /* XCTest.framework */; };
 		BD270ADD18B7AF2100B81773 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ABC18B7AF2100B81773 /* Cocoa.framework */; };
 		BD270AE518B7AF2100B81773 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD270AE318B7AF2100B81773 /* InfoPlist.strings */; };
 		BD270AE718B7AF2100B81773 /* Hyper_ActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */; };
-		BD270AF218B7B73A00B81773 /* HYPPlugInsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */; };
-		BD270AF518B7B8E200B81773 /* HYPPlugInsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */; };
+		BD5806C418F4780300C90CF5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5806C218F4780300C90CF5 /* MainMenu.xib */; };
+		BD5806C618F4782D00C90CF5 /* Goldfish-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD5806C518F4782D00C90CF5 /* Goldfish-Info.plist */; };
+		BD5806C918F4784F00C90CF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806C818F4784F00C90CF5 /* main.m */; };
+		BD5806CC18F4785D00C90CF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD5806CA18F4785D00C90CF5 /* InfoPlist.strings */; };
+		BD5806CF18F4786800C90CF5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BD5806CD18F4786800C90CF5 /* Credits.rtf */; };
+		BD5806D718F4787F00C90CF5 /* GOLDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806D418F4787F00C90CF5 /* GOLDAppDelegate.m */; };
+		BD5806D818F4787F00C90CF5 /* GOLDPlugInsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */; };
+		BD5806D918F4787F00C90CF5 /* GOLDPlugInsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */; };
+		BD5806DB18F4788B00C90CF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5806DA18F4788B00C90CF5 /* Images.xcassets */; };
 		BDDE4B8318BD1FDD00DFF497 /* Git.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B7B18BD1EF500DFF497 /* Git.bundle */; };
 		BDDE4B9418BD353A00DFF497 /* Calendar.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B9118BD352500DFF497 /* Calendar.bundle */; };
 /* End PBXBuildFile section */
@@ -77,32 +78,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BD270AB918B7AF2100B81773 /* Hyper Active.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hyper Active.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD270AB918B7AF2100B81773 /* Goldfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goldfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD270ABC18B7AF2100B81773 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BD270ABF18B7AF2100B81773 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		BD270AC018B7AF2100B81773 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BD270AC118B7AF2100B81773 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BD270AC418B7AF2100B81773 /* Hyper Active-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hyper Active-Info.plist"; sourceTree = "<group>"; };
-		BD270AC618B7AF2100B81773 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BD270AC818B7AF2100B81773 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BD270ACA18B7AF2100B81773 /* Hyper Active-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hyper Active-Prefix.pch"; sourceTree = "<group>"; };
-		BD270ACC18B7AF2100B81773 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		BD270ACE18B7AF2100B81773 /* HYPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPAppDelegate.h; sourceTree = "<group>"; };
-		BD270ACF18B7AF2100B81773 /* HYPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYPAppDelegate.m; sourceTree = "<group>"; };
-		BD270AD218B7AF2100B81773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		BD270AD418B7AF2100B81773 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BD270ADA18B7AF2100B81773 /* Hyper ActiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hyper ActiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD270ADA18B7AF2100B81773 /* GoldfishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldfishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD270ADB18B7AF2100B81773 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BD270AE218B7AF2100B81773 /* Hyper ActiveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hyper ActiveTests-Info.plist"; sourceTree = "<group>"; };
+		BD270AE218B7AF2100B81773 /* GoldfishTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoldfishTests-Info.plist"; sourceTree = "<group>"; };
 		BD270AE418B7AF2100B81773 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hyper_ActiveTests.m; sourceTree = "<group>"; };
-		BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPPlugInsController.h; sourceTree = "<group>"; };
-		BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsController.m; sourceTree = "<group>"; };
-		BD270AF318B7B8E200B81773 /* HYPPlugInsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPPlugInsLoader.h; sourceTree = "<group>"; };
-		BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPPlugInsLoader.m; sourceTree = "<group>"; };
+		BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Hyper_ActiveTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BD5806C318F4780300C90CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Goldfish/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		BD5806C518F4782D00C90CF5 /* Goldfish-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Goldfish-Info.plist"; path = "Goldfish/Goldfish-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BD5806C718F4784600C90CF5 /* Goldfish-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Goldfish-Prefix.pch"; path = "Goldfish/Goldfish-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		BD5806C818F4784F00C90CF5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Goldfish/main.m; sourceTree = SOURCE_ROOT; };
+		BD5806CB18F4785D00C90CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Goldfish/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		BD5806CE18F4786800C90CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Goldfish/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		BD5806D018F4787F00C90CF5 /* GOLDPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugIn.h; path = Goldfish/GOLDPlugIn.h; sourceTree = SOURCE_ROOT; };
+		BD5806D118F4787F00C90CF5 /* GOLDPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsController.h; path = Goldfish/GOLDPlugInsController.h; sourceTree = SOURCE_ROOT; };
+		BD5806D218F4787F00C90CF5 /* GOLDPlugInsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsLoader.h; path = Goldfish/GOLDPlugInsLoader.h; sourceTree = SOURCE_ROOT; };
+		BD5806D318F4787F00C90CF5 /* GOLDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDAppDelegate.h; path = Goldfish/GOLDAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		BD5806D418F4787F00C90CF5 /* GOLDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDAppDelegate.m; path = Goldfish/GOLDAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPlugInsController.m; path = Goldfish/GOLDPlugInsController.m; sourceTree = SOURCE_ROOT; };
+		BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPlugInsLoader.m; path = Goldfish/GOLDPlugInsLoader.m; sourceTree = SOURCE_ROOT; };
+		BD5806DA18F4788B00C90CF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Goldfish/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Git.xcodeproj; path = PlugIns/Git/Git.xcodeproj; sourceTree = "<group>"; };
 		BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Calendar.xcodeproj; path = PlugIns/Calendar/Calendar.xcodeproj; sourceTree = "<group>"; };
-		BDF240F118BA7134004E3BB9 /* HYPPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPPlugIn.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +132,8 @@
 			children = (
 				BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */,
 				BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */,
-				BD270AC218B7AF2100B81773 /* Hyper Active */,
-				BD270AE018B7AF2100B81773 /* Hyper ActiveTests */,
+				BD270AC218B7AF2100B81773 /* Goldfish */,
+				BD270AE018B7AF2100B81773 /* GoldfishTests */,
 				BD270ABB18B7AF2100B81773 /* Frameworks */,
 				BD270ABA18B7AF2100B81773 /* Products */,
 			);
@@ -141,8 +142,8 @@
 		BD270ABA18B7AF2100B81773 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD270AB918B7AF2100B81773 /* Hyper Active.app */,
-				BD270ADA18B7AF2100B81773 /* Hyper ActiveTests.xctest */,
+				BD270AB918B7AF2100B81773 /* Goldfish.app */,
+				BD270ADA18B7AF2100B81773 /* GoldfishTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,48 +168,50 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		BD270AC218B7AF2100B81773 /* Hyper Active */ = {
+		BD270AC218B7AF2100B81773 /* Goldfish */ = {
 			isa = PBXGroup;
 			children = (
-				BD270ACE18B7AF2100B81773 /* HYPAppDelegate.h */,
-				BD270ACF18B7AF2100B81773 /* HYPAppDelegate.m */,
-				BD270AF118B7B73A00B81773 /* HYPPlugInsController.m */,
-				BD270AF318B7B8E200B81773 /* HYPPlugInsLoader.h */,
-				BD270AF418B7B8E200B81773 /* HYPPlugInsLoader.m */,
-				BDF240F118BA7134004E3BB9 /* HYPPlugIn.h */,
-				BD270AF018B7B73A00B81773 /* HYPPlugInsController.h */,
-				BD270AD118B7AF2100B81773 /* MainMenu.xib */,
-				BD270AD418B7AF2100B81773 /* Images.xcassets */,
+				BD5806D018F4787F00C90CF5 /* GOLDPlugIn.h */,
+				BD5806D118F4787F00C90CF5 /* GOLDPlugInsController.h */,
+				BD5806D218F4787F00C90CF5 /* GOLDPlugInsLoader.h */,
+				BD5806D318F4787F00C90CF5 /* GOLDAppDelegate.h */,
+				BD5806D418F4787F00C90CF5 /* GOLDAppDelegate.m */,
+				BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */,
+				BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */,
+				BD5806C218F4780300C90CF5 /* MainMenu.xib */,
+				BD5806DA18F4788B00C90CF5 /* Images.xcassets */,
 				BD270AC318B7AF2100B81773 /* Supporting Files */,
 			);
+			name = Goldfish;
 			path = "Hyper Active";
 			sourceTree = "<group>";
 		};
 		BD270AC318B7AF2100B81773 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BD270AC418B7AF2100B81773 /* Hyper Active-Info.plist */,
-				BD270AC518B7AF2100B81773 /* InfoPlist.strings */,
-				BD270AC818B7AF2100B81773 /* main.m */,
-				BD270ACA18B7AF2100B81773 /* Hyper Active-Prefix.pch */,
-				BD270ACB18B7AF2100B81773 /* Credits.rtf */,
+				BD5806C518F4782D00C90CF5 /* Goldfish-Info.plist */,
+				BD5806C818F4784F00C90CF5 /* main.m */,
+				BD5806CA18F4785D00C90CF5 /* InfoPlist.strings */,
+				BD5806C718F4784600C90CF5 /* Goldfish-Prefix.pch */,
+				BD5806CD18F4786800C90CF5 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BD270AE018B7AF2100B81773 /* Hyper ActiveTests */ = {
+		BD270AE018B7AF2100B81773 /* GoldfishTests */ = {
 			isa = PBXGroup;
 			children = (
 				BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */,
 				BD270AE118B7AF2100B81773 /* Supporting Files */,
 			);
+			name = GoldfishTests;
 			path = "Hyper ActiveTests";
 			sourceTree = "<group>";
 		};
 		BD270AE118B7AF2100B81773 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BD270AE218B7AF2100B81773 /* Hyper ActiveTests-Info.plist */,
+				BD270AE218B7AF2100B81773 /* GoldfishTests-Info.plist */,
 				BD270AE318B7AF2100B81773 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -233,9 +236,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD270AB818B7AF2100B81773 /* Hyper Active */ = {
+		BD270AB818B7AF2100B81773 /* Goldfish */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD270AEA18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Hyper Active" */;
+			buildConfigurationList = BD270AEA18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Goldfish" */;
 			buildPhases = (
 				BD270AB518B7AF2100B81773 /* Sources */,
 				BD270AB618B7AF2100B81773 /* Frameworks */,
@@ -248,14 +251,14 @@
 				BDDE4B9318BD353600DFF497 /* PBXTargetDependency */,
 				BDDE4B8218BD1FDA00DFF497 /* PBXTargetDependency */,
 			);
-			name = "Hyper Active";
+			name = Goldfish;
 			productName = "Hyper Active";
-			productReference = BD270AB918B7AF2100B81773 /* Hyper Active.app */;
+			productReference = BD270AB918B7AF2100B81773 /* Goldfish.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BD270AD918B7AF2100B81773 /* Hyper ActiveTests */ = {
+		BD270AD918B7AF2100B81773 /* GoldfishTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD270AED18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Hyper ActiveTests" */;
+			buildConfigurationList = BD270AED18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "GoldfishTests" */;
 			buildPhases = (
 				BD270AD618B7AF2100B81773 /* Sources */,
 				BD270AD718B7AF2100B81773 /* Frameworks */,
@@ -266,9 +269,9 @@
 			dependencies = (
 				BD270ADF18B7AF2100B81773 /* PBXTargetDependency */,
 			);
-			name = "Hyper ActiveTests";
+			name = GoldfishTests;
 			productName = "Hyper ActiveTests";
-			productReference = BD270ADA18B7AF2100B81773 /* Hyper ActiveTests.xctest */;
+			productReference = BD270ADA18B7AF2100B81773 /* GoldfishTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -277,16 +280,16 @@
 		BD270AB118B7AF2100B81773 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = HYP;
+				CLASSPREFIX = GOLD;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = Hyper;
+				ORGANIZATIONNAME = zenangst;
 				TargetAttributes = {
 					BD270AD918B7AF2100B81773 = {
 						TestTargetID = BD270AB818B7AF2100B81773;
 					};
 				};
 			};
-			buildConfigurationList = BD270AB418B7AF2100B81773 /* Build configuration list for PBXProject "Hyper Active" */;
+			buildConfigurationList = BD270AB418B7AF2100B81773 /* Build configuration list for PBXProject "Goldfish" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -309,8 +312,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				BD270AB818B7AF2100B81773 /* Hyper Active */,
-				BD270AD918B7AF2100B81773 /* Hyper ActiveTests */,
+				BD270AB818B7AF2100B81773 /* Goldfish */,
+				BD270AD918B7AF2100B81773 /* GoldfishTests */,
 			);
 		};
 /* End PBXProject section */
@@ -337,10 +340,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD270AC718B7AF2100B81773 /* InfoPlist.strings in Resources */,
-				BD270AD518B7AF2100B81773 /* Images.xcassets in Resources */,
-				BD270ACD18B7AF2100B81773 /* Credits.rtf in Resources */,
-				BD270AD318B7AF2100B81773 /* MainMenu.xib in Resources */,
+				BD5806CF18F4786800C90CF5 /* Credits.rtf in Resources */,
+				BD5806DB18F4788B00C90CF5 /* Images.xcassets in Resources */,
+				BD5806C618F4782D00C90CF5 /* Goldfish-Info.plist in Resources */,
+				BD5806C418F4780300C90CF5 /* MainMenu.xib in Resources */,
+				BD5806CC18F4785D00C90CF5 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,10 +363,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD270AD018B7AF2100B81773 /* HYPAppDelegate.m in Sources */,
-				BD270AC918B7AF2100B81773 /* main.m in Sources */,
-				BD270AF218B7B73A00B81773 /* HYPPlugInsController.m in Sources */,
-				BD270AF518B7B8E200B81773 /* HYPPlugInsLoader.m in Sources */,
+				BD5806D718F4787F00C90CF5 /* GOLDAppDelegate.m in Sources */,
+				BD5806C918F4784F00C90CF5 /* main.m in Sources */,
+				BD5806D818F4787F00C90CF5 /* GOLDPlugInsController.m in Sources */,
+				BD5806D918F4787F00C90CF5 /* GOLDPlugInsLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +383,7 @@
 /* Begin PBXTargetDependency section */
 		BD270ADF18B7AF2100B81773 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BD270AB818B7AF2100B81773 /* Hyper Active */;
+			target = BD270AB818B7AF2100B81773 /* Goldfish */;
 			targetProxy = BD270ADE18B7AF2100B81773 /* PBXContainerItemProxy */;
 		};
 		BDDE4B8218BD1FDA00DFF497 /* PBXTargetDependency */ = {
@@ -395,36 +399,36 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BD270AC518B7AF2100B81773 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD270AC618B7AF2100B81773 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BD270ACB18B7AF2100B81773 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD270ACC18B7AF2100B81773 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		BD270AD118B7AF2100B81773 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD270AD218B7AF2100B81773 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		BD270AE318B7AF2100B81773 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BD270AE418B7AF2100B81773 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BD5806C218F4780300C90CF5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD5806C318F4780300C90CF5 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		BD5806CA18F4785D00C90CF5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD5806CB18F4785D00C90CF5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BD5806CD18F4786800C90CF5 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD5806CE18F4786800C90CF5 /* en */,
+			);
+			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -504,9 +508,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hyper Active/Hyper Active-Prefix.pch";
-				INFOPLIST_FILE = "Hyper Active/Hyper Active-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
+				INFOPLIST_FILE = "Goldfish/Goldfish-Info.plist";
+				PRODUCT_NAME = Goldfish;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -517,9 +521,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hyper Active/Hyper Active-Prefix.pch";
-				INFOPLIST_FILE = "Hyper Active/Hyper Active-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
+				INFOPLIST_FILE = "Goldfish/Goldfish-Info.plist";
+				PRODUCT_NAME = Goldfish;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -527,20 +531,20 @@
 		BD270AEE18B7AF2100B81773 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hyper Active.app/Contents/MacOS/Hyper Active";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Goldfish.app/Contents/MacOS/Goldfish";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hyper Active/Hyper Active-Prefix.pch";
+				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Hyper ActiveTests/Hyper ActiveTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "GoldfishTests/GoldfishTests-Info.plist";
+				PRODUCT_NAME = GoldfishTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -549,16 +553,16 @@
 		BD270AEF18B7AF2100B81773 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hyper Active.app/Contents/MacOS/Hyper Active";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Goldfish.app/Contents/MacOS/Goldfish";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hyper Active/Hyper Active-Prefix.pch";
-				INFOPLIST_FILE = "Hyper ActiveTests/Hyper ActiveTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
+				INFOPLIST_FILE = "GoldfishTests/GoldfishTests-Info.plist";
+				PRODUCT_NAME = GoldfishTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -567,7 +571,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD270AB418B7AF2100B81773 /* Build configuration list for PBXProject "Hyper Active" */ = {
+		BD270AB418B7AF2100B81773 /* Build configuration list for PBXProject "Goldfish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD270AE818B7AF2100B81773 /* Debug */,
@@ -576,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD270AEA18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Hyper Active" */ = {
+		BD270AEA18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Goldfish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD270AEB18B7AF2100B81773 /* Debug */,
@@ -585,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD270AED18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Hyper ActiveTests" */ = {
+		BD270AED18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "GoldfishTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD270AEE18B7AF2100B81773 /* Debug */,

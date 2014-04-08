@@ -1,6 +1,6 @@
 //
-//  HYPPlugInsLoader.h
-//  Hyper Active
+//  GOLDPlugInsLoader.h
+//  Goldfish
 //
 //  Created by Christoffer Winterkvist on 2/21/14.
 //  Copyright (c) 2014 Christoffer Winterkvist. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HYPPlugInsLoader : NSObject
+@interface GOLDPlugInsLoader : NSObject
 
 @property (nonatomic, retain) NSDictionary *loadedPlugIns;
 

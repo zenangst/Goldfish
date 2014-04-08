@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD95184918BE97B0006005CC /* HYPPlugIn.h in Resources */ = {isa = PBXBuildFile; fileRef = BD95184718BE97B0006005CC /* HYPPlugIn.h */; };
-		BD95184A18BE97B0006005CC /* HYPPlugInsController.h in Resources */ = {isa = PBXBuildFile; fileRef = BD95184818BE97B0006005CC /* HYPPlugInsController.h */; };
 		BDA8D7D418BDD0BB00F71CFE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA8D7D318BDD0BB00F71CFE /* QuartzCore.framework */; };
 		BDDE4B6518BD1EF400DFF497 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */; };
 		BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B6D18BD1EF500DFF497 /* InfoPlist.strings */; };
-		BDDE4B8018BD1FAF00DFF497 /* HYPGitPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */; };
+		BDDE4B8018BD1FAF00DFF497 /* GOLDGitPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDE4B7F18BD1FAF00DFF497 /* GOLDGitPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD95184718BE97B0006005CC /* HYPPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = file; name = HYPPlugIn.h; path = "../../../Hyper Active/HYPPlugIn.h"; sourceTree = "<group>"; };
-		BD95184818BE97B0006005CC /* HYPPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = HYPPlugInsController.h; path = "../../../Hyper Active/HYPPlugInsController.h"; sourceTree = "<group>"; };
+		BD7D08DD18F47A5D00A93971 /* GOLDPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugIn.h; path = ../../../Goldfish/GOLDPlugIn.h; sourceTree = "<group>"; };
+		BD7D08DE18F47A5D00A93971 /* GOLDPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsController.h; path = ../../../Goldfish/GOLDPlugInsController.h; sourceTree = "<group>"; };
 		BDA8D7D318BDD0BB00F71CFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BDDE4B6118BD1EF400DFF497 /* Git.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Git.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -27,8 +25,8 @@
 		BDDE4B6C18BD1EF400DFF497 /* Git-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Git-Info.plist"; sourceTree = "<group>"; };
 		BDDE4B6E18BD1EF500DFF497 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BDDE4B7018BD1EF500DFF497 /* Git-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Git-Prefix.pch"; sourceTree = "<group>"; };
-		BDDE4B7E18BD1FAF00DFF497 /* HYPGitPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPGitPlugin.h; sourceTree = "<group>"; };
-		BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPGitPlugin.m; sourceTree = "<group>"; };
+		BDDE4B7E18BD1FAF00DFF497 /* GOLDGitPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLDGitPlugin.h; sourceTree = "<group>"; };
+		BDDE4B7F18BD1FAF00DFF497 /* GOLDGitPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLDGitPlugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +82,10 @@
 		BDDE4B6A18BD1EF400DFF497 /* Git */ = {
 			isa = PBXGroup;
 			children = (
-				BD95184718BE97B0006005CC /* HYPPlugIn.h */,
-				BD95184818BE97B0006005CC /* HYPPlugInsController.h */,
-				BDDE4B7E18BD1FAF00DFF497 /* HYPGitPlugin.h */,
-				BDDE4B7F18BD1FAF00DFF497 /* HYPGitPlugin.m */,
+				BD7D08DD18F47A5D00A93971 /* GOLDPlugIn.h */,
+				BD7D08DE18F47A5D00A93971 /* GOLDPlugInsController.h */,
+				BDDE4B7E18BD1FAF00DFF497 /* GOLDGitPlugin.h */,
+				BDDE4B7F18BD1FAF00DFF497 /* GOLDGitPlugin.m */,
 				BDDE4B6B18BD1EF400DFF497 /* Supporting Files */,
 			);
 			path = Git;
@@ -155,8 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */,
-				BD95184A18BE97B0006005CC /* HYPPlugInsController.h in Resources */,
-				BD95184918BE97B0006005CC /* HYPPlugIn.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDDE4B8018BD1FAF00DFF497 /* HYPGitPlugin.m in Sources */,
+				BDDE4B8018BD1FAF00DFF497 /* GOLDGitPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

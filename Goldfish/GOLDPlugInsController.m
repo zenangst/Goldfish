@@ -1,14 +1,14 @@
 //
-//  HYPPlugInsController.m
-//  Hyper Active
+//  GOLDPlugInsController.m
+//  Goldfish
 //
 //  Created by Christoffer Winterkvist on 2/21/14.
 //  Copyright (c) 2014 Christoffer Winterkvist. All rights reserved.
 //
 
-#import "HYPPlugInsController.h"
+#import "GOLDPlugInsController.h"
 
-@implementation HYPPlugInsController
+@implementation GOLDPlugInsController
 
 + (instancetype)sharedPlugInsController
 {
@@ -22,7 +22,7 @@
     return sharedInstance;
 }
 
-- (NSString *)hyperActiveVersion
+- (NSString *)goldfishVersion
 {
 	return [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"];
 }

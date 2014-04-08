@@ -1,18 +1,18 @@
 //
-//  HYPCalendarPlugin.m
+//  GOLDCalendarPlugin.m
 //  Calendar.waddup
 //
 //  Created by Christoffer Winterkvist on 23/02/14.
 //  Copyright (c) 2014 Hyper. All rights reserved.
 //
 
-#import "HYPCalendarPlugin.h"
+#import "GOLDCalendarPlugin.h"
 
-@implementation HYPCalendarPlugin
+@implementation GOLDCalendarPlugin
 
 @synthesize plugInsController;
 
-- (id)initWithPlugInsController:(HYPPlugInsController *)hyperPlugInsController {
+- (id)initWithPlugInsController:(GOLDPlugInsController *)hyperPlugInsController {
   self = [super init];
   if (self) {
     self.plugInsController = hyperPlugInsController;
