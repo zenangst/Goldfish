@@ -10,10 +10,7 @@
 		BD270ABD18B7AF2100B81773 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ABC18B7AF2100B81773 /* Cocoa.framework */; };
 		BD270ADC18B7AF2100B81773 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ADB18B7AF2100B81773 /* XCTest.framework */; };
 		BD270ADD18B7AF2100B81773 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ABC18B7AF2100B81773 /* Cocoa.framework */; };
-		BD270AE518B7AF2100B81773 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD270AE318B7AF2100B81773 /* InfoPlist.strings */; };
-		BD270AE718B7AF2100B81773 /* Hyper_ActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */; };
 		BD5806C418F4780300C90CF5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5806C218F4780300C90CF5 /* MainMenu.xib */; };
-		BD5806C618F4782D00C90CF5 /* Goldfish-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD5806C518F4782D00C90CF5 /* Goldfish-Info.plist */; };
 		BD5806C918F4784F00C90CF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806C818F4784F00C90CF5 /* main.m */; };
 		BD5806CC18F4785D00C90CF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD5806CA18F4785D00C90CF5 /* InfoPlist.strings */; };
 		BD5806CF18F4786800C90CF5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BD5806CD18F4786800C90CF5 /* Credits.rtf */; };
@@ -21,6 +18,8 @@
 		BD5806D818F4787F00C90CF5 /* GOLDPlugInsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */; };
 		BD5806D918F4787F00C90CF5 /* GOLDPlugInsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */; };
 		BD5806DB18F4788B00C90CF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5806DA18F4788B00C90CF5 /* Images.xcassets */; };
+		BD7D08E818F47BA200A93971 /* GoldfishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7D08E718F47BA200A93971 /* GoldfishTests.m */; };
+		BD7D08ED18F47BC800A93971 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD7D08EB18F47BC800A93971 /* InfoPlist.strings */; };
 		BDDE4B8318BD1FDD00DFF497 /* Git.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B7B18BD1EF500DFF497 /* Git.bundle */; };
 		BDDE4B9418BD353A00DFF497 /* Calendar.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B9118BD352500DFF497 /* Calendar.bundle */; };
 /* End PBXBuildFile section */
@@ -85,9 +84,6 @@
 		BD270AC118B7AF2100B81773 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD270ADA18B7AF2100B81773 /* GoldfishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldfishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD270ADB18B7AF2100B81773 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BD270AE218B7AF2100B81773 /* GoldfishTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoldfishTests-Info.plist"; sourceTree = "<group>"; };
-		BD270AE418B7AF2100B81773 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Hyper_ActiveTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BD5806C318F4780300C90CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Goldfish/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		BD5806C518F4782D00C90CF5 /* Goldfish-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Goldfish-Info.plist"; path = "Goldfish/Goldfish-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BD5806C718F4784600C90CF5 /* Goldfish-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Goldfish-Prefix.pch"; path = "Goldfish/Goldfish-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -102,6 +98,9 @@
 		BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPlugInsController.m; path = Goldfish/GOLDPlugInsController.m; sourceTree = SOURCE_ROOT; };
 		BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPlugInsLoader.m; path = Goldfish/GOLDPlugInsLoader.m; sourceTree = SOURCE_ROOT; };
 		BD5806DA18F4788B00C90CF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Goldfish/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		BD7D08E718F47BA200A93971 /* GoldfishTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoldfishTests.m; path = GoldfishTests/GoldfishTests.m; sourceTree = SOURCE_ROOT; };
+		BD7D08E918F47BC200A93971 /* GoldfishTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoldfishTests-Info.plist"; path = "GoldfishTests/GoldfishTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BD7D08EC18F47BC800A93971 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GoldfishTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Git.xcodeproj; path = PlugIns/Git/Git.xcodeproj; sourceTree = "<group>"; };
 		BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Calendar.xcodeproj; path = PlugIns/Calendar/Calendar.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,7 +200,7 @@
 		BD270AE018B7AF2100B81773 /* GoldfishTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD270AE618B7AF2100B81773 /* Hyper_ActiveTests.m */,
+				BD7D08E718F47BA200A93971 /* GoldfishTests.m */,
 				BD270AE118B7AF2100B81773 /* Supporting Files */,
 			);
 			name = GoldfishTests;
@@ -211,8 +210,8 @@
 		BD270AE118B7AF2100B81773 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BD270AE218B7AF2100B81773 /* GoldfishTests-Info.plist */,
-				BD270AE318B7AF2100B81773 /* InfoPlist.strings */,
+				BD7D08EB18F47BC800A93971 /* InfoPlist.strings */,
+				BD7D08E918F47BC200A93971 /* GoldfishTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -342,7 +341,6 @@
 			files = (
 				BD5806CF18F4786800C90CF5 /* Credits.rtf in Resources */,
 				BD5806DB18F4788B00C90CF5 /* Images.xcassets in Resources */,
-				BD5806C618F4782D00C90CF5 /* Goldfish-Info.plist in Resources */,
 				BD5806C418F4780300C90CF5 /* MainMenu.xib in Resources */,
 				BD5806CC18F4785D00C90CF5 /* InfoPlist.strings in Resources */,
 			);
@@ -352,7 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD270AE518B7AF2100B81773 /* InfoPlist.strings in Resources */,
+				BD7D08ED18F47BC800A93971 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD270AE718B7AF2100B81773 /* Hyper_ActiveTests.m in Sources */,
+				BD7D08E818F47BA200A93971 /* GoldfishTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,14 +397,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BD270AE318B7AF2100B81773 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD270AE418B7AF2100B81773 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		BD5806C218F4780300C90CF5 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -429,6 +419,14 @@
 				BD5806CE18F4786800C90CF5 /* en */,
 			);
 			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		BD7D08EB18F47BC800A93971 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD7D08EC18F47BC800A93971 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

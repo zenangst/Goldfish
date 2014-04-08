@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface Hyper_ActiveTests : XCTestCase
+@interface GoldfishTests : XCTestCase
 
 @end
 
-@implementation Hyper_ActiveTests
+@implementation GoldfishTests
 
 - (void)setUp
 {
