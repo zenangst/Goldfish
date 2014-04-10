@@ -17,6 +17,21 @@
     [plugInsLoader loadPlugIns];
     [plugInsLoader drawViews];
     [plugInsLoader executePlugInWithName:@"Git"];
+
+    NSWindow *window = [[NSWindow alloc] initWithContentRect:NSMakeRect(0, 0, 320, 240) styleMask:NSTitledWindowMask|NSResizableWindowMask|NSClosableWindowMask backing:NSBackingStoreBuffered defer:NO];
+    [window setHasShadow:YES];
+
+    self.windowController = [[NSWindowController alloc] initWithWindow:window];
+    [self.windowController loadWindow];
+    [self.windowController showWindow:self];
+    [self.windowController setWindowFrameAutosaveName:@"MainWindow"];
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    [NSApp activateIgnoringOtherApps:YES];
+    [self.windowController showWindow:self];
+    return YES;
 }
 
 @end

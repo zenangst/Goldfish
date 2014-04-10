@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface GOLDAppDelegate : NSObject <NSApplicationDelegate>
+@interface GOLDAppDelegate : NSApplication <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong, nonatomic) NSWindowController *windowController;
 
 @end
