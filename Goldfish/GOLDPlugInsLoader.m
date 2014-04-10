@@ -17,6 +17,18 @@ static NSString * const kHyperFileExtension = @"bundle";
 
 @synthesize loadedPlugIns;
 
++ (instancetype)sharedLoader
+{
+    static id sharedInstance = nil;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] init];
+    });
+
+    return sharedInstance;
+}
+
 - (void)loadPlugIns
 {
     NSString *builtInplugInsPath = [[NSBundle mainBundle] builtInPlugInsPath];
@@ -48,10 +60,13 @@ static NSString * const kHyperFileExtension = @"bundle";
 
 - (void)drawViews
 {
-    __weak GOLDAppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
-    for (NSObject <GOLDPlugIn> *plugIn in self.loadedPlugIns) {
+    __weak NSWindow *window = [[GOLDAppDelegate sharedApplication] mainWindow];
+    NSObject <GOLDPlugIn> *plugIn;
+
+    for (NSString *plugInName in self.loadedPlugIns) {
+        plugIn = [self.loadedPlugIns objectForKey:plugInName];
     	if ([plugIn respondsToSelector:@selector(mainView)]) {
-        	//[[appDelegate.window contentView] addSubview:[plugIn mainView]];
+        	[[window contentView] addSubview:[plugIn mainView]];
     	}
     }
 }

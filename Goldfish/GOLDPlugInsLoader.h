@@ -12,6 +12,8 @@
 
 @property (nonatomic, retain) NSDictionary *loadedPlugIns;
 
++ (instancetype)sharedLoader;
+
 - (void)loadPlugIns;
 - (void)drawViews;
 - (void)executePlugIns;
