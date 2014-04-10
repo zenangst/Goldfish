@@ -10,6 +10,6 @@
 
 @interface GOLDAppDelegate : NSApplication <NSApplicationDelegate>
 
-@property (strong, nonatomic) NSWindowController *windowController;
+@property (strong, nonatomic) NSWindow *window;
 
 @end
