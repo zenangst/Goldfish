@@ -34,6 +34,7 @@
     [viewLayer setBackgroundColor:backgroundColor];
     [mainView setWantsLayer:YES];
     [mainView setLayer:viewLayer];
+    CGColorRelease(backgroundColor);
     return mainView;
 }
 
