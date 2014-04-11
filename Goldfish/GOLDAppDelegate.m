@@ -44,8 +44,8 @@
 
 - (NSWindowController *)windowController
 {
-  NSWindowController *windowController = [self.window windowController];
-  return windowController;
+    NSWindowController *windowController = [self.window windowController];
+    return windowController;
 }
 
 @end

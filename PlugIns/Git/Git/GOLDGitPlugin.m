@@ -13,10 +13,10 @@
 @synthesize plugInsController;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)hyperPlugInsController {
-  self = [super init];
+    self = [super init];
 	if (self) {
 		self.plugInsController = hyperPlugInsController;
-    NSLog(@"%@: loaded", [self name]);
+        NSLog(@"%@: loaded", [self name]);
 	}
 	return self;
 }
@@ -28,18 +28,19 @@
 
 - (NSView *)mainView
 {
-  NSView *mainView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,20,20)];
-  CALayer *viewLayer = [CALayer layer];
-  [viewLayer setBackgroundColor:CGColorCreateGenericRGB(1.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel
-  [mainView setWantsLayer:YES]; // view's backing store is using a Core Animation Layer
-  [mainView setLayer:viewLayer];
-  return mainView;
+    NSView *mainView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,20,20)];
+    CALayer *viewLayer = [CALayer layer];
+    CGColorRef backgroundColor = CGColorCreateGenericRGB(1.0, 0.0, 0.0, 0.4);
+    [viewLayer setBackgroundColor:backgroundColor];
+    [mainView setWantsLayer:YES];
+    [mainView setLayer:viewLayer];
+    return mainView;
 }
 
 - (NSView *)preferenceView
 {
-	NSView *preferenceView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,0,0)];
-  return preferenceView;
+    NSView *preferenceView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,0,0)];
+    return preferenceView;
 }
 
 - (void)execute
