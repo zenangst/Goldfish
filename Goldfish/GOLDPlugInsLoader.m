@@ -47,8 +47,9 @@ static NSString * const kHyperFileExtension = @"bundle";
             className = [bundle principalClass];
             if ([className conformsToProtocol:NSProtocolFromString(@"GOLDPlugIn")]) {
                 plugIn = [[className alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
-                if (![loadedPlugIns objectForKey:[plugIn name]])
+                if (![loadedPlugIns objectForKey:[plugIn name]]) {
                     [plugInsDictionary setObject:plugIn forKey:[plugIn name]];
+                }
             } else {
                 NSLog(@"%@ -> failed validation", className);
             }
