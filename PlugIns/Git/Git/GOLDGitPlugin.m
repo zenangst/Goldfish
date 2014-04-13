@@ -12,10 +12,10 @@
 
 @synthesize plugInsController;
 
-- (id)initWithPlugInsController:(GOLDPlugInsController *)hyperPlugInsController {
+- (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
     self = [super init];
 	if (self) {
-		self.plugInsController = hyperPlugInsController;
+		self.plugInsController = aPlugInsController;
         NSLog(@"%@: loaded", [self name]);
 	}
 	return self;
@@ -24,6 +24,11 @@
 - (NSString *)name
 {
 	return @"Git";
+}
+
+- (void)execute
+{
+	NSLog(@"%s", __FUNCTION__);
 }
 
 - (NSView *)mainView
@@ -42,11 +47,6 @@
 {
     NSView *preferenceView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,0,0)];
     return preferenceView;
-}
-
-- (void)execute
-{
-	NSLog(@"%s", __FUNCTION__);
 }
 
 @end

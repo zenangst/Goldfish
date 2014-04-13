@@ -8,13 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 #import "GOLDPlugInsController.h"
+#import "GOLDPlugIn.h"
 
-@interface GOLDGitPlugin : NSObject
+@interface GOLDGitPlugin : NSObject <GOLDPlugIn>
 
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
 
-- (id)initWithPlugInsController:(GOLDPlugInsController *)hyperPlugInsController;
+- (id)initWithPlugInsController:(GOLDPlugInsController *)plugInsController;
 - (NSString *)name;
 - (void)execute;
+
+- (NSView *)mainView;
+- (NSView *)preferenceView;
 
 @end
