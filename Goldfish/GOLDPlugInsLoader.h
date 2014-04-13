@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 @interface GOLDPlugInsLoader : NSObject
 
@@ -17,7 +18,6 @@
 - (void)loadPlugIns;
 - (void)drawViews;
 - (void)executePlugIns;
-- (void)executePlugInWithName:(NSString *)plugInName;
 - (NSURL *)applicationDirectory;
 
 @end

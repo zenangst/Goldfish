@@ -34,21 +34,26 @@ static NSString * const kHyperFileExtension = @"bundle";
     NSString *builtInplugInsPath = [[NSBundle mainBundle] builtInPlugInsPath];
     NSMutableDictionary *plugInsDictionary = [[NSMutableDictionary alloc] init];
     NSArray *builtInplugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInplugInsPath error:nil];
-    NSBundle *bundle;
-    Class plugInClassName;
-    NSObject <GOLDPlugIn> *plugIn;
-    NSString *bundlePath;
 
-    for (NSString *filename in builtInplugIns) {
-        bundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, filename];
+    __block Class className;
+    __block NSBundle *bundle;
+    __block NSObject<GOLDPlugIn> *plugIn;
+    __block NSString *bundlePath;
+
+	[builtInplugIns enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        bundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, object];
         bundle = [NSBundle bundleWithPath:bundlePath];
         if ([bundle load]) {
-            plugInClassName = [bundle principalClass];
-            plugIn = [[plugInClassName alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
-            if (![loadedPlugIns objectForKey:[plugIn name]])
-            [plugInsDictionary setObject:plugIn forKey:[plugIn name]];
+            className = [bundle principalClass];
+            if ([className conformsToProtocol:NSProtocolFromString(@"GOLDPlugIn")]) {
+                plugIn = [[className alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
+                if (![loadedPlugIns objectForKey:[plugIn name]])
+                    [plugInsDictionary setObject:plugIn forKey:[plugIn name]];
+            } else {
+                NSLog(@"%@ -> failed validation", className);
+            }
         }
-    }
+	}];
 
     if (self.loadedPlugIns) {
         self.loadedPlugIns = nil;
@@ -61,35 +66,20 @@ static NSString * const kHyperFileExtension = @"bundle";
 - (void)drawViews
 {
     __weak NSWindow *window = [[GOLDAppDelegate sharedApplication] mainWindow];
-    NSObject <GOLDPlugIn> *plugIn;
-
-    for (NSString *plugInName in self.loadedPlugIns) {
-        plugIn = [self.loadedPlugIns objectForKey:plugInName];
-    	if ([plugIn respondsToSelector:@selector(mainView)]) {
+    [self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(id key, NSObject <GOLDPlugIn> *plugIn, BOOL *stop) {
+        if ([plugIn respondsToSelector:@selector(mainView)]) {
         	[[window contentView] addSubview:[plugIn mainView]];
     	}
-    }
+    }];
 }
 
 - (void)executePlugIns
 {
     if (self.loadedPlugIns) {
-    	for (NSString *plugInName in self.loadedPlugIns) {
-    		[self executePlugInWithName:plugInName];
-    	}
+    	[self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSObject<GOLDPlugIn> *plugInName, id plugIn, BOOL *stop) {
+        	[plugIn execute];
+    	}];
     }
-}
-
-- (void)executePlugInWithName:(NSString *)plugInName
-{
-    NSObject <GOLDPlugIn> *plugIn;
-    plugIn = [loadedPlugIns objectForKey:plugInName];
-
-	if (plugIn) {
-        if ([plugIn respondsToSelector:@selector(execute)]) {
-      		[plugIn execute];
-        }
-	}
 }
 
 - (NSURL *)applicationDirectory
