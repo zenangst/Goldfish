@@ -11,12 +11,12 @@
 
 @protocol GOLDPlugIn <NSObject>
 
-- (NSString *)name;
+@required
 - (id)initWithPlugInsController:(GOLDPlugInsController *)plugInsController;
+- (NSString *)name;
 - (void)execute;
 
 @optional
-
 - (NSView *)mainView;
 - (NSView *)preferenceView;
 
