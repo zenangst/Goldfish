@@ -188,9 +188,8 @@
 				BD5806DA18F4788B00C90CF5 /* Images.xcassets */,
 				BD270AC318B7AF2100B81773 /* Supporting Files */,
 			);
-			name = Goldfish;
-			path = "Hyper Active";
-			sourceTree = "<group>";
+			path = Goldfish;
+			sourceTree = SOURCE_ROOT;
 		};
 		BD270AC318B7AF2100B81773 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -210,9 +209,8 @@
 				BD7D08E718F47BA200A93971 /* GoldfishTests.m */,
 				BD270AE118B7AF2100B81773 /* Supporting Files */,
 			);
-			name = GoldfishTests;
-			path = "Hyper ActiveTests";
-			sourceTree = "<group>";
+			path = GoldfishTests;
+			sourceTree = SOURCE_ROOT;
 		};
 		BD270AE118B7AF2100B81773 /* Supporting Files */ = {
 			isa = PBXGroup;
