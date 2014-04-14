@@ -305,7 +305,7 @@
 			attributes = {
 				CLASSPREFIX = GOLD;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = zenangst;
+				ORGANIZATIONNAME = Goldfish;
 				TargetAttributes = {
 					BD270AD918B7AF2100B81773 = {
 						TestTargetID = BD270AB818B7AF2100B81773;
