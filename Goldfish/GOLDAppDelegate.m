@@ -8,16 +8,20 @@
 
 #import "GOLDAppDelegate.h"
 #import "GOLDPlugInsLoader.h"
+#import "GOLDPreferencesController.h"
 
 @implementation GOLDAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     NSRect frame = NSMakeRect(0, 0, 320, 240);
-    self.window = [[NSWindow alloc] initWithContentRect:frame styleMask:NSTitledWindowMask|NSResizableWindowMask|NSClosableWindowMask backing:NSBackingStoreBuffered defer:NO];
-    [self.window setHasShadow:YES];
+    self.preferencesWindow = [[GOLDWindow alloc] initWithContentRect:frame];
+    [self.preferencesWindow setTitle:@"Preferences"];
+
+    GOLDPreferencesController *preferencesWindowController = [[GOLDPreferencesController alloc] initWithWindow:self.preferencesWindow];
+
+    self.window = [[GOLDWindow alloc] initWithContentRect:frame];
     [self.window setTitle:@"Goldfish"];
-    [[self.window contentView] setAutoresizesSubviews:YES];
 
     NSWindowController *windowController = [[NSWindowController alloc] initWithWindow:self.window];
     [windowController loadWindow];
