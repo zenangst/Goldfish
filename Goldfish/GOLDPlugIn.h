@@ -12,11 +12,15 @@
 @protocol GOLDPlugIn <NSObject>
 
 @required
+
+@property (nonatomic, retain) NSString *bundleIdentifier;
+
 - (id)initWithPlugInsController:(GOLDPlugInsController *)plugInsController;
 - (NSString *)name;
 - (void)execute;
 
 @optional
++ (BOOL)hasConfiguration;
 - (NSView *)mainView;
 - (NSView *)preferenceView;
 
