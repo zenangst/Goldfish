@@ -11,7 +11,7 @@
 #import "GOLDPlugInsController.h"
 #import "GOLDPlugIn.h"
 
-static NSString * const kHyperFileExtension = @"bundle";
+static NSString * const kGoldfishFileExtension = @"bundle";
 
 @implementation GOLDPlugInsLoader
 
