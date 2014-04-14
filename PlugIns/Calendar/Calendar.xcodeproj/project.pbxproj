@@ -250,8 +250,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Calendar.waddup/Calendar-Prefix.pch";
-				INFOPLIST_FILE = "Calendar.waddup/Calendar-Info.plist";
+				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
+				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = Calendar;
 				WRAPPER_EXTENSION = bundle;
@@ -263,8 +263,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Calendar.waddup/Calendar-Prefix.pch";
-				INFOPLIST_FILE = "Calendar.waddup/Calendar-Info.plist";
+				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
+				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = Calendar;
 				WRAPPER_EXTENSION = bundle;
