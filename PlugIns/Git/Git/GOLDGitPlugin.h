@@ -3,7 +3,7 @@
 //  Git
 //
 //  Created by Christoffer Winterkvist on 25/02/14.
-//  Copyright (c) 2014 Hyper. All rights reserved.
+//  Copyright (c) 2014 Goldfish. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

@@ -3,7 +3,7 @@
 //  Calendar.waddup
 //
 //  Created by Christoffer Winterkvist on 23/02/14.
-//  Copyright (c) 2014 Hyper. All rights reserved.
+//  Copyright (c) 2014 Goldfish. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -13,7 +13,7 @@
 
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
 
-- (id)initWithPlugInsController:(GOLDPlugInsController *)hyperPlugInsController;
+- (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
 - (NSString *)name;
 
 @end

@@ -3,7 +3,7 @@
 //  Calendar.waddup
 //
 //  Created by Christoffer Winterkvist on 23/02/14.
-//  Copyright (c) 2014 Hyper. All rights reserved.
+//  Copyright (c) 2014 Goldfish. All rights reserved.
 //
 
 #import "GOLDCalendarPlugin.h"
@@ -12,10 +12,10 @@
 
 @synthesize plugInsController;
 
-- (id)initWithPlugInsController:(GOLDPlugInsController *)hyperPlugInsController {
+- (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
   self = [super init];
   if (self) {
-    self.plugInsController = hyperPlugInsController;
+    self.plugInsController = aPlugInsController;
     NSLog(@"%@: loaded", [self name]);
   }
   return self;
