@@ -3,7 +3,7 @@
 //  GoldfishTests
 //
 //  Created by Christoffer Winterkvist on 2/21/14.
-//  Copyright (c) 2014 Christoffer Winterkvist. All rights reserved.
+//  Copyright (c) 2014 Goldfish. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
