@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Christoffer Winterkvist. All rights reserved.
 //
 
+#import "GOLDPlugInsLoader.h"
 #import "GOLDPlugInsController.h"
+#import "GOLDPlugIn.h"
 
 @implementation GOLDPlugInsController
 
@@ -22,6 +24,22 @@
     return sharedInstance;
 }
 
+- (void)loadConfigurationForPlugIn:(id)plugIn
+{
+    NSString *plugInDirectory = [self plugInDirectory:[plugIn name]];
+    BOOL plugInDirectoryExists = [[NSFileManager defaultManager] fileExistsAtPath:plugInDirectory];
+
+    if (!plugInDirectoryExists) {
+        NSError *error;
+        [[NSFileManager defaultManager] createDirectoryAtPath:plugInDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    }
+}
+
+- (void)saveConfiguration
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
 - (NSString *)goldfishVersion
 {
 	return [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"];
@@ -30,6 +48,12 @@
 - (NSUInteger)apiVersion
 {
 	return 1.0;
+}
+
+- (NSString *)plugInDirectory:(NSString *)bundleIdentifier
+{
+	NSString *path = [[[GOLDPlugInsLoader sharedLoader] applicationDirectory] relativePath];
+	return [path stringByAppendingFormat:@"/%@", bundleIdentifier];
 }
 
 @end

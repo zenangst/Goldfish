@@ -11,8 +11,10 @@
 @interface GOLDPlugInsController : NSObject
 
 + (instancetype)sharedPlugInsController;
-
+- (void)loadConfigurationForPlugIn:(id)plugIn;
+- (void)saveConfiguration;
 - (NSString *)goldfishVersion;
 - (NSUInteger)apiVersion;
+- (NSString *)plugInDirectory:(NSString *)bundleIdentifier;
 
 @end
