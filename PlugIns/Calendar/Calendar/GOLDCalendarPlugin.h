@@ -1,6 +1,6 @@
 //
 //  GOLDCalendarPlugin.h
-//  Calendar.waddup
+//  Calendar
 //
 //  Created by Christoffer Winterkvist on 23/02/14.
 //  Copyright (c) 2014 Goldfish. All rights reserved.

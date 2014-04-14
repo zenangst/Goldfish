@@ -84,8 +84,7 @@
 				BDF2411918BA76B7004E3BB9 /* GOLDCalendarPlugin.m */,
 				BDF2410518BA7641004E3BB9 /* Supporting Files */,
 			);
-			name = Calendar;
-			path = Calendar.waddup;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		BDF2410518BA7641004E3BB9 /* Supporting Files */ = {
