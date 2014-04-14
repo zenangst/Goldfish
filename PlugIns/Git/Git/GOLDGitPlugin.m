@@ -10,7 +10,12 @@
 
 @implementation GOLDGitPlugin
 
-@synthesize plugInsController;
+@synthesize plugInsController, bundleIdentifier;
+
++ (BOOL)hasConfiguration
+{
+	return YES;
+}
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
     self = [super init];

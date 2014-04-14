@@ -13,8 +13,11 @@
 @interface GOLDGitPlugin : NSObject <GOLDPlugIn>
 
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
+@property (nonatomic, retain) NSString *bundleIdentifier;
 
-- (id)initWithPlugInsController:(GOLDPlugInsController *)plugInsController;
++ (BOOL)hasConfiguration;
+
+- (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
 - (NSString *)name;
 - (void)execute;
 
