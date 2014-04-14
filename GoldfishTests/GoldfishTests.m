@@ -1,5 +1,5 @@
 //
-//  Hyper_ActiveTests.m
+//  Goldfish_ActiveTests.m
 //  GoldfishTests
 //
 //  Created by Christoffer Winterkvist on 2/21/14.
