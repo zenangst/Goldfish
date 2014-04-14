@@ -8,12 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "GOLDPlugInsController.h"
+#import "GOLDPlugIn.h"
 
-@interface GOLDCalendarPlugin : NSObject
+@interface GOLDCalendarPlugin : NSObject <GOLDPlugIn>
 
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
+@property (nonatomic, retain) NSString *bundleIdentifier;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
 - (NSString *)name;
+- (void)execute;
 
 @end

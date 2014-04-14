@@ -25,4 +25,9 @@
 	return @"Calendar";
 }
 
+- (void)execute
+{
+	NSLog(@"%s", __FUNCTION__);
+}
+
 @end
