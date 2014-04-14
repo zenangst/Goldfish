@@ -125,7 +125,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = Hyper;
+				ORGANIZATIONNAME = "";
 			};
 			buildConfigurationList = BDF240F618BA7641004E3BB9 /* Build configuration list for PBXProject "Calendar" */;
 			compatibilityVersion = "Xcode 3.2";
