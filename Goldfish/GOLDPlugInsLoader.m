@@ -46,9 +46,9 @@ static NSString * const kGoldfishFileExtension = @"bundle";
         if ([bundle load]) {
             className = [bundle principalClass];
             if ([className conformsToProtocol:NSProtocolFromString(@"GOLDPlugIn")]) {
-                plugIn = [[className alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
-                if (![loadedPlugIns objectForKey:[plugIn name]]) {
-                    [plugInsDictionary setObject:plugIn forKey:[plugIn name]];
+                plugIn = [self initializePlugin:className withBundleIdentifier:[bundle bundleIdentifier]];
+                if (!loadedPlugIns[[plugIn name]]) {
+                    plugInsDictionary[[plugIn name]] = plugIn;
                 }
             } else {
                 NSLog(@"%@ -> failed validation", className);
@@ -64,10 +64,21 @@ static NSString * const kGoldfishFileExtension = @"bundle";
     plugInsDictionary = nil;
 }
 
+- (id)initializePlugin:(Class)className withBundleIdentifier:(NSString *)bundleIdentifier
+{
+	NSObject<GOLDPlugIn> *plugIn = [[className alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
+    plugIn.bundleIdentifier = bundleIdentifier;
+	if ([className respondsToSelector:@selector(hasConfiguration)] && [className hasConfiguration]) {
+        [[GOLDPlugInsController sharedPlugInsController] loadConfigurationForPlugIn:plugIn];
+    }
+
+    return plugIn;
+}
+
 - (void)drawViews
 {
     __weak NSWindow *window = [[GOLDAppDelegate sharedApplication] mainWindow];
-    [self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(id key, NSObject <GOLDPlugIn> *plugIn, BOOL *stop) {
+    [self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject <GOLDPlugIn> *plugIn, BOOL *stop) {
         if ([plugIn respondsToSelector:@selector(mainView)]) {
         	[[window contentView] addSubview:[plugIn mainView]];
     	}
@@ -77,7 +88,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 - (void)executePlugIns
 {
     if (self.loadedPlugIns) {
-    	[self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSObject<GOLDPlugIn> *plugInName, id plugIn, BOOL *stop) {
+    	[self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, id plugIn, BOOL *stop) {
         	[plugIn execute];
     	}];
     }
@@ -87,7 +98,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:@"com.zenangst.Keyboard_Cowboy_2"];
+    return [appSupportURL URLByAppendingPathComponent:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleExecutable"]];
 }
 
 @end
