@@ -170,12 +170,12 @@
 		BD270AC218B7AF2100B81773 /* Goldfish */ = {
 			isa = PBXGroup;
 			children = (
-				BD5806D018F4787F00C90CF5 /* GOLDPlugIn.h */,
+				BD7CA6B818FC4F1500F52B11 /* Protocols */,
 				BD5806D118F4787F00C90CF5 /* GOLDPlugInsController.h */,
-				BD5806D218F4787F00C90CF5 /* GOLDPlugInsLoader.h */,
+				BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */,
 				BD5806D318F4787F00C90CF5 /* GOLDAppDelegate.h */,
 				BD5806D418F4787F00C90CF5 /* GOLDAppDelegate.m */,
-				BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */,
+				BD5806D218F4787F00C90CF5 /* GOLDPlugInsLoader.h */,
 				BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */,
 				BDCC684618F5DF7600CB8361 /* MainMenu.xib */,
 				BD5806DA18F4788B00C90CF5 /* Images.xcassets */,
@@ -214,6 +214,14 @@
 				BD7D08E918F47BC200A93971 /* GoldfishTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD7CA6B818FC4F1500F52B11 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BD5806D018F4787F00C90CF5 /* GOLDPlugIn.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		BDDE4B7718BD1EF500DFF497 /* Products */ = {
