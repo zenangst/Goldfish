@@ -11,6 +11,7 @@
 #import "GOLDPlugInsController.h"
 #import "GOLDPlugIn.h"
 
+static NSString * const kGoldfishPluginProtocol = @"GOLDPlugIn";
 static NSString * const kGoldfishFileExtension = @"bundle";
 
 @implementation GOLDPlugInsLoader
@@ -45,7 +46,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
         bundle = [NSBundle bundleWithPath:bundlePath];
         if ([bundle load]) {
             className = [bundle principalClass];
-            if ([className conformsToProtocol:NSProtocolFromString(@"GOLDPlugIn")]) {
+            if ([className conformsToProtocol:NSProtocolFromString(kGoldfishPluginProtocol)]) {
                 plugIn = [self initializePlugin:className withBundleIdentifier:[bundle bundleIdentifier]];
                 if (!loadedPlugIns[[plugIn name]]) {
                     plugInsDictionary[[plugIn name]] = plugIn;
