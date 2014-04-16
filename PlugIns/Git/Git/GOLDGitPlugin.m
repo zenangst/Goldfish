@@ -7,6 +7,7 @@
 //
 
 #import "GOLDGitPlugin.h"
+#import "GOLDTask.h"
 
 @implementation GOLDGitPlugin
 
@@ -21,7 +22,7 @@
     self = [super init];
 	if (self) {
 		self.plugInsController = aPlugInsController;
-        NSLog(@"%@: loaded", [self name]);
+        self.dataCache = nil;
 	}
 	return self;
 }
@@ -33,7 +34,57 @@
 
 - (void)execute
 {
-	NSLog(@"%s", __FUNCTION__);
+    NSArray *configurations = @[
+        @{@"enabled": @YES,
+          @"name"   : @"Goldfish",
+          @"path"   : @"/Users/christofferwinterkvist/Library/Mobile Documents/iCloud/Developer/Cocoa/Goldfish/Goldfish"
+        }
+    ];
+
+    __block NSString *gitPath = @"/usr/bin/git";
+    __block NSArray *arguments;
+    __block NSString *author;
+    __block NSString *commits;
+    __block NSMutableArray *entries = [[NSMutableArray alloc] init];
+    __block NSArray *indexFields = @[@"commit", @"datestamp", @"summary"];
+
+    [configurations enumerateObjectsUsingBlock:^(NSDictionary *configuration, NSUInteger idx, BOOL *stop) {
+        BOOL configIsEnabled = [configuration[@"enabled"] boolValue];
+
+        if (configIsEnabled) {
+            author = [[GOLDTask runCommand:gitPath withArguments:@[@"config", @"--get", @"user.name"] inDirectory:configuration[@"path"]] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+
+            arguments  = @[
+                @"log",
+                @"--all",
+                @"--no-merges",
+                [NSString stringWithFormat:@"--author=%@", author],
+                [NSString stringWithFormat:@"--format=%@", @"%h -> %ai -> %s"]
+            ];
+
+            commits = [GOLDTask runCommand:gitPath withArguments:arguments inDirectory:configuration[@"path"]];
+            NSArray *lines = [commits componentsSeparatedByString:@"\n"];
+
+            [lines enumerateObjectsUsingBlock:^(NSString *line, NSUInteger idx, BOOL *stop) {
+                if ([line length]) {
+                    NSArray *components = [line componentsSeparatedByString:@"->"];
+                    __block NSMutableDictionary *mdict = [[NSMutableDictionary alloc] init];
+
+                    [components enumerateObjectsUsingBlock:^(NSString *component, NSUInteger idx, BOOL *stop) {
+                        [mdict setObject:[component stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:indexFields[idx]];
+                    }];
+
+                    [entries addObject:[mdict copy]];
+                }
+            }];
+        }
+    }];
+
+    if (self.dataCache) {
+        self.dataCache = nil;
+    }
+
+    self.dataCache = [entries copy];
 }
 
 - (NSView *)mainView

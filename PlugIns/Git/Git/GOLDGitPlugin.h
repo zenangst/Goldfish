@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
 @property (nonatomic, retain) NSString *bundleIdentifier;
+@property (nonatomic, retain) NSArray *dataCache;
 
 + (BOOL)hasConfiguration;
 
