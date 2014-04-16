@@ -23,6 +23,7 @@
 	if (self) {
 		self.plugInsController = aPlugInsController;
         self.dataCache = nil;
+        NSLog(@"%@: loaded", [self name]);
 	}
 	return self;
 }
@@ -75,6 +76,7 @@
                     }];
 
                     [entries addObject:[mdict copy]];
+                    mdict = nil;
                 }
             }];
         }
@@ -85,6 +87,7 @@
     }
 
     self.dataCache = [entries copy];
+    entries = nil;
 }
 
 - (NSView *)mainView
