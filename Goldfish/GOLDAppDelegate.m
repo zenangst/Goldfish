@@ -19,6 +19,7 @@
     [self.preferencesWindow setTitle:@"Preferences"];
 
     GOLDPreferencesController *preferencesWindowController = [[GOLDPreferencesController alloc] initWithWindow:self.preferencesWindow];
+    [preferencesWindowController loadWindow];
 
     self.window = [[GOLDWindow alloc] initWithContentRect:frame];
     [self.window setTitle:@"Goldfish"];
