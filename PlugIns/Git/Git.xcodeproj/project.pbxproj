@@ -11,6 +11,7 @@
 		BDDE4B6518BD1EF400DFF497 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */; };
 		BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B6D18BD1EF500DFF497 /* InfoPlist.strings */; };
 		BDDE4B8018BD1FAF00DFF497 /* GOLDGitPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDE4B7F18BD1FAF00DFF497 /* GOLDGitPlugin.m */; };
+		BDDEE95718FDB85B00EB3C8D /* GOLDTask.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDEE95618FDB85B00EB3C8D /* GOLDTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		BDDE4B7018BD1EF500DFF497 /* Git-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Git-Prefix.pch"; sourceTree = "<group>"; };
 		BDDE4B7E18BD1FAF00DFF497 /* GOLDGitPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLDGitPlugin.h; sourceTree = "<group>"; };
 		BDDE4B7F18BD1FAF00DFF497 /* GOLDGitPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLDGitPlugin.m; sourceTree = "<group>"; };
+		BDDEE95518FDB85B00EB3C8D /* GOLDTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLDTask.h; sourceTree = "<group>"; };
+		BDDEE95618FDB85B00EB3C8D /* GOLDTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLDTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 			children = (
 				BD7D08DD18F47A5D00A93971 /* GOLDPlugIn.h */,
 				BD7D08DE18F47A5D00A93971 /* GOLDPlugInsController.h */,
+				BDDEE95518FDB85B00EB3C8D /* GOLDTask.h */,
+				BDDEE95618FDB85B00EB3C8D /* GOLDTask.m */,
 				BDDE4B7E18BD1FAF00DFF497 /* GOLDGitPlugin.h */,
 				BDDE4B7F18BD1FAF00DFF497 /* GOLDGitPlugin.m */,
 				BDDE4B6B18BD1EF400DFF497 /* Supporting Files */,
@@ -163,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDDEE95718FDB85B00EB3C8D /* GOLDTask.m in Sources */,
 				BDDE4B8018BD1FAF00DFF497 /* GOLDGitPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
