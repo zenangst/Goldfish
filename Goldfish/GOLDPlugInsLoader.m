@@ -39,11 +39,11 @@ static NSString * const kGoldfishFileExtension = @"bundle";
     __block Class className;
     __block NSBundle *bundle;
     __block NSObject<GOLDPlugIn> *plugIn;
-    __block NSString *bundlePath;
+    __block NSString *fullBundlePath;
 
-	[builtInplugIns enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-        bundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, object];
-        bundle = [NSBundle bundleWithPath:bundlePath];
+	[builtInplugIns enumerateObjectsUsingBlock:^(NSString *bundlePath, NSUInteger idx, BOOL *stop) {
+        fullBundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, bundlePath];
+        bundle = [NSBundle bundleWithPath:fullBundlePath];
         if ([bundle load]) {
             className = [bundle principalClass];
             if ([className conformsToProtocol:NSProtocolFromString(kGoldfishPluginProtocol)]) {
@@ -79,7 +79,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 - (void)drawViews
 {
     __weak NSWindow *window = [[GOLDAppDelegate sharedApplication] mainWindow];
-    [self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject <GOLDPlugIn> *plugIn, BOOL *stop) {
+    [self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
         if ([plugIn respondsToSelector:@selector(mainView)]) {
         	[[window contentView] addSubview:[plugIn mainView]];
     	}
@@ -89,7 +89,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 - (void)executePlugIns
 {
     if (self.loadedPlugIns) {
-    	[self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, id plugIn, BOOL *stop) {
+    	[self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
         	[plugIn execute];
     	}];
     }
