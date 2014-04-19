@@ -76,25 +76,6 @@ static NSString * const kGoldfishFileExtension = @"bundle";
     return plugIn;
 }
 
-- (void)drawViews
-{
-    __weak NSWindow *window = [[GOLDAppDelegate sharedApplication] mainWindow];
-    [self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
-        if ([plugIn respondsToSelector:@selector(mainView)]) {
-        	[[window contentView] addSubview:[plugIn mainView]];
-    	}
-    }];
-}
-
-- (void)executePlugIns
-{
-    if (self.loadedPlugIns) {
-    	[self.loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
-        	[plugIn execute];
-    	}];
-    }
-}
-
 - (NSURL *)applicationDirectory
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];

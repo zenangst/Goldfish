@@ -16,8 +16,6 @@
 + (instancetype)sharedLoader;
 
 - (void)loadPlugIns;
-- (void)drawViews;
-- (void)executePlugIns;
 - (NSURL *)applicationDirectory;
 
 @end
