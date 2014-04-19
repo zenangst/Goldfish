@@ -21,6 +21,8 @@
 		BD7D08E818F47BA200A93971 /* GoldfishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7D08E718F47BA200A93971 /* GoldfishTests.m */; };
 		BD7D08ED18F47BC800A93971 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD7D08EB18F47BC800A93971 /* InfoPlist.strings */; };
 		BD90AD3818FC541D000515D6 /* GOLDPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD90AD3718FC541D000515D6 /* GOLDPreferencesController.m */; };
+		BD7FF48618FE81BF009F4B68 /* GOLDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7FF48518FE81BF009F4B68 /* GOLDMainViewController.m */; };
+		BD7FF48818FE8E68009F4B68 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7FF48718FE8E68009F4B68 /* QuartzCore.framework */; };
 		BD90AD3C18FC5692000515D6 /* GOLDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BD90AD3B18FC5692000515D6 /* GOLDWindow.m */; };
 		BDDE4B8318BD1FDD00DFF497 /* Git.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B7B18BD1EF500DFF497 /* Git.bundle */; };
 		BDDE4B9418BD353A00DFF497 /* Calendar.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B9118BD352500DFF497 /* Calendar.bundle */; };
