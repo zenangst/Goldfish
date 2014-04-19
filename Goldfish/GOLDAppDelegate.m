@@ -8,7 +8,7 @@
 
 #import "GOLDAppDelegate.h"
 #import "GOLDPlugInsLoader.h"
-#import "GOLDPreferencesController.h"
+#import "GOLDPreferencesViewController.h"
 
 @implementation GOLDAppDelegate
 
@@ -18,39 +18,19 @@
     self.preferencesWindow = [[GOLDWindow alloc] initWithContentRect:frame];
     [self.preferencesWindow setTitle:@"Preferences"];
 
-    GOLDPreferencesController *preferencesWindowController = [[GOLDPreferencesController alloc] initWithWindow:self.preferencesWindow];
+    GOLDPreferencesViewController *preferencesWindowController = [[GOLDPreferencesViewController alloc] initWithWindow:self.preferencesWindow];
     [preferencesWindowController loadWindow];
 
-    self.window = [[GOLDWindow alloc] initWithContentRect:frame];
-    [self.window setTitle:@"Goldfish"];
-
-    NSWindowController *windowController = [[NSWindowController alloc] initWithWindow:self.window];
-    [windowController loadWindow];
-    [windowController setWindowFrameAutosaveName:@"MainWindow"];
-    [self.window setWindowController:windowController];
-
-    [NSApp activateIgnoringOtherApps:YES];
-    [[self.window windowController] showWindow:self];
-
+    self.mainViewController = [[GOLDMainViewController alloc] init];
+    [self.mainViewController showWindow];
     [[GOLDPlugInsLoader sharedLoader] loadPlugIns];
-}
-
-- (void)applicationDidBecomeActive:(NSNotification *)aNotification
-{
-    [[GOLDPlugInsLoader sharedLoader] drawViews];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
 {
-    [NSApp activateIgnoringOtherApps:YES];
-    [[self.window windowController] showWindow:self];
+    //[NSApp activateIgnoringOtherApps:YES];
+    //[[self.window windowController] showWindow:self];
     return YES;
-}
-
-- (NSWindowController *)windowController
-{
-    NSWindowController *windowController = [self.window windowController];
-    return windowController;
 }
 
 @end

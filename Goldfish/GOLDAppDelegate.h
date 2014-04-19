@@ -8,11 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "GOLDWindow.h"
-#import "GOLDPreferencesController.h"
+#import "GOLDPreferencesViewController.h"
+#import "GOLDMainViewController.h"
 
 @interface GOLDAppDelegate : NSApplication <NSApplicationDelegate>
 
 @property (strong, nonatomic) GOLDWindow *preferencesWindow;
-@property (strong, nonatomic) GOLDWindow *window;
+@property (strong, nonatomic) GOLDMainViewController *mainViewController;
 
 @end
