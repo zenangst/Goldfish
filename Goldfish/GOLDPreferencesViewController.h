@@ -1,5 +1,5 @@
 //
-//  GOLDPreferencesController.h
+//  GOLDPreferencesViewController.h
 //  Goldfish
 //
 //  Created by Christoffer Winterkvist on 14/04/14.
@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface GOLDPreferencesController : NSWindowController
+@interface GOLDPreferencesViewController : NSWindowController
 
 @end

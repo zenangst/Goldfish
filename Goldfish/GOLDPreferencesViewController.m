@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Goldfish. All rights reserved.
 //
 
-#import "GOLDPreferencesController.h"
+#import "GOLDPreferencesViewController.h"
 
-@interface GOLDPreferencesController ()
+@interface GOLDPreferencesViewController ()
 
 @end
 
-@implementation GOLDPreferencesController
+@implementation GOLDPreferencesViewController
 
 - (id)initWithWindow:(NSWindow *)window
 {
