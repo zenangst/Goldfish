@@ -105,8 +105,11 @@
 		BD7D08E718F47BA200A93971 /* GoldfishTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoldfishTests.m; path = GoldfishTests/GoldfishTests.m; sourceTree = SOURCE_ROOT; };
 		BD7D08E918F47BC200A93971 /* GoldfishTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoldfishTests-Info.plist"; path = "GoldfishTests/GoldfishTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BD7D08EC18F47BC800A93971 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GoldfishTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		BD90AD3618FC541D000515D6 /* GOLDPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPreferencesController.h; path = Goldfish/GOLDPreferencesController.h; sourceTree = SOURCE_ROOT; };
-		BD90AD3718FC541D000515D6 /* GOLDPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPreferencesController.m; path = Goldfish/GOLDPreferencesController.m; sourceTree = SOURCE_ROOT; };
+		BD7FF48418FE81BF009F4B68 /* GOLDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLDMainViewController.h; sourceTree = "<group>"; };
+		BD7FF48518FE81BF009F4B68 /* GOLDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLDMainViewController.m; sourceTree = "<group>"; };
+		BD7FF48718FE8E68009F4B68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BD90AD3618FC541D000515D6 /* GOLDPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPreferencesViewController.h; path = Goldfish/GOLDPreferencesViewController.h; sourceTree = SOURCE_ROOT; };
+		BD90AD3718FC541D000515D6 /* GOLDPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPreferencesViewController.m; path = Goldfish/GOLDPreferencesViewController.m; sourceTree = SOURCE_ROOT; };
 		BD90AD3A18FC5692000515D6 /* GOLDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDWindow.h; path = Goldfish/GOLDWindow.h; sourceTree = SOURCE_ROOT; };
 		BD90AD3B18FC5692000515D6 /* GOLDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDWindow.m; path = Goldfish/GOLDWindow.m; sourceTree = SOURCE_ROOT; };
 		BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Git.xcodeproj; path = PlugIns/Git/Git.xcodeproj; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7FF48818FE8E68009F4B68 /* QuartzCore.framework in Frameworks */,
 				BD270ABD18B7AF2100B81773 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +162,7 @@
 		BD270ABB18B7AF2100B81773 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD7FF48718FE8E68009F4B68 /* QuartzCore.framework */,
 				BD270ABC18B7AF2100B81773 /* Cocoa.framework */,
 				BD270ADB18B7AF2100B81773 /* XCTest.framework */,
 				BD270ABE18B7AF2100B81773 /* Other Frameworks */,
@@ -236,8 +241,10 @@
 			children = (
 				BD5806D118F4787F00C90CF5 /* GOLDPlugInsController.h */,
 				BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */,
-				BD90AD3618FC541D000515D6 /* GOLDPreferencesController.h */,
-				BD90AD3718FC541D000515D6 /* GOLDPreferencesController.m */,
+				BD90AD3618FC541D000515D6 /* GOLDPreferencesViewController.h */,
+				BD90AD3718FC541D000515D6 /* GOLDPreferencesViewController.m */,
+				BD7FF48418FE81BF009F4B68 /* GOLDMainViewController.h */,
+				BD7FF48518FE81BF009F4B68 /* GOLDMainViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -387,11 +394,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD90AD3818FC541D000515D6 /* GOLDPreferencesController.m in Sources */,
+				BD90AD3818FC541D000515D6 /* GOLDPreferencesViewController.m in Sources */,
 				BD90AD3C18FC5692000515D6 /* GOLDWindow.m in Sources */,
 				BD5806D718F4787F00C90CF5 /* GOLDAppDelegate.m in Sources */,
 				BD5806C918F4784F00C90CF5 /* main.m in Sources */,
 				BD5806D818F4787F00C90CF5 /* GOLDPlugInsController.m in Sources */,
+				BD7FF48618FE81BF009F4B68 /* GOLDMainViewController.m in Sources */,
 				BD5806D918F4787F00C90CF5 /* GOLDPlugInsLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
