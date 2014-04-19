@@ -11,7 +11,7 @@
 
 @implementation GOLDGitPlugin
 
-@synthesize plugInsController, bundleIdentifier;
+@synthesize plugInsController, bundleIdentifier, dataCache;
 
 + (BOOL)hasConfiguration
 {
@@ -36,9 +36,10 @@
 - (void)execute
 {
     NSArray *configurations = @[
-        @{@"enabled": @YES,
-          @"name"   : @"Goldfish",
-          @"path"   : @"/Users/christofferwinterkvist/Library/Mobile Documents/iCloud/Developer/Cocoa/Goldfish/Goldfish"
+        @{
+            @"enabled": @YES,
+            @"name"   : @"Goldfish",
+            @"path"   : @"/Users/christofferwinterkvist/Library/Mobile Documents/iCloud/Developer/Cocoa/Goldfish/Goldfish"
         }
     ];
 
@@ -70,6 +71,7 @@
                 if ([line length]) {
                     NSArray *components = [line componentsSeparatedByString:@"->"];
                     __block NSMutableDictionary *mdict = [[NSMutableDictionary alloc] init];
+                    mdict[@"plugIn"] = @"Git";
 
                     [components enumerateObjectsUsingBlock:^(NSString *component, NSUInteger idx, BOOL *stop) {
                         [mdict setObject:[component stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:indexFields[idx]];
@@ -90,15 +92,32 @@
     entries = nil;
 }
 
-- (NSView *)mainView
+- (NSView *)mainView:(NSDictionary *)entry isRowSelected:(BOOL)rowIsSelected
 {
-    NSView *mainView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,20,20)];
-    CALayer *viewLayer = [CALayer layer];
-    CGColorRef backgroundColor = CGColorCreateGenericRGB(1.0, 0.0, 0.0, 0.4);
-    [viewLayer setBackgroundColor:backgroundColor];
-    [mainView setWantsLayer:YES];
-    [mainView setLayer:viewLayer];
-    CGColorRelease(backgroundColor);
+    NSView *mainView = [[NSView alloc] init];
+
+    NSTextField *summaryField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 22, 200, 17)];
+    [summaryField setStringValue:entry[@"summary"]];
+    [summaryField setBezeled:NO];
+    [summaryField setDrawsBackground:NO];
+    [summaryField setEditable:NO];
+    [summaryField setSelectable:NO];
+    [summaryField setFont:[NSFont systemFontOfSize:13]];
+
+    if (rowIsSelected) {
+        /* [summaryField ] */
+    }
+
+    NSTextField *dateField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 2, 200, 17)];
+    [dateField setStringValue:entry[@"datestamp"]];
+    [dateField setBezeled:NO];
+    [dateField setDrawsBackground:NO];
+    [dateField setEditable:NO];
+    [dateField setSelectable:NO];
+    [dateField setFont:[NSFont systemFontOfSize:10]];
+
+    [mainView addSubview:summaryField];
+    [mainView addSubview:dateField];
     return mainView;
 }
 

@@ -22,7 +22,7 @@
 - (NSString *)name;
 - (void)execute;
 
-- (NSView *)mainView;
+- (NSView *)mainView:(NSDictionary *)entry isRowSelected:(BOOL)rowIsSelected;
 - (NSView *)preferenceView;
 
 @end
