@@ -156,7 +156,7 @@ static const float kTableViewMaxWidth = 350.0f;
     return proposedMin;
 }
 
-- (CGFloat)splitView:(NSSplitView *)splitView constrainSplitPosition:(CGFloat)proposedPositionofSubviewAt:(NSInteger)dividerIndex {
+- (CGFloat)splitView:(NSSplitView *)splitView constrainSplitPosition:(CGFloat)proposedPosition ofSubviewAt:(NSInteger)dividerIndex {
     if (proposedPosition > kTableViewMaxWidth)
         return 200.0f;
     if (proposedPosition < kTableViewMinWidth)
