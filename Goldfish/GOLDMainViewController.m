@@ -19,18 +19,7 @@ static const float kTableViewMaxWidth = 350.0f;
 {
     self = [super init];
     if (self) {
-        NSRect frame = NSMakeRect(0, 0, 320, 240);
-
-        self.window = [[GOLDWindow alloc] initWithContentRect:frame];
-        self.windowController = [[NSWindowController alloc] initWithWindow:self.window];
-
-        [self.windowController loadWindow];
-        [self.windowController setWindowFrameAutosaveName:@"MainWindowFrame"];
-        [self.window setWindowController:self.windowController];
-        [self.window setTitle:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleExecutable"]];
-        [self.window setFrameAutosaveName:@"MainFrame"];
-        [self.window setDelegate:self];
-        [self configureSubviews];
+        [self configureInterface];
     }
     return self;
 }
@@ -43,10 +32,23 @@ static const float kTableViewMaxWidth = 350.0f;
 
 #pragma mark Interface construction
 
-- (void)configureSubviews
+- (void)configureInterface
 {
-    NSRect frame = NSMakeRect(0, 0, CGRectGetWidth([[self.window contentView] frame]), CGRectGetHeight([[self.window contentView] frame]));
-    self.splitView = [[NSSplitView alloc] initWithFrame:frame];
+    NSRect frame = NSMakeRect(0, 0, 320, 240);
+
+    self.window = [[GOLDWindow alloc] initWithContentRect:frame];
+    self.windowController = [[NSWindowController alloc] initWithWindow:self.window];
+
+    [self.windowController loadWindow];
+    [self.windowController setWindowFrameAutosaveName:@"MainWindowFrame"];
+
+    [self.window setWindowController:self.windowController];
+    [self.window setTitle:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleExecutable"]];
+    [self.window setFrameAutosaveName:@"MainFrame"];
+    [self.window setDelegate:self];
+
+    NSRect splitViewFrame = NSMakeRect(0, 0, CGRectGetWidth([[self.window contentView] frame]), CGRectGetHeight([[self.window contentView] frame]));
+    self.splitView = [[NSSplitView alloc] initWithFrame:splitViewFrame];
     [self.splitView setAutosaveName:@"MainSplitView"];
     [self.splitView setIdentifier:@"MainSplitView"];
     [self.splitView setVertical:YES];
