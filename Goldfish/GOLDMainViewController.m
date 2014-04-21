@@ -119,7 +119,8 @@ static const float kTableViewMaxWidth = 350.0f;
 }
 
 #pragma mark Window Delegate
-- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn
+                                                               row:(NSInteger)row {
     return [NSString stringWithFormat:@"%ld", row];
 }
 
@@ -147,14 +148,15 @@ static const float kTableViewMaxWidth = 350.0f;
     return proposedMax;
 }
 
-- (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMin ofSubviewAt:(NSInteger)dividerIndex {
+- (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMin
+                                                         ofSubviewAt:(NSInteger)dividerIndex {
     if (dividerIndex == 0) {
         proposedMin = kTableViewMinWidth;
     }
     return proposedMin;
 }
 
-- (CGFloat)splitView:(NSSplitView *)splitView constrainSplitPosition:(CGFloat)proposedPosition ofSubviewAt:(NSInteger)dividerIndex {
+- (CGFloat)splitView:(NSSplitView *)splitView constrainSplitPosition:(CGFloat)proposedPositionofSubviewAt:(NSInteger)dividerIndex {
     if (proposedPosition > kTableViewMaxWidth)
         return 200.0f;
     if (proposedPosition < kTableViewMinWidth)
@@ -164,9 +166,11 @@ static const float kTableViewMaxWidth = 350.0f;
 
 #pragma mark Table View Delegate
 
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn
+                                                              row:(NSInteger)row
 {
-    NSView *cellView = (NSView*)[tableView makeViewWithIdentifier:@"PlugnInView" owner:[tableView delegate]];
+    NSView *cellView = (NSView*)[tableView makeViewWithIdentifier:@"PlugnInView"
+                                                            owner:[tableView delegate]];
     if (cellView == nil) {
         NSString *plugInName = self.dataSource[row][@"plugIn"];
         if (plugInName) {
@@ -179,7 +183,8 @@ static const float kTableViewMaxWidth = 350.0f;
     return cellView;
 }
 
-- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+- (CGFloat)tableView:(NSTableView *)tableView
+         heightOfRow:(NSInteger)row {
 	return 44.f;
 }
 

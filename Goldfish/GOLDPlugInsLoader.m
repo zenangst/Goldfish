@@ -44,6 +44,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 	[builtInplugIns enumerateObjectsUsingBlock:^(NSString *bundlePath, NSUInteger idx, BOOL *stop) {
         fullBundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, bundlePath];
         bundle = [NSBundle bundleWithPath:fullBundlePath];
+
         if ([bundle load]) {
             className = [bundle principalClass];
             if ([className conformsToProtocol:NSProtocolFromString(kGoldfishPluginProtocol)]) {
@@ -51,6 +52,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
                 if (!loadedPlugIns[[plugIn name]]) {
                     plugInsDictionary[[plugIn name]] = plugIn;
                 }
+                NSLog(@"%@: loaded", [plugIn name]);
             } else {
                 NSLog(@"%@ -> failed validation", className);
             }
@@ -69,7 +71,8 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 {
 	NSObject<GOLDPlugIn> *plugIn = [[className alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
     plugIn.bundleIdentifier = bundleIdentifier;
-	if ([className respondsToSelector:@selector(hasConfiguration)] && [className hasConfiguration]) {
+	if ([className respondsToSelector:@selector(hasConfiguration)]
+	&&  [className hasConfiguration]) {
         [[GOLDPlugInsController sharedPlugInsController] loadConfigurationForPlugIn:plugIn];
     }
 

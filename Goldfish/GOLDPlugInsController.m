@@ -31,7 +31,10 @@
 
     if (!plugInDirectoryExists) {
         NSError *error;
-        [[NSFileManager defaultManager] createDirectoryAtPath:plugInDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+        [[NSFileManager defaultManager] createDirectoryAtPath:plugInDirectory
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:&error];
     }
 }
 

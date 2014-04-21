@@ -12,7 +12,9 @@
 
 - (instancetype)initWithContentRect:(NSRect)rect
 {
-    self = [super initWithContentRect:rect styleMask:NSTitledWindowMask|NSResizableWindowMask|NSMiniaturizableWindowMask|NSClosableWindowMask backing:NSBackingStoreBuffered defer:NO];
+    self = [super initWithContentRect:rect styleMask:NSTitledWindowMask|NSResizableWindowMask|NSMiniaturizableWindowMask|NSClosableWindowMask
+                                             backing:NSBackingStoreBuffered
+                                               defer:NO];
     if (self) {
         [self setHasShadow:YES];
         [[self contentView] setAutoresizesSubviews:YES];

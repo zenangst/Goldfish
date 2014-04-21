@@ -23,7 +23,6 @@
 	if (self) {
 		self.plugInsController = aPlugInsController;
         self.dataCache = nil;
-        NSLog(@"%@: loaded", [self name]);
 	}
 	return self;
 }
