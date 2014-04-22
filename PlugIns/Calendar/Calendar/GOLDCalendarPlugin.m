@@ -16,7 +16,6 @@
   self = [super init];
   if (self) {
     self.plugInsController = aPlugInsController;
-    NSLog(@"%@: loaded", [self name]);
   }
   return self;
 }
