@@ -3,7 +3,7 @@
 //  Goldfish
 //
 //  Created by Christoffer Winterkvist on 23/02/14.
-//  Copyright (c) 2014 Christoffer Winterkvist. All rights reserved.
+//  Copyright (c) 2014 Goldfish. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
