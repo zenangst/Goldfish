@@ -60,7 +60,7 @@
                 @"--all",
                 @"--no-merges",
                 [NSString stringWithFormat:@"--author=%@", author],
-                [NSString stringWithFormat:@"--format=%@", @"%h -> %ai -> %s"]
+                [NSString stringWithFormat:@"--format=%@", @"%h %ai %s"]
             ];
 
             commits = [GOLDTask runCommand:gitPath withArguments:arguments inDirectory:configuration[@"path"]];
@@ -68,16 +68,13 @@
 
             [lines enumerateObjectsUsingBlock:^(NSString *line, NSUInteger idx, BOOL *stop) {
                 if ([line length]) {
-                    NSArray *components = [line componentsSeparatedByString:@"->"];
-                    __block NSMutableDictionary *mdict = [[NSMutableDictionary alloc] init];
-                    mdict[@"plugIn"] = @"Git";
-
-                    [components enumerateObjectsUsingBlock:^(NSString *component, NSUInteger idx, BOOL *stop) {
-                        [mdict setObject:[component stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:indexFields[idx]];
-                    }];
-
-                    [entries addObject:[mdict copy]];
-                    mdict = nil;
+                    NSDictionary *entryDictionary = @{
+                        @"plugIn"    : self.name,
+                        @"commit"    : [line substringToIndex:7],
+                        @"datestamp" : [line substringWithRange:NSMakeRange(8, 25)],
+                        @"name"      : [line substringFromIndex:34]
+                    };
+                    [entries addObject:entryDictionary];
                 }
             }];
         }
@@ -96,7 +93,7 @@
     NSView *mainView = [[NSView alloc] init];
 
     NSTextField *summaryField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 22, 200, 17)];
-    [summaryField setStringValue:entry[@"summary"]];
+    [summaryField setStringValue:entry[@"name"]];
     [summaryField setBezeled:NO];
     [summaryField setDrawsBackground:NO];
     [summaryField setEditable:NO];
