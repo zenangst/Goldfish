@@ -10,7 +10,7 @@
 
 @implementation GOLDCalendarPlugin
 
-@synthesize plugInsController;
+@synthesize plugInsController, bundleIdentifier, dataCache;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
     self = [super init];
