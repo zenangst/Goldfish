@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD7D08DD18F47A5D00A93971 /* GOLDPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugIn.h; path = ../../../Goldfish/GOLDPlugIn.h; sourceTree = "<group>"; };
+		BD2C690C1906D87100CE75B9 /* GOLDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDProtocols.h; path = ../../../Goldfish/GOLDProtocols.h; sourceTree = "<group>"; };
 		BD7D08DE18F47A5D00A93971 /* GOLDPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsController.h; path = ../../../Goldfish/GOLDPlugInsController.h; sourceTree = "<group>"; };
 		BDA8D7D318BDD0BB00F71CFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BDDE4B6118BD1EF400DFF497 /* Git.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Git.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +85,7 @@
 		BDDE4B6A18BD1EF400DFF497 /* Git */ = {
 			isa = PBXGroup;
 			children = (
-				BD7D08DD18F47A5D00A93971 /* GOLDPlugIn.h */,
+				BD2C690C1906D87100CE75B9 /* GOLDProtocols.h */,
 				BD7D08DE18F47A5D00A93971 /* GOLDPlugInsController.h */,
 				BDDEE95518FDB85B00EB3C8D /* GOLDTask.h */,
 				BDDEE95618FDB85B00EB3C8D /* GOLDTask.m */,

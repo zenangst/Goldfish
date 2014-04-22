@@ -8,7 +8,7 @@
 
 #import "GOLDMainViewController.h"
 #import "GOLDPlugInsLoader.h"
-#import "GOLDPlugIn.h"
+#import "GOLDProtocols.h"
 
 static const float kTableViewMinWidth = 150.0f;
 static const float kTableViewMaxWidth = 350.0f;
@@ -116,7 +116,8 @@ static const float kTableViewMaxWidth = 350.0f;
 
     [[GOLDPlugInsLoader sharedLoader].loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
         [plugIn execute];
-        if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")] && plugIn.dataCache) {
+        if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
+        && plugIn.dataCache) {
             [plugInData addObjectsFromArray:plugIn.dataCache];
         }
     }];
@@ -163,7 +164,8 @@ static const float kTableViewMaxWidth = 350.0f;
     return proposedMin;
 }
 
-- (CGFloat)splitView:(NSSplitView *)splitView constrainSplitPosition:(CGFloat)proposedPosition ofSubviewAt:(NSInteger)dividerIndex {
+- (CGFloat)splitView:(NSSplitView *)splitView constrainSplitPosition:(CGFloat)proposedPosition
+                                                         ofSubviewAt:(NSInteger)dividerIndex {
     if (proposedPosition > kTableViewMaxWidth)
         return 200.0f;
     if (proposedPosition < kTableViewMinWidth)

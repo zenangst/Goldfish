@@ -1,5 +1,5 @@
 //
-//  GOLDPlugin.h
+//  GOLDProtocols.h
 //  Goldfish
 //
 //  Created by Christoffer Winterkvist on 23/02/14.
@@ -24,5 +24,14 @@
 + (BOOL)hasConfiguration;
 - (NSView *)mainView:(NSDictionary *)entry isRowSelected:(BOOL)rowIsSelected;
 - (NSView *)preferenceView;
+
+@end
+
+@protocol GOLDDataEntry
+
+@required
+
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *datestamp;
 
 @end

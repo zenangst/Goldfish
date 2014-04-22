@@ -9,7 +9,7 @@
 #import "GOLDAppDelegate.h"
 #import "GOLDPlugInsLoader.h"
 #import "GOLDPlugInsController.h"
-#import "GOLDPlugIn.h"
+#import "GOLDProtocols.h"
 
 static NSString * const kGoldfishPluginProtocol = @"GOLDPlugIn";
 static NSString * const kGoldfishFileExtension = @"bundle";

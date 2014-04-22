@@ -93,7 +93,7 @@
 		BD5806C818F4784F00C90CF5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Goldfish/main.m; sourceTree = SOURCE_ROOT; };
 		BD5806CB18F4785D00C90CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Goldfish/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		BD5806CE18F4786800C90CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Goldfish/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
-		BD5806D018F4787F00C90CF5 /* GOLDPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugIn.h; path = Goldfish/GOLDPlugIn.h; sourceTree = SOURCE_ROOT; };
+		BD5806D018F4787F00C90CF5 /* GOLDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDProtocols.h; path = Goldfish/GOLDProtocols.h; sourceTree = SOURCE_ROOT; };
 		BD5806D118F4787F00C90CF5 /* GOLDPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsController.h; path = Goldfish/GOLDPlugInsController.h; sourceTree = SOURCE_ROOT; };
 		BD5806D218F4787F00C90CF5 /* GOLDPlugInsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsLoader.h; path = Goldfish/GOLDPlugInsLoader.h; sourceTree = SOURCE_ROOT; };
 		BD5806D318F4787F00C90CF5 /* GOLDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDAppDelegate.h; path = Goldfish/GOLDAppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -231,7 +231,7 @@
 		BD7CA6B818FC4F1500F52B11 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				BD5806D018F4787F00C90CF5 /* GOLDPlugIn.h */,
+				BD5806D018F4787F00C90CF5 /* GOLDProtocols.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";

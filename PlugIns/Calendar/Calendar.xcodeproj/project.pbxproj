@@ -13,7 +13,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD7D08DB18F47A5700A93971 /* GOLDPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugIn.h; path = ../../../Goldfish/GOLDPlugIn.h; sourceTree = "<group>"; };
+		BD2C690D1906D87A00CE75B9 /* GOLDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDProtocols.h; path = ../../../Goldfish/GOLDProtocols.h; sourceTree = "<group>"; };
 		BD7D08DC18F47A5700A93971 /* GOLDPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsController.h; path = ../../../Goldfish/GOLDPlugInsController.h; sourceTree = "<group>"; };
 		BDF240FB18BA7641004E3BB9 /* Calendar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Calendar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF240FE18BA7641004E3BB9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -78,7 +78,7 @@
 		BDF2410418BA7641004E3BB9 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				BD7D08DB18F47A5700A93971 /* GOLDPlugIn.h */,
+				BD2C690D1906D87A00CE75B9 /* GOLDProtocols.h */,
 				BD7D08DC18F47A5700A93971 /* GOLDPlugInsController.h */,
 				BDF2411818BA76B7004E3BB9 /* GOLDCalendarPlugin.h */,
 				BDF2411918BA76B7004E3BB9 /* GOLDCalendarPlugin.m */,

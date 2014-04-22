@@ -8,7 +8,7 @@
 
 #import "GOLDPlugInsLoader.h"
 #import "GOLDPlugInsController.h"
-#import "GOLDPlugIn.h"
+#import "GOLDProtocols.h"
 
 @implementation GOLDPlugInsController
 

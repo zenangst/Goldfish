@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "GOLDPlugInsController.h"
-#import "GOLDPlugIn.h"
+#import "GOLDProtocols.h"
 
 @interface GOLDCalendarPlugin : NSObject <GOLDPlugIn>
 
