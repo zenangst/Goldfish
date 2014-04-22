@@ -33,6 +33,6 @@
 @required
 
 @property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *datestamp;
+@property (nonatomic, retain) NSDate *datestamp;
 
 @end
