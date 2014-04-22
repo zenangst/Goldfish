@@ -112,12 +112,17 @@ static const float kTableViewMaxWidth = 350.0f;
 
 - (void)refreshDataSources
 {
-    NSObject<GOLDPlugIn> *plugIn = [GOLDPlugInsLoader sharedLoader].loadedPlugIns[@"Git"];
-    [plugIn execute];
-    if (plugIn.dataCache) {
-        self.dataSource = [plugIn.dataCache copy];
-        [self.tableView reloadData];
-    }
+    __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
+
+    [[GOLDPlugInsLoader sharedLoader].loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
+        [plugIn execute];
+        if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")] && plugIn.dataCache) {
+            [plugInData addObjectsFromArray:plugIn.dataCache];
+        }
+    }];
+
+    self.dataSource = [plugInData copy];
+    [self.tableView reloadData];
 }
 
 #pragma mark Window Delegate
