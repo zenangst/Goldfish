@@ -110,23 +110,8 @@ static const float kTableViewMaxWidth = 350.0f;
     [self refreshDataSources];
 }
 
-- (void)refreshDataSources
-{
-    __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
-
-    [[GOLDPlugInsLoader sharedLoader].loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
-        [plugIn execute];
-        if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
-        && plugIn.dataCache) {
-            [plugInData addObjectsFromArray:plugIn.dataCache];
-        }
-    }];
-
-    self.dataSource = [plugInData copy];
-    [self.tableView reloadData];
-}
-
 #pragma mark Window Delegate
+
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn
                                                                row:(NSInteger)row {
     return [NSString stringWithFormat:@"%ld", row];
@@ -202,6 +187,22 @@ static const float kTableViewMaxWidth = 350.0f;
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
 	return self.dataSource.count;
+}
+
+- (void)refreshDataSources
+{
+    __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
+
+    [[GOLDPlugInsLoader sharedLoader].loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
+        [plugIn execute];
+        if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
+        && plugIn.dataCache) {
+            [plugInData addObjectsFromArray:plugIn.dataCache];
+        }
+    }];
+
+    self.dataSource = [plugInData copy];
+    [self.tableView reloadData];
 }
 
 @end
