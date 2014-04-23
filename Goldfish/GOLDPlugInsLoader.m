@@ -52,7 +52,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
                 if (!loadedPlugIns[[plugIn name]]) {
                     plugInsDictionary[[plugIn name]] = plugIn;
                 }
-                NSLog(@"%@: loaded", [plugIn name]);
+                NSLog(@"%@ -> loaded", [plugIn name]);
             } else {
                 NSLog(@"%@ -> failed validation", className);
             }

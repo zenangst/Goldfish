@@ -535,6 +535,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = "Goldfish/Goldfish-Info.plist";
 				PRODUCT_NAME = Goldfish;
 				WRAPPER_EXTENSION = app;

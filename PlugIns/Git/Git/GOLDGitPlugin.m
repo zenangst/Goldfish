@@ -15,30 +15,31 @@
 
 + (BOOL)hasConfiguration
 {
-	return YES;
+    return YES;
 }
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
     self = [super init];
-	if (self) {
-		self.plugInsController = aPlugInsController;
+    if (self) {
+        self.plugInsController = aPlugInsController;
         self.dataCache = nil;
-	}
-	return self;
+    }
+    return self;
 }
 
 - (NSString *)name
 {
-	return @"Git";
+    return @"Git";
 }
 
 - (void)execute
 {
+    NSDictionary *env = [[NSProcessInfo processInfo] environment];
     NSArray *configurations = @[
         @{
             @"enabled": @YES,
             @"name"   : @"Goldfish",
-            @"path"   : @"/Users/christofferwinterkvist/Library/Mobile Documents/iCloud/Developer/Cocoa/Goldfish/Goldfish"
+            @"path"   : env[@"XCODE_ROOT"]
         }
     ];
 
@@ -47,7 +48,6 @@
     __block NSString *author;
     __block NSString *commits;
     __block NSMutableArray *entries = [[NSMutableArray alloc] init];
-    __block NSArray *indexFields = @[@"commit", @"datestamp", @"summary"];
 
     [configurations enumerateObjectsUsingBlock:^(NSDictionary *configuration, NSUInteger idx, BOOL *stop) {
         BOOL configIsEnabled = [configuration[@"enabled"] boolValue];
