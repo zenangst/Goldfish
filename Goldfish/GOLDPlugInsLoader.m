@@ -10,6 +10,7 @@
 #import "GOLDPlugInsLoader.h"
 #import "GOLDPlugInsController.h"
 #import "GOLDProtocols.h"
+#import "NSObject+ProtocolValidation.h"
 
 static NSString * const kGoldfishPluginProtocol = @"GOLDPlugIn";
 static NSString * const kGoldfishFileExtension = @"bundle";
@@ -36,22 +37,23 @@ static NSString * const kGoldfishFileExtension = @"bundle";
     NSMutableDictionary *plugInsDictionary = [[NSMutableDictionary alloc] init];
     NSArray *builtInplugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInplugInsPath error:nil];
 
-    __block Class className;
-    __block NSBundle *bundle;
-    __block NSObject<GOLDPlugIn> *plugIn;
-    __block NSString *fullBundlePath;
-
 	[builtInplugIns enumerateObjectsUsingBlock:^(NSString *bundlePath, NSUInteger idx, BOOL *stop) {
-        fullBundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, bundlePath];
-        bundle = [NSBundle bundleWithPath:fullBundlePath];
+        NSObject<GOLDPlugIn> *plugIn;
+        NSString *fullBundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, bundlePath];
+        NSBundle *bundle = [NSBundle bundleWithPath:fullBundlePath];
 
         if ([bundle load]) {
-            className = [bundle principalClass];
-            if ([className conformsToProtocol:NSProtocolFromString(kGoldfishPluginProtocol)]) {
+            Class className = [bundle principalClass];
+            Protocol *protocol = NSProtocolFromString(kGoldfishPluginProtocol);
+            BOOL plugInIsValid = [className conformsToPlugInProtocol:protocol];
+
+            if (plugInIsValid) {
                 plugIn = [self initializePlugin:className withBundleIdentifier:[bundle bundleIdentifier]];
+
                 if (!loadedPlugIns[[plugIn name]]) {
                     plugInsDictionary[[plugIn name]] = plugIn;
                 }
+
                 NSLog(@"%@ -> loaded", [plugIn name]);
             } else {
                 NSLog(@"%@ -> failed validation", className);
