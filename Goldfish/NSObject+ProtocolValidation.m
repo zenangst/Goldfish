@@ -12,28 +12,43 @@
 @implementation NSObject (ProtocolValidation)
 
 - (BOOL)conformsToPlugInProtocol {
-    Protocol *protocol = NSProtocolFromString(@"GOLDPlugIn");
-    if (![self conformsToProtocol:protocol]) {
-        return NO;
-    }
-
-    NSArray *requiredSelectors = @[
+    NSArray *arraySelectors = @[
         @"initWithPlugInsController:", @"name", @"configurations",
         @"executeWithConfiguration:",
         @"bundleIdentifier", @"setBundleIdentifier:",
         @"dataCache"
     ];
 
+    return [self conformsToProtocol:NSProtocolFromString(@"GOLDPlugIn")
+                  requiredSelectors:arraySelectors];
+}
+
+- (BOOL)conformsToDataEntryProtocol
+{
+    NSArray *arraySelectors = @[
+        @"name", @"setName:",
+        @"datestamp", @"setDatestamp:"
+    ];
+
+    return [self conformsToProtocol:NSProtocolFromString(@"GOLDDataEntry")
+                  requiredSelectors:arraySelectors];
+}
+
+- (BOOL)conformsToProtocol:(Protocol *)protocol requiredSelectors:(NSArray *)selectors
+{
+    if (![self conformsToProtocol:protocol]) {
+        return NO;
+    }
+
     __block id plugInTest = [[self class] new];
     __block BOOL validates = YES;
-    [requiredSelectors enumerateObjectsUsingBlock:^(NSString *selectorString, NSUInteger idx, BOOL *stop) {
-        if (![plugInTest respondsToSelector:NSSelectorFromString(selectorString)]) {
-            NSLog(@"class: %@ failed on : %@", [plugInTest class], selectorString);
-            validates = NO;
-            stop = YES;
-        }
+    [selectors enumerateObjectsUsingBlock:^(NSString *selectorString, NSUInteger idx, BOOL *stop) {
+      if (![plugInTest respondsToSelector:NSSelectorFromString(selectorString)]) {
+          NSLog(@"class: %@ failed on : %@", [plugInTest class], selectorString);
+          validates = NO;
+          stop = YES;
+      }
     }];
-
     plugInTest = nil;
     return validates;
 }

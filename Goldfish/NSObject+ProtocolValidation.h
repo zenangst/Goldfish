@@ -11,5 +11,7 @@
 @interface NSObject (ProtocolValidation)
 
 - (BOOL)conformsToPlugInProtocol;
+- (BOOL)conformsToDataEntryProtocol;
+- (BOOL)conformsToProtocol:(Protocol *)protocol requiredSelectors:(NSArray *)selectors;
 
 @end
