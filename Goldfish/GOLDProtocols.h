@@ -18,7 +18,8 @@
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)plugInsController;
 - (NSString *)name;
-- (void)execute;
+- (NSArray *)configurations;
+- (void)executeWithConfiguration:(NSDictionary *)configuration;
 
 @optional
 + (BOOL)hasConfiguration;

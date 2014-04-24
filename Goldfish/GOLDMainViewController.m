@@ -194,7 +194,10 @@ static const float kTableViewMaxWidth = 350.0f;
     __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
 
     [[GOLDPlugInsLoader sharedLoader].loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
-        [plugIn execute];
+        NSArray *configurations = [plugIn configurations];
+        [configurations enumerateObjectsUsingBlock:^(NSDictionary *configuration, NSUInteger idx, BOOL *stop) {
+            [plugIn executeWithConfiguration:configuration];
+        }];
         if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
         && plugIn.dataCache) {
             [plugInData addObjectsFromArray:plugIn.dataCache];
