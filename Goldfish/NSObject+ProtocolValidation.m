@@ -11,7 +11,8 @@
 
 @implementation NSObject (ProtocolValidation)
 
-- (BOOL)conformsToPlugInProtocol:(Protocol *)protocol {
+- (BOOL)conformsToPlugInProtocol {
+    Protocol *protocol = NSProtocolFromString(@"GOLDPlugIn");
     if (![self conformsToProtocol:protocol]) {
         return NO;
     }

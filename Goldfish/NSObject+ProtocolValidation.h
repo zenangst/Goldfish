@@ -10,6 +10,6 @@
 
 @interface NSObject (ProtocolValidation)
 
-- (BOOL)conformsToPlugInProtocol:(Protocol *)protocol;
+- (BOOL)conformsToPlugInProtocol;
 
 @end

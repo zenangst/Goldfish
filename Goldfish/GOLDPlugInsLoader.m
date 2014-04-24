@@ -44,8 +44,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 
         if ([bundle load]) {
             Class className = [bundle principalClass];
-            Protocol *protocol = NSProtocolFromString(kGoldfishPluginProtocol);
-            BOOL plugInIsValid = [className conformsToPlugInProtocol:protocol];
+            BOOL plugInIsValid = [className conformsToPlugInProtocol];
 
             if (plugInIsValid) {
                 plugIn = [self initializePlugin:className withBundleIdentifier:[bundle bundleIdentifier]];
