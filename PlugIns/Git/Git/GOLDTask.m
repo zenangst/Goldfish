@@ -16,6 +16,8 @@
     NSPipe *pipe = [NSPipe pipe];
 
     task.launchPath = commandPath;
+
+    // TODO Should check that directory exists, if not -> fail?
     if (directory) {
         task.currentDirectoryPath = directory;
     }
