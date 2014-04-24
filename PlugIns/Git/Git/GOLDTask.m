@@ -25,8 +25,9 @@
     [task launch];
 
     NSData *data = [[pipe fileHandleForReading] readDataToEndOfFile];
+    NSString *output = [[NSString alloc] initWithData:data
+                                             encoding:NSUTF8StringEncoding];
 
-    NSString *output = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     return output;
 }
 

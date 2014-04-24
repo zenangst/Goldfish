@@ -11,7 +11,8 @@
 
 @implementation NSObject (ProtocolValidation)
 
-- (BOOL)conformsToPlugInProtocol {
+- (BOOL)conformsToPlugInProtocol
+{
     NSArray *arraySelectors = @[
         @"initWithPlugInsController:", @"name", @"configurations",
         @"executeWithConfiguration:",
@@ -20,7 +21,7 @@
     ];
 
     return [self conformsToProtocol:NSProtocolFromString(@"GOLDPlugIn")
-                  requiringSelectors:arraySelectors];
+                 requiringSelectors:arraySelectors];
 }
 
 - (BOOL)conformsToDataEntryProtocol
@@ -31,7 +32,7 @@
     ];
 
     return [self conformsToProtocol:NSProtocolFromString(@"GOLDDataEntry")
-                  requiringSelectors:arraySelectors];
+                 requiringSelectors:arraySelectors];
 }
 
 - (BOOL)conformsToProtocol:(Protocol *)protocol requiringSelectors:(NSArray *)selectors
@@ -44,12 +45,14 @@
     __block BOOL validates = YES;
     [selectors enumerateObjectsUsingBlock:^(NSString *selectorString, NSUInteger idx, BOOL *stop) {
       if (![plugInTest respondsToSelector:NSSelectorFromString(selectorString)]) {
-          NSLog(@"class: %@ failed on : %@", [plugInTest class], selectorString);
+          NSLog(@"class %@ failed on %@", [plugInTest class], selectorString);
           validates = NO;
           stop = YES;
       }
     }];
+
     plugInTest = nil;
+
     return validates;
 }
 

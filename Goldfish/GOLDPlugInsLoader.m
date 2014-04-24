@@ -38,7 +38,6 @@ static NSString * const kGoldfishFileExtension = @"bundle";
     NSArray *builtInplugIns = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:builtInplugInsPath error:nil];
 
 	[builtInplugIns enumerateObjectsUsingBlock:^(NSString *bundlePath, NSUInteger idx, BOOL *stop) {
-        NSObject<GOLDPlugIn> *plugIn;
         NSString *fullBundlePath = [NSString stringWithFormat:@"%@/%@", builtInplugInsPath, bundlePath];
         NSBundle *bundle = [NSBundle bundleWithPath:fullBundlePath];
 
@@ -47,13 +46,12 @@ static NSString * const kGoldfishFileExtension = @"bundle";
             BOOL plugInIsValid = [className conformsToPlugInProtocol];
 
             if (plugInIsValid) {
-                plugIn = [self initializePlugin:className withBundleIdentifier:[bundle bundleIdentifier]];
-
+                NSObject<GOLDPlugIn> *plugIn = [self initializePlugin:className
+                                                 withBundleIdentifier:[bundle bundleIdentifier]];
                 if (!loadedPlugIns[[plugIn name]]) {
                     plugInsDictionary[[plugIn name]] = plugIn;
+                    NSLog(@"%@ -> loaded", [plugIn name]);
                 }
-
-                NSLog(@"%@ -> loaded", [plugIn name]);
             } else {
                 NSLog(@"%@ -> failed validation", className);
             }
@@ -78,8 +76,10 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 - (NSURL *)applicationDirectory
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleExecutable"]];
+    NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory
+                                                inDomains:NSUserDomainMask] lastObject];
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    return [appSupportURL URLByAppendingPathComponent:[[mainBundle infoDictionary] objectForKey:@"CFBundleExecutable"]];
 }
 
 @end
