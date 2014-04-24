@@ -17,7 +17,10 @@
     }
 
     NSArray *requiredSelectors = @[
-        @"initWithPlugInsController:", @"name", @"configurations", @"executeWithConfiguration:"
+        @"initWithPlugInsController:", @"name", @"configurations",
+        @"executeWithConfiguration:",
+        @"bundleIdentifier", @"setBundleIdentifier:",
+        @"dataCache"
     ];
 
     __block id plugInTest = [[self class] new];
@@ -29,6 +32,7 @@
             stop = YES;
         }
     }];
+
     plugInTest = nil;
     return validates;
 }
