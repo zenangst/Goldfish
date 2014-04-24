@@ -12,6 +12,6 @@
 
 - (BOOL)conformsToPlugInProtocol;
 - (BOOL)conformsToDataEntryProtocol;
-- (BOOL)conformsToProtocol:(Protocol *)protocol requiredSelectors:(NSArray *)selectors;
+- (BOOL)conformsToProtocol:(Protocol *)protocol requiringSelectors:(NSArray *)selectors;
 
 @end

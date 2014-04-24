@@ -20,7 +20,7 @@
     ];
 
     return [self conformsToProtocol:NSProtocolFromString(@"GOLDPlugIn")
-                  requiredSelectors:arraySelectors];
+                  requiringSelectors:arraySelectors];
 }
 
 - (BOOL)conformsToDataEntryProtocol
@@ -31,10 +31,10 @@
     ];
 
     return [self conformsToProtocol:NSProtocolFromString(@"GOLDDataEntry")
-                  requiredSelectors:arraySelectors];
+                  requiringSelectors:arraySelectors];
 }
 
-- (BOOL)conformsToProtocol:(Protocol *)protocol requiredSelectors:(NSArray *)selectors
+- (BOOL)conformsToProtocol:(Protocol *)protocol requiringSelectors:(NSArray *)selectors
 {
     if (![self conformsToProtocol:protocol]) {
         return NO;
