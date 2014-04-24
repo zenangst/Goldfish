@@ -71,11 +71,6 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 {
 	NSObject<GOLDPlugIn> *plugIn = [[className alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
     plugIn.bundleIdentifier = bundleIdentifier;
-	if ([className respondsToSelector:@selector(hasConfiguration)]
-	&&  [className hasConfiguration]) {
-        [[GOLDPlugInsController sharedPlugInsController] loadConfigurationForPlugIn:plugIn];
-    }
-
     return plugIn;
 }
 

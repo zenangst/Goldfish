@@ -13,11 +13,6 @@
 
 @synthesize plugInsController, bundleIdentifier, dataCache;
 
-+ (BOOL)hasConfiguration
-{
-    return YES;
-}
-
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
     self = [super init];
     if (self) {
@@ -32,56 +27,53 @@
     return @"Git";
 }
 
-- (void)execute
+- (NSArray *)configurations
 {
-    NSDictionary *env = [[NSProcessInfo processInfo] environment];
-    NSArray *configurations = @[
+    return @[
         @{
             @"enabled": @YES,
             @"name"   : @"Goldfish",
-            @"path"   : env[@"XCODE_ROOT"]
+            @"path"   : [[NSProcessInfo processInfo] environment][@"XCODE_ROOT"]
         }
     ];
+}
 
-    __block NSString *gitPath = @"/usr/bin/git";
-    __block NSArray *arguments;
-    __block NSString *author;
-    __block NSString *commits;
-    __block NSMutableArray *entries = [[NSMutableArray alloc] init];
+- (void)executeWithConfiguration:(NSDictionary *)configuration
+{
+    NSDictionary *env = [[NSProcessInfo processInfo] environment];
+    NSString *gitPath = @"/usr/bin/git";
+    NSArray *arguments;
+    NSString *author;
+    NSString *commits;
+    NSMutableArray *entries = [[NSMutableArray alloc] init];
 
-    [configurations enumerateObjectsUsingBlock:^(NSDictionary *configuration, NSUInteger idx, BOOL *stop) {
-        BOOL configIsEnabled = [configuration[@"enabled"] boolValue];
+    BOOL configIsEnabled = [configuration[@"enabled"] boolValue];
 
-        if (configIsEnabled) {
-            author = [[GOLDTask runCommand:gitPath withArguments:@[@"config", @"--get", @"user.name"] inDirectory:configuration[@"path"]] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    if (configIsEnabled) {
+        author = [[GOLDTask runCommand:gitPath withArguments:@[@"config", @"--get", @"user.name"] inDirectory:configuration[@"path"]] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 
-            arguments  = @[
-                @"log",
-                @"--all",
-                @"--no-merges",
-                [NSString stringWithFormat:@"--author=%@", author],
-                [NSString stringWithFormat:@"--format=%@", @"%h %ai %s"]
-            ];
+        arguments  = @[
+            @"log",
+            @"--all",
+            @"--no-merges",
+            [NSString stringWithFormat:@"--author=%@", author],
+            [NSString stringWithFormat:@"--format=%@", @"%h %ai %s"]
+        ];
 
-            commits = [GOLDTask runCommand:gitPath withArguments:arguments inDirectory:configuration[@"path"]];
-            NSArray *lines = [commits componentsSeparatedByString:@"\n"];
+        commits = [GOLDTask runCommand:gitPath withArguments:arguments inDirectory:configuration[@"path"]];
+        NSArray *lines = [commits componentsSeparatedByString:@"\n"];
 
-            [lines enumerateObjectsUsingBlock:^(NSString *line, NSUInteger idx, BOOL *stop) {
-                if ([line length]) {
-                    NSDictionary *entryDictionary = @{
-                        @"plugIn"    : self.name,
-                        @"commit"    : [line substringToIndex:7],
-                        @"datestamp" : [line substringWithRange:NSMakeRange(8, 25)],
-                        @"name"      : [line substringFromIndex:34]
-                    };
-                    [entries addObject:entryDictionary];
-                }
-            }];
-        }
-    }];
-
-    if (self.dataCache) {
-        self.dataCache = nil;
+        [lines enumerateObjectsUsingBlock:^(NSString *line, NSUInteger idx, BOOL *stop) {
+            if ([line length]) {
+                NSDictionary *entryDictionary = @{
+                    @"plugIn"    : self.name,
+                    @"commit"    : [line substringToIndex:7],
+                    @"datestamp" : [line substringWithRange:NSMakeRange(8, 25)],
+                    @"name"      : [line substringFromIndex:34]
+                };
+                [entries addObject:entryDictionary];
+            }
+        }];
     }
 
     self.dataCache = [entries copy];

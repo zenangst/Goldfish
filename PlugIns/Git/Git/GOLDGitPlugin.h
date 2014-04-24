@@ -16,11 +16,9 @@
 @property (nonatomic, retain) NSString *bundleIdentifier;
 @property (nonatomic, retain) NSArray *dataCache;
 
-+ (BOOL)hasConfiguration;
-
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
 - (NSString *)name;
-- (void)execute;
+- (void)executeWithConfiguration:(NSDictionary *)configuration;
 
 - (NSView *)mainView:(NSDictionary *)entry isRowSelected:(BOOL)rowIsSelected;
 - (NSView *)preferenceView;
