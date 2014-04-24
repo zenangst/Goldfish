@@ -26,6 +26,7 @@
 		BD90AD3C18FC5692000515D6 /* GOLDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BD90AD3B18FC5692000515D6 /* GOLDWindow.m */; };
 		BDDE4B8318BD1FDD00DFF497 /* Git.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B7B18BD1EF500DFF497 /* Git.bundle */; };
 		BDDE4B9418BD353A00DFF497 /* Calendar.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B9118BD352500DFF497 /* Calendar.bundle */; };
+		BDEA00C71908E2DA00D263FE /* NSObject+ProtocolValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEA00C61908E2DA00D263FE /* NSObject+ProtocolValidation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		BD90AD3B18FC5692000515D6 /* GOLDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDWindow.m; path = Goldfish/GOLDWindow.m; sourceTree = SOURCE_ROOT; };
 		BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Git.xcodeproj; path = PlugIns/Git/Git.xcodeproj; sourceTree = "<group>"; };
 		BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Calendar.xcodeproj; path = PlugIns/Calendar/Calendar.xcodeproj; sourceTree = "<group>"; };
+		BDEA00C51908E2DA00D263FE /* NSObject+ProtocolValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ProtocolValidation.h"; sourceTree = "<group>"; };
+		BDEA00C61908E2DA00D263FE /* NSObject+ProtocolValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ProtocolValidation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,7 @@
 		BD270AC218B7AF2100B81773 /* Goldfish */ = {
 			isa = PBXGroup;
 			children = (
+				BD8A2F4B190859620029A3DD /* Categories */,
 				BD7CA6B818FC4F1500F52B11 /* Protocols */,
 				BD90AD3918FC542E000515D6 /* Controllers */,
 				BD5806D318F4787F00C90CF5 /* GOLDAppDelegate.h */,
@@ -232,8 +236,17 @@
 			isa = PBXGroup;
 			children = (
 				BD5806D018F4787F00C90CF5 /* GOLDProtocols.h */,
+				BDEA00C51908E2DA00D263FE /* NSObject+ProtocolValidation.h */,
+				BDEA00C61908E2DA00D263FE /* NSObject+ProtocolValidation.m */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		BD8A2F4B190859620029A3DD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		BD90AD3918FC542E000515D6 /* Controllers */ = {
@@ -394,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEA00C71908E2DA00D263FE /* NSObject+ProtocolValidation.m in Sources */,
 				BD90AD3818FC541D000515D6 /* GOLDPreferencesViewController.m in Sources */,
 				BD90AD3C18FC5692000515D6 /* GOLDWindow.m in Sources */,
 				BD5806D718F4787F00C90CF5 /* GOLDAppDelegate.m in Sources */,
