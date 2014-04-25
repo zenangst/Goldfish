@@ -44,11 +44,12 @@
     __block id plugInTest = [[self class] new];
     __block BOOL validates = YES;
     [selectors enumerateObjectsUsingBlock:^(NSString *selectorString, NSUInteger idx, BOOL *stop) {
-      if (![plugInTest respondsToSelector:NSSelectorFromString(selectorString)]) {
-          NSLog(@"class %@ failed on %@", [plugInTest class], selectorString);
-          validates = NO;
-          stop = YES;
-      }
+        BOOL plugInValidates = [plugInTest respondsToSelector:NSSelectorFromString(selectorString)];
+        if (!plugInValidates) {
+            NSLog(@"class %@ failed on %@", [plugInTest class], selectorString);
+            validates = NO;
+            *stop = YES;
+        }
     }];
 
     plugInTest = nil;
