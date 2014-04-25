@@ -91,6 +91,7 @@
     [summaryField setEditable:NO];
     [summaryField setSelectable:NO];
     [summaryField setFont:[NSFont systemFontOfSize:13]];
+    [summaryField setAutoresizingMask:NSViewWidthSizable];
 
     if (rowIsSelected) {
         /* [summaryField ] */
@@ -103,6 +104,7 @@
     [dateField setEditable:NO];
     [dateField setSelectable:NO];
     [dateField setFont:[NSFont systemFontOfSize:10]];
+    [dateField setAutoresizingMask:NSViewWidthSizable];
 
     [mainView addSubview:summaryField];
     [mainView addSubview:dateField];
