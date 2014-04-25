@@ -40,7 +40,6 @@
 
 - (void)executeWithConfiguration:(NSDictionary *)configuration
 {
-    NSDictionary *env = [[NSProcessInfo processInfo] environment];
     NSString *gitPath = @"/usr/bin/git";
     NSArray *arguments;
     NSString *author;
