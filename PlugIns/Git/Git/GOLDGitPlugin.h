@@ -20,7 +20,7 @@
 - (NSString *)name;
 - (void)executeWithConfiguration:(NSDictionary *)configuration;
 
-- (NSView *)mainView:(NSDictionary *)entry isRowSelected:(BOOL)rowIsSelected;
+- (NSView *)mainView:(NSDictionary *)entry;
 - (NSView *)preferenceView;
 
 @end

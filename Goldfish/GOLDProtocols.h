@@ -25,7 +25,7 @@
 
 + (BOOL)hasConfiguration;
 + (BOOL)singleton;
-- (NSView *)mainView:(NSDictionary *)entry isRowSelected:(BOOL)rowIsSelected;
+- (NSView *)mainView:(NSDictionary *)entry;
 - (NSView *)preferenceView;
 
 @end

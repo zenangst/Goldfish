@@ -80,7 +80,7 @@
     entries = nil;
 }
 
-- (NSView *)mainView:(NSDictionary *)entry isRowSelected:(BOOL)rowIsSelected
+- (NSView *)mainView:(NSDictionary *)entry
 {
     NSView *mainView = [[NSView alloc] init];
 
@@ -92,10 +92,6 @@
     [summaryField setSelectable:NO];
     [summaryField setFont:[NSFont systemFontOfSize:13]];
     [summaryField setAutoresizingMask:NSViewWidthSizable];
-
-    if (rowIsSelected) {
-        /* [summaryField ] */
-    }
 
     NSTextField *dateField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 2, 200, 17)];
     [dateField setStringValue:entry[@"datestamp"]];

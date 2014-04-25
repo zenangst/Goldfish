@@ -165,7 +165,7 @@ static const float kTableViewMaxWidth = 350.0f;
         NSString *plugInName = self.dataSource[row][@"plugIn"];
         if (plugInName) {
             NSObject<GOLDPlugIn> *plugIn = [GOLDPlugInsLoader sharedLoader].loadedPlugIns[plugInName];
-            NSView *plugInView = [plugIn mainView:self.dataSource[row] isRowSelected:row];
+            NSView *plugInView = [plugIn mainView:self.dataSource[row]];
             [plugInView setIdentifier:@"PlugnInView"];
             cellView = plugInView;
         }
