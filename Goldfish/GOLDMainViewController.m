@@ -187,7 +187,7 @@ static const float kTableViewMaxWidth = 350.0f;
 - (void)refreshDataSources
 {
     __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
-    NSArray *loadedPlugIns = [GOLDPlugInsLoader sharedLoader].loadedPlugIns;
+    NSDictionary *loadedPlugIns = [GOLDPlugInsLoader sharedLoader].loadedPlugIns;
     [loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
         NSArray *configurations = [plugIn configurations];
 
