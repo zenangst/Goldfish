@@ -43,10 +43,11 @@
 
     __block id plugInTest = [[self class] new];
     __block BOOL validates = YES;
+
     [selectors enumerateObjectsUsingBlock:^(NSString *selectorString, NSUInteger idx, BOOL *stop) {
         BOOL plugInValidates = [plugInTest respondsToSelector:NSSelectorFromString(selectorString)];
         if (!plugInValidates) {
-            NSLog(@"class %@ failed on %@", [plugInTest class], selectorString);
+            [NSException raise:@"PROTOCOL_VALIDATION_FAILED" format:@"%@ does not respond to selector(%@)", [plugInTest class], selectorString];
             validates = NO;
             *stop = YES;
         }

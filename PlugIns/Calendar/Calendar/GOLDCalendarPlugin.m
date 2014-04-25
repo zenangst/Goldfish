@@ -13,18 +13,23 @@
 @synthesize plugInsController;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
-  self = [super init];
-  if (self) {
-    self.plugInsController = aPlugInsController;
-  }
-  return self;
+    self = [super init];
+    if (self) {
+        self.plugInsController = aPlugInsController;
+    }
+    return self;
 }
 
 - (NSString *)name {
 	return @"Calendar";
 }
 
-- (void)execute
+- (NSArray *)configurations
+{
+    return @[];
+}
+
+- (void)executeWithConfiguration:(NSDictionary *)configuration
 {
 	NSLog(@"%s", __FUNCTION__);
 }
