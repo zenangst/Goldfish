@@ -13,7 +13,6 @@
 
 @property (strong, nonatomic) NSWindowController *windowController;
 @property (strong, nonatomic) GOLDWindow *window;
-@property (strong, nonatomic) NSSplitView *splitView;
 @property (strong, nonatomic) NSTableView *tableView;
 @property (strong, nonatomic) NSView *previewView;
 @property (strong, nonatomic) NSArray *dataSource;

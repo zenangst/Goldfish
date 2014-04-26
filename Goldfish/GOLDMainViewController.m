@@ -48,13 +48,13 @@ static const float kTableViewMaxWidth = 350.0f;
     [self.window setDelegate:self];
 
     NSRect splitViewFrame = NSMakeRect(0, 0, CGRectGetWidth([[self.window contentView] frame]), CGRectGetHeight([[self.window contentView] frame]));
-    self.splitView = [[NSSplitView alloc] initWithFrame:splitViewFrame];
-    [self.splitView setAutosaveName:@"MainSplitView"];
-    [self.splitView setIdentifier:@"MainSplitView"];
-    [self.splitView setVertical:YES];
-    [self.splitView setDelegate:self];
-    [self.splitView setDividerStyle:NSSplitViewDividerStylePaneSplitter];
-    [self.splitView setAutoresizesSubviews:YES];
+    NSSplitView *splitView = [[NSSplitView alloc] initWithFrame:splitViewFrame];
+    [splitView setAutosaveName:@"MainSplitView"];
+    [splitView setIdentifier:@"MainSplitView"];
+    [splitView setVertical:YES];
+    [splitView setDelegate:self];
+    [splitView setDividerStyle:NSSplitViewDividerStylePaneSplitter];
+    [splitView setAutoresizesSubviews:YES];
 
     NSScrollView *scrollView = [[NSScrollView alloc] init];
     [scrollView setHasVerticalScroller:YES];
@@ -100,13 +100,13 @@ static const float kTableViewMaxWidth = 350.0f;
     [self.previewView setLayer:viewLayer];
     CGColorRelease(backgroundColor);
 
-    [self.splitView addSubview:scrollView];
-    [self.splitView addSubview:self.previewView];
+    [splitView addSubview:scrollView];
+    [splitView addSubview:self.previewView];
 
-    [self.splitView setAutoresizingMask:kCALayerWidthSizable|kCALayerHeightSizable];
-    [self.splitView setAutoresizesSubviews:YES];
+    [splitView setAutoresizingMask:kCALayerWidthSizable|kCALayerHeightSizable];
+    [splitView setAutoresizesSubviews:YES];
 
-    [[self.window contentView] addSubview:self.splitView];
+    [[self.window contentView] addSubview:splitView];
     [self refreshDataSources];
 }
 
