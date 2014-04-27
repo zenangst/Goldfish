@@ -9,6 +9,7 @@
 #import "GOLDMainViewController.h"
 #import "GOLDPlugInsLoader.h"
 #import "GOLDProtocols.h"
+#import "NSObject+ProtocolValidation.h"
 
 static const float kTableViewMinWidth = 150.0f;
 static const float kTableViewMaxWidth = 350.0f;
@@ -191,6 +192,7 @@ static const float kTableViewMaxWidth = 350.0f;
 {
     __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
     NSDictionary *loadedPlugIns = [GOLDPlugInsLoader sharedLoader].loadedPlugIns;
+
     [loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
         NSArray *configurations = [plugIn configurations];
 
@@ -198,16 +200,19 @@ static const float kTableViewMaxWidth = 350.0f;
             [plugIn executeWithConfiguration:configuration];
         }];
 
-        // TODO Add data source validation using GOLDDataEntry protocol
         if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
         && plugIn.dataCache) {
-            [plugInData addObjectsFromArray:plugIn.dataCache];
+            if ([[plugIn.dataCache firstObject] conformsToDataEntryProtocol]) {
+                [plugInData addObjectsFromArray:plugIn.dataCache];
+            }
         }
     }];
 
-    self.dataSource = [plugInData copy];
-    plugInData = nil;
+    if ([plugInData count]) {
+        self.dataSource = [plugInData copy];
+    }
 
+    plugInData = nil;
     [self.tableView reloadData];
 }
 
