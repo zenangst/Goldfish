@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD377389190CCDB00032C46B /* GOLDGitDataEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BD377388190CCDB00032C46B /* GOLDGitDataEntry.m */; };
 		BDA8D7D418BDD0BB00F71CFE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA8D7D318BDD0BB00F71CFE /* QuartzCore.framework */; };
 		BDDE4B6518BD1EF400DFF497 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDE4B6418BD1EF400DFF497 /* Cocoa.framework */; };
 		BDDE4B6F18BD1EF500DFF497 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDDE4B6D18BD1EF500DFF497 /* InfoPlist.strings */; };
@@ -16,6 +17,8 @@
 
 /* Begin PBXFileReference section */
 		BD2C690C1906D87100CE75B9 /* GOLDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDProtocols.h; path = ../../../Goldfish/GOLDProtocols.h; sourceTree = "<group>"; };
+		BD377387190CCDB00032C46B /* GOLDGitDataEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLDGitDataEntry.h; sourceTree = "<group>"; };
+		BD377388190CCDB00032C46B /* GOLDGitDataEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLDGitDataEntry.m; sourceTree = "<group>"; };
 		BD7D08DE18F47A5D00A93971 /* GOLDPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsController.h; path = ../../../Goldfish/GOLDPlugInsController.h; sourceTree = "<group>"; };
 		BDA8D7D318BDD0BB00F71CFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BDDE4B6118BD1EF400DFF497 /* Git.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Git.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,8 @@
 				BDDEE95618FDB85B00EB3C8D /* GOLDTask.m */,
 				BDDE4B7E18BD1FAF00DFF497 /* GOLDGitPlugin.h */,
 				BDDE4B7F18BD1FAF00DFF497 /* GOLDGitPlugin.m */,
+				BD377387190CCDB00032C46B /* GOLDGitDataEntry.h */,
+				BD377388190CCDB00032C46B /* GOLDGitDataEntry.m */,
 				BDDE4B6B18BD1EF400DFF497 /* Supporting Files */,
 			);
 			path = Git;
@@ -169,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDEE95718FDB85B00EB3C8D /* GOLDTask.m in Sources */,
+				BD377389190CCDB00032C46B /* GOLDGitDataEntry.m in Sources */,
 				BDDE4B8018BD1FAF00DFF497 /* GOLDGitPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
