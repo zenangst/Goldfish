@@ -15,6 +15,8 @@ static const float kTableViewMaxWidth = 350.0f;
 
 @implementation GOLDMainViewController
 
+// TODO Split into multiple files and use delegates
+
 - (instancetype)init
 {
     self = [super init];
@@ -196,6 +198,7 @@ static const float kTableViewMaxWidth = 350.0f;
             [plugIn executeWithConfiguration:configuration];
         }];
 
+        // TODO Add data source validation using GOLDDataEntry protocol
         if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
         && plugIn.dataCache) {
             [plugInData addObjectsFromArray:plugIn.dataCache];

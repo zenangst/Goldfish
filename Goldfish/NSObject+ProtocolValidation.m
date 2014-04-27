@@ -13,6 +13,7 @@
 
 - (BOOL)conformsToPlugInProtocol
 {
+    // TODO Improve by parsing protocol selectors at runtime
     NSArray *arraySelectors = @[
         @"initWithPlugInsController:", @"name", @"configurations",
         @"executeWithConfiguration:",
