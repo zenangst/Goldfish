@@ -30,10 +30,11 @@
 
 @end
 
-@protocol GOLDDataEntry
+@protocol GOLDDataEntry <NSObject>
 
 @required
 
+@property (nonatomic, retain) NSString *plugIn;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSDate *datestamp;
 
