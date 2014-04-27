@@ -8,6 +8,7 @@
 
 #import "GOLDGitPlugin.h"
 #import "GOLDTask.h"
+#import "GOLDGitDataEntry.h"
 
 @implementation GOLDGitPlugin
 
@@ -64,13 +65,12 @@
 
         [lines enumerateObjectsUsingBlock:^(NSString *line, NSUInteger idx, BOOL *stop) {
             if ([line length]) {
-                NSDictionary *entryDictionary = @{
-                    @"plugIn"    : self.name,
-                    @"commit"    : [line substringToIndex:7],
-                    @"datestamp" : [line substringWithRange:NSMakeRange(8, 25)],
-                    @"name"      : [line substringFromIndex:34]
-                };
-                [entries addObject:entryDictionary];
+                GOLDGitDataEntry *dataEntry = [[GOLDGitDataEntry alloc] init];
+                dataEntry.plugIn = self.name;
+                dataEntry.commit = [line substringToIndex:7];
+                dataEntry.datestamp = [NSDate dateWithString:[line substringWithRange:NSMakeRange(8, 25)]];
+                dataEntry.name = [line substringFromIndex:34];
+                [entries addObject:dataEntry];
             }
         }];
     }
@@ -79,12 +79,14 @@
     entries = nil;
 }
 
-- (NSView *)mainView:(NSDictionary *)entry
+- (NSView *)mainView:(NSObject<GOLDDataEntry> *)entry
 {
     NSView *mainView = [[NSView alloc] init];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss ZZZZ"];
 
     NSTextField *summaryField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 22, 200, 17)];
-    [summaryField setStringValue:entry[@"name"]];
+    [summaryField setStringValue:entry.name];
     [summaryField setBezeled:NO];
     [summaryField setDrawsBackground:NO];
     [summaryField setEditable:NO];
@@ -93,7 +95,7 @@
     [summaryField setAutoresizingMask:NSViewWidthSizable];
 
     NSTextField *dateField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 2, 200, 17)];
-    [dateField setStringValue:entry[@"datestamp"]];
+    [dateField setStringValue:[dateFormat stringFromDate:entry.datestamp]];
     [dateField setBezeled:NO];
     [dateField setDrawsBackground:NO];
     [dateField setEditable:NO];
@@ -103,6 +105,9 @@
 
     [mainView addSubview:summaryField];
     [mainView addSubview:dateField];
+
+    dateFormat = nil;
+
     return mainView;
 }
 

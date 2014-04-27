@@ -19,8 +19,7 @@
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
 - (NSString *)name;
 - (void)executeWithConfiguration:(NSDictionary *)configuration;
-
-- (NSView *)mainView:(NSDictionary *)entry;
+- (NSView *)mainView:(NSObject<GOLDDataEntry> *)entry
 - (NSView *)preferenceView;
 
 @end
