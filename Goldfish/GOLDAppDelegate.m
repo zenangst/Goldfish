@@ -29,7 +29,7 @@
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
 {
     [NSApp activateIgnoringOtherApps:YES];
-    [[self.window windowController] showWindow:self];
+    [self.mainViewController showWindow];
     return YES;
 }
 
