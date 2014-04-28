@@ -7,6 +7,7 @@
 //
 
 #import "GOLDCalendarPlugin.h"
+#import "GOLDCalendarEvent.h"
 
 @implementation GOLDCalendarPlugin
 
@@ -36,7 +37,30 @@
 
 - (void)executeWithConfiguration:(NSDictionary *)configuration
 {
-	NSLog(@"%s", __FUNCTION__);
+    NSMutableArray *entries = [[NSMutableArray alloc] init];
+
+    NSDate *start = [NSDate dateWithNaturalLanguageString:@"last week"];
+    NSDate *end   = [NSDate dateWithNaturalLanguageString:@"next week"];
+
+    NSPredicate *predicate = [self.eventStore predicateForEventsWithStartDate:start
+                                                                      endDate:end
+                                                                    calendars:nil];
+
+    NSArray *events = [self.eventStore eventsMatchingPredicate:predicate];
+
+    [events enumerateObjectsUsingBlock:^(EKEvent *event, NSUInteger idx, BOOL *stop) {
+        GOLDCalendarEvent *entry = [[GOLDCalendarEvent alloc] init];
+        entry.title  = event.title;
+        entry.at     = event.startDate;
+        entry.until  = event.endDate;
+        entry.plugIn = self.name;
+        [entries addObject:entry];
+    }];
+
+    events = nil;
+
+    self.dataCache = [entries copy];
+    entries = nil;
 }
 
 @end
