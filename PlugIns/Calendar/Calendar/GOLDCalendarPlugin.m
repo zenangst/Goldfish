@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         self.plugInsController = aPlugInsController;
+        self.eventStore = [[EKEventStore alloc] init];
     }
     return self;
 }

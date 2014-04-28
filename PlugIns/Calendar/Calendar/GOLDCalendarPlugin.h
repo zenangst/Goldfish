@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <EventKit/EventKit.h>
 #import "GOLDPlugInsController.h"
 #import "GOLDProtocols.h"
 
@@ -15,6 +16,7 @@
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
 @property (nonatomic, retain) NSString *bundleIdentifier;
 @property (nonatomic, retain) NSArray *dataCache;
+@property (nonatomic, retain) EKEventStore *eventStore;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
 - (NSString *)name;
