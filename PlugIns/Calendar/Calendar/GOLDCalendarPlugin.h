@@ -22,5 +22,7 @@
 - (NSString *)name;
 - (NSArray *)configurations;
 - (void)executeWithConfiguration:(NSDictionary *)configuration;
+- (NSView *)mainView:(NSObject<GOLDDataEntry> *)entry;
+- (NSView *)preferenceView;
 
 @end
