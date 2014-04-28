@@ -27,7 +27,11 @@
 
 - (NSArray *)configurations
 {
-    return @[];
+    return @[
+        @{
+             @"enabled": @YES
+        }
+    ];
 }
 
 - (void)executeWithConfiguration:(NSDictionary *)configuration
