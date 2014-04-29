@@ -14,15 +14,6 @@
 @interface GOLDCalendarPlugin : NSObject <GOLDPlugIn>
 
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
-@property (nonatomic, retain) NSString *bundleIdentifier;
-@property (nonatomic, retain) NSArray *dataCache;
 @property (nonatomic, retain) EKEventStore *eventStore;
-
-- (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
-- (NSString *)name;
-- (NSArray *)configurations;
-- (void)executeWithConfiguration:(NSDictionary *)configuration;
-- (NSView *)mainView:(NSObject<GOLDDataEntry> *)entry;
-- (NSView *)preferenceView;
 
 @end
