@@ -11,9 +11,9 @@
 
 @interface GOLDGitDataEntry : NSObject <GOLDDataEntry>
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSDate *datestamp;
-@property (nonatomic, strong) NSString *plugIn;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSDate *startDate;
+@property (nonatomic, strong) NSString *plugInName;
 @property (nonatomic, strong) NSString *commit;
 
 @end

@@ -34,8 +34,12 @@
 
 @required
 
-@property (nonatomic, retain) NSString *plugIn;
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSDate *datestamp;
+@property (nonatomic, retain) NSString *plugInName;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSDate *startDate;
+
+@optional
+
+@property (nonatomic, retain) NSDate *endDate;
 
 @end

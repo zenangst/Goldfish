@@ -28,9 +28,9 @@
 - (BOOL)conformsToDataEntryProtocol
 {
     NSArray *arraySelectors = @[
-        @"name",
-        @"datestamp",
-        @"plugIn"
+        @"title",
+        @"startDate",
+        @"plugInName"
     ];
 
     return [self conformsToProtocol:NSProtocolFromString(@"GOLDDataEntry")
