@@ -23,7 +23,6 @@
 
 @optional
 
-+ (BOOL)hasConfiguration;
 + (BOOL)singleton;
 - (NSView *)mainView:(NSDictionary *)entry;
 - (NSView *)preferenceView;
