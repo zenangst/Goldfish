@@ -116,7 +116,6 @@ static const float kTableViewMaxWidth = 350.0f;
     [splitView setAutoresizesSubviews:YES];
 
     [[self.window contentView] addSubview:splitView];
-    [self refreshDataSources];
 }
 
 #pragma mark Window Delegate

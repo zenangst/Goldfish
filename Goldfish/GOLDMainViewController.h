@@ -19,5 +19,6 @@
 @property (strong, nonatomic) NSArray *dataSource;
 
 - (void)showWindow;
+- (void)refreshDataSources;
 
 @end

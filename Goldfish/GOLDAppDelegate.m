@@ -24,6 +24,7 @@
     self.mainViewController = [[GOLDMainViewController alloc] init];
     [self.mainViewController showWindow];
     [[GOLDPlugInsLoader sharedLoader] loadPlugIns];
+    [self.mainViewController refreshDataSources];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
