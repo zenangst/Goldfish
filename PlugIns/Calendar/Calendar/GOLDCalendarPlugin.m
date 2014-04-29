@@ -50,10 +50,10 @@
 
     [events enumerateObjectsUsingBlock:^(EKEvent *event, NSUInteger idx, BOOL *stop) {
         GOLDCalendarEvent *entry = [[GOLDCalendarEvent alloc] init];
-        entry.title  = event.title;
-        entry.at     = event.startDate;
-        entry.until  = event.endDate;
-        entry.plugIn = self.name;
+        entry.title      = event.title;
+        entry.startDate  = event.startDate;
+        entry.endDate    = event.endDate;
+        entry.plugInName = self.name;
         [entries addObject:entry];
     }];
 

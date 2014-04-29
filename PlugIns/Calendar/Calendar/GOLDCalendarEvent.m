@@ -10,14 +10,6 @@
 
 @implementation GOLDCalendarEvent
 
-- (NSString *)name
-{
-    return self.title;
-}
-
-- (NSDate *)datestamp
-{
-    return self.at;
-}
+@synthesize title, startDate, endDate, plugInName;
 
 @end
