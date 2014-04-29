@@ -119,7 +119,7 @@ static const float kTableViewMaxWidth = 350.0f;
 
 - (void)windowDidBecomeMain:(NSNotification *)notification
 {
-    [self refreshDataSources];
+    //[self refreshDataSources];
 }
 
 #pragma mark Split View Delegate
