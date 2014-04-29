@@ -44,7 +44,8 @@
     NSArray *arguments;
     NSString *author;
     NSString *commits;
-    NSMutableArray *entries = [[NSMutableArray alloc] init];
+
+    __block NSMutableArray *entries = [[NSMutableArray alloc] init];
 
     BOOL configIsEnabled = [configuration[@"enabled"] boolValue];
 
