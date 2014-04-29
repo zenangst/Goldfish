@@ -167,7 +167,15 @@ static const float kTableViewMaxWidth = 350.0f;
 
         if (dataEntry.plugInName) {
             NSObject<GOLDPlugIn> *plugIn = [GOLDPlugInsLoader sharedLoader].loadedPlugIns[dataEntry.plugInName];
-            NSView *plugInView = [plugIn mainView:self.dataSource[row]];
+            NSView *plugInView;
+            id entry = self.dataSource[row];
+
+            if ([plugIn respondsToSelector:@selector(mainView:)]) {
+                plugInView = [plugIn mainView:entry];
+            } else {
+                plugInView = [self defaultMainView:entry];
+            }
+
             [plugInView setIdentifier:@"PlugnInView"];
             cellView = plugInView;
         }
@@ -210,6 +218,38 @@ static const float kTableViewMaxWidth = 350.0f;
         self.dataSource = [plugInData copy];
     }
     [self.tableView reloadData];
+}
+
+#pragma mark Fallback for plug-ins without mainView
+
+- (NSView *)defaultMainView:(NSObject<GOLDDataEntry> *)entry
+{
+    NSView *mainView = [[NSView alloc] init];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss ZZZZ"];
+
+    NSTextField *summaryField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 22, 200, 17)];
+    [summaryField setStringValue:entry.title];
+    [summaryField setBezeled:NO];
+    [summaryField setDrawsBackground:NO];
+    [summaryField setEditable:NO];
+    [summaryField setSelectable:NO];
+    [summaryField setFont:[NSFont systemFontOfSize:13]];
+    [summaryField setAutoresizingMask:NSViewWidthSizable];
+
+    NSTextField *dateField = [[NSTextField alloc] initWithFrame:NSMakeRect(5, 2, 200, 17)];
+    [dateField setStringValue:[dateFormat stringFromDate:entry.startDate]];
+    [dateField setBezeled:NO];
+    [dateField setDrawsBackground:NO];
+    [dateField setEditable:NO];
+    [dateField setSelectable:NO];
+    [dateField setFont:[NSFont systemFontOfSize:10]];
+    [dateField setAutoresizingMask:NSViewWidthSizable];
+
+    [mainView addSubview:summaryField];
+    [mainView addSubview:dateField];
+
+    return mainView;
 }
 
 @end
