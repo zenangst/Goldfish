@@ -57,10 +57,7 @@
         [entries addObject:entry];
     }];
 
-    events = nil;
-
     self.dataCache = [entries copy];
-    entries = nil;
 }
 
 - (NSView *)preferenceView
