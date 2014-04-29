@@ -18,7 +18,6 @@
     self = [super init];
     if (self) {
         self.plugInsController = aPlugInsController;
-        self.dataCache;
     }
     return self;
 }
