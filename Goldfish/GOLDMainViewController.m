@@ -226,10 +226,14 @@ static const float kTableViewMaxWidth = 350.0f;
             }
         }];
 
-    if ([plugInData count]) {
-        self.dataSource = [plugInData copy];
-    }
-    [self.tableView reloadData];
+        if ([plugInData count]) {
+            NSSortDescriptor *sortByStartDateProperty = [NSSortDescriptor sortDescriptorWithKey:@"startDate" ascending:NO];
+            [plugInData sortUsingDescriptors:@[sortByStartDateProperty]];
+
+            self.dataSource = [plugInData copy];
+        }
+        [self.tableView reloadData];
+    });
 }
 
 #pragma mark Fallback for plug-ins without mainView
