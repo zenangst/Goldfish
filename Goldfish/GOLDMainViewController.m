@@ -205,8 +205,9 @@ static const float kTableViewMaxWidth = 350.0f;
 {
     // TODO Discuss with Tim if it might have some implications that all plug-in configurations share the same data cache
     dispatch_async(self.plugInQueue, ^{
-        __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
         NSDictionary *loadedPlugIns = [GOLDPlugInsLoader sharedLoader].loadedPlugIns;
+
+        __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
 
         [loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
             NSArray *configurations = [plugIn configurations];
