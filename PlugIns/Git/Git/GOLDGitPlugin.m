@@ -18,7 +18,7 @@
     self = [super init];
     if (self) {
         self.plugInsController = aPlugInsController;
-        self.dataCache = nil;
+        self.dataCache;
     }
     return self;
 }
@@ -76,7 +76,6 @@
     }
 
     self.dataCache = [entries copy];
-    entries = nil;
 }
 
 - (NSView *)mainView:(NSObject<GOLDDataEntry> *)entry
@@ -105,8 +104,6 @@
 
     [mainView addSubview:summaryField];
     [mainView addSubview:dateField];
-
-    dateFormat = nil;
 
     return mainView;
 }

@@ -55,8 +55,6 @@
         }
     }];
 
-    plugInTest = nil;
-
     return validates;
 }
 

@@ -67,8 +67,6 @@ static const float kTableViewMaxWidth = 350.0f;
     [scrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [scrollView setAcceptsTouchEvents:YES];
 
-    self.dataSource = nil;
-
     self.tableView = [[NSTableView alloc] init];
     [self.tableView setAutosaveName:@"HistoryView"];
     [self.tableView setDelegate:self];
@@ -164,7 +162,7 @@ static const float kTableViewMaxWidth = 350.0f;
 {
     NSView *cellView = (NSView*)[tableView makeViewWithIdentifier:@"PlugnInView"
                                                             owner:[tableView delegate]];
-    if (cellView == nil) {
+    if (cellView) {
         NSObject<GOLDDataEntry> *dataEntry = self.dataSource[row];
 
         if (dataEntry.plugInName) {
@@ -211,8 +209,6 @@ static const float kTableViewMaxWidth = 350.0f;
     if ([plugInData count]) {
         self.dataSource = [plugInData copy];
     }
-
-    plugInData = nil;
     [self.tableView reloadData];
 }
 
