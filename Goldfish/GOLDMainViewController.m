@@ -22,6 +22,7 @@ static const float kTableViewMaxWidth = 350.0f;
 {
     self = [super init];
     if (self) {
+        [self configureGrandCentralDispatch];
         [self configureInterface];
     }
     return self;
@@ -31,6 +32,13 @@ static const float kTableViewMaxWidth = 350.0f;
 {
     [NSApp activateIgnoringOtherApps:YES];
     [self.windowController showWindow:self];
+}
+
+#pragma mark Grand Central dispatch
+
+- (void)configureGrandCentralDispatch
+{
+	self.plugInQueue = dispatch_queue_create("plugInDispatch", DISPATCH_QUEUE_SERIAL);
 }
 
 #pragma mark Interface construction
@@ -196,23 +204,27 @@ static const float kTableViewMaxWidth = 350.0f;
 
 - (void)refreshDataSources
 {
-    __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
-    NSDictionary *loadedPlugIns = [GOLDPlugInsLoader sharedLoader].loadedPlugIns;
+    // TODO Discuss with Tim if it might have some implications that
+    dispatch_async(self.plugInQueue, ^{
+        __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
+        NSDictionary *loadedPlugIns = [GOLDPlugInsLoader sharedLoader].loadedPlugIns;
 
-    [loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
-        NSArray *configurations = [plugIn configurations];
+        [loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
+            NSArray *configurations = [plugIn configurations];
 
-        [configurations enumerateObjectsUsingBlock:^(NSDictionary *configuration, NSUInteger idx, BOOL *stop) {
-            [plugIn executeWithConfiguration:configuration];
-        }];
+            [configurations enumerateObjectsUsingBlock:^(NSDictionary *configuration, NSUInteger idx, BOOL *stop) {
+                [plugIn executeWithConfiguration:configuration];
+            }];
 
-        if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
-        && plugIn.dataCache) {
-            if ([[plugIn.dataCache firstObject] conformsToDataEntryProtocol]) {
-                [plugInData addObjectsFromArray:plugIn.dataCache];
+            if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
+            && plugIn.dataCache) {
+                BOOL dataCacheIsValid = [[plugIn.dataCache firstObject] conformsToDataEntryProtocol];
+
+                if (dataCacheIsValid) {
+                    [plugInData addObjectsFromArray:plugIn.dataCache];
+                }
             }
-        }
-    }];
+        }];
 
     if ([plugInData count]) {
         self.dataSource = [plugInData copy];

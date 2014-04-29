@@ -11,6 +11,7 @@
 
 @interface GOLDMainViewController : NSObject <NSSplitViewDelegate, NSTableViewDelegate, NSTableViewDataSource, NSWindowDelegate>
 
+@property (strong, atomic) dispatch_queue_t plugInQueue;
 @property (strong, nonatomic) NSWindowController *windowController;
 @property (strong, nonatomic) GOLDWindow *window;
 @property (strong, nonatomic) NSTableView *tableView;
