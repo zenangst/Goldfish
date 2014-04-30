@@ -45,11 +45,11 @@
     NSString *author;
     NSString *commits;
 
-    __block NSMutableArray *entries = [[NSMutableArray alloc] init];
+    BOOL configurationIsEnabled = [configuration[@"enabled"] boolValue];
 
-    BOOL configIsEnabled = [configuration[@"enabled"] boolValue];
+    if (configurationIsEnabled) {
+        __block NSMutableArray *entries = [[NSMutableArray alloc] init];
 
-    if (configIsEnabled) {
         author = [[GOLDTask runCommand:gitPath withArguments:@[@"config", @"--get", @"user.name"] inDirectory:configuration[@"path"]] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 
         arguments  = @[
@@ -73,9 +73,8 @@
                 [entries addObject:dataEntry];
             }
         }];
+        self.dataCache = [entries copy];
     }
-
-    self.dataCache = [entries copy];
 }
 
 - (NSView *)preferenceView
