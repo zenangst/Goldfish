@@ -170,10 +170,10 @@ static const float kTableViewMaxWidth = 350.0f;
     NSView *cellView = (NSView*)[tableView makeViewWithIdentifier:@"PlugnInView"
                                                             owner:[tableView delegate]];
     if (!cellView) {
-        NSObject<GOLDDataEntry> *dataEntry = self.dataSource[row];
+        id <GOLDDataEntry> dataEntry = self.dataSource[row];
 
         if (dataEntry.plugInName) {
-            NSObject<GOLDPlugIn> *plugIn = [GOLDPlugInsLoader sharedLoader].loadedPlugIns[dataEntry.plugInName];
+            id <GOLDPlugIn> plugIn = [GOLDPlugInsLoader sharedLoader].loadedPlugIns[dataEntry.plugInName];
             NSView *plugInView;
             id entry = self.dataSource[row];
 

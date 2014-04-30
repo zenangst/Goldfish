@@ -46,7 +46,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
             BOOL plugInIsValid = [className conformsToPlugInProtocol];
 
             if (plugInIsValid) {
-                NSObject<GOLDPlugIn> *plugIn = [self initializePlugin:className
+                id <GOLDPlugIn> plugIn = [self initializePlugin:className
                                                  withBundleIdentifier:[bundle bundleIdentifier]];
                 if (!loadedPlugIns[[plugIn name]]) {
                     plugInsDictionary[[plugIn name]] = plugIn;
@@ -64,7 +64,7 @@ static NSString * const kGoldfishFileExtension = @"bundle";
 
 - (id)initializePlugin:(Class)className withBundleIdentifier:(NSString *)bundleIdentifier
 {
-	NSObject<GOLDPlugIn> *plugIn = [[className alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
+	id <GOLDPlugIn> plugIn = [[className alloc] initWithPlugInsController:[GOLDPlugInsController sharedPlugInsController]];
     plugIn.bundleIdentifier = bundleIdentifier;
     return plugIn;
 }
