@@ -58,10 +58,6 @@ static NSString * const kGoldfishFileExtension = @"bundle";
         }
 	}];
 
-    if (self.loadedPlugIns) {
-        self.loadedPlugIns = nil;
-    }
-
     self.loadedPlugIns = [[NSDictionary alloc] initWithDictionary:plugInsDictionary];
     plugInsDictionary = nil;
 }
