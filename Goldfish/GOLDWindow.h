@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <INAppStoreWindow.h>
 
-@interface GOLDWindow : NSWindow
+@interface GOLDWindow : INAppStoreWindow
 
 - (instancetype)initWithContentRect:(NSRect)rect;
 
