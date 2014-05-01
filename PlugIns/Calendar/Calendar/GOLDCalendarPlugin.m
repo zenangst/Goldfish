@@ -7,15 +7,17 @@
 //
 
 #import "GOLDCalendarPlugin.h"
+#import "GOLDCalendarEvent.h"
 
 @implementation GOLDCalendarPlugin
 
-@synthesize plugInsController;
+@synthesize plugInsController, bundleIdentifier, dataCache, eventStore;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
     self = [super init];
     if (self) {
         self.plugInsController = aPlugInsController;
+        self.eventStore = [[EKEventStore alloc] init];
     }
     return self;
 }
@@ -26,12 +28,42 @@
 
 - (NSArray *)configurations
 {
-    return @[];
+    return @[
+        @{
+             @"enabled": @YES
+        }
+    ];
 }
 
 - (void)executeWithConfiguration:(NSDictionary *)configuration
 {
-	NSLog(@"%s", __FUNCTION__);
+    NSMutableArray *entries = [[NSMutableArray alloc] init];
+
+    NSDate *start = [NSDate dateWithNaturalLanguageString:@"last week"];
+    NSDate *end   = [NSDate dateWithNaturalLanguageString:@"next week"];
+
+    NSPredicate *predicate = [self.eventStore predicateForEventsWithStartDate:start
+                                                                      endDate:end
+                                                                    calendars:nil];
+
+    NSArray *events = [self.eventStore eventsMatchingPredicate:predicate];
+
+    [events enumerateObjectsUsingBlock:^(EKEvent *event, NSUInteger idx, BOOL *stop) {
+        GOLDCalendarEvent *entry = [[GOLDCalendarEvent alloc] init];
+        entry.title      = event.title;
+        entry.startDate  = event.startDate;
+        entry.endDate    = event.endDate;
+        entry.plugInName = self.name;
+        [entries addObject:entry];
+    }];
+
+    self.dataCache = [entries copy];
+}
+
+- (NSView *)preferenceView
+{
+    NSView *preferenceView = [[NSView alloc] initWithFrame:NSMakeRect(320,200,0,0)];
+    return preferenceView;
 }
 
 @end

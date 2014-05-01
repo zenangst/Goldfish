@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7212E41E1906FB3B008282F4 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7212E41D1906FB3B008282F4 /* EventKit.framework */; };
+		72DCC843190EE25B00B07D58 /* GOLDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DCC842190EE25B00B07D58 /* GOLDCalendarEvent.m */; };
 		BDF240FF18BA7641004E3BB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF240FE18BA7641004E3BB9 /* Cocoa.framework */; };
 		BDF2410918BA7641004E3BB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDF2410718BA7641004E3BB9 /* InfoPlist.strings */; };
 		BDF2411A18BA76B7004E3BB9 /* GOLDCalendarPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF2411918BA76B7004E3BB9 /* GOLDCalendarPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7212E41D1906FB3B008282F4 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		72DCC841190EE25B00B07D58 /* GOLDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLDCalendarEvent.h; sourceTree = "<group>"; };
+		72DCC842190EE25B00B07D58 /* GOLDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLDCalendarEvent.m; sourceTree = "<group>"; };
 		BD2C690D1906D87A00CE75B9 /* GOLDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDProtocols.h; path = ../../../Goldfish/GOLDProtocols.h; sourceTree = "<group>"; };
 		BD7D08DC18F47A5700A93971 /* GOLDPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsController.h; path = ../../../Goldfish/GOLDPlugInsController.h; sourceTree = "<group>"; };
 		BDF240FB18BA7641004E3BB9 /* Calendar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Calendar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7212E41E1906FB3B008282F4 /* EventKit.framework in Frameworks */,
 				BDF240FF18BA7641004E3BB9 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +65,7 @@
 		BDF240FD18BA7641004E3BB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7212E41D1906FB3B008282F4 /* EventKit.framework */,
 				BDF240FE18BA7641004E3BB9 /* Cocoa.framework */,
 				BDF2410018BA7641004E3BB9 /* Other Frameworks */,
 			);
@@ -83,6 +90,8 @@
 				BDF2411818BA76B7004E3BB9 /* GOLDCalendarPlugin.h */,
 				BDF2411918BA76B7004E3BB9 /* GOLDCalendarPlugin.m */,
 				BDF2410518BA7641004E3BB9 /* Supporting Files */,
+				72DCC841190EE25B00B07D58 /* GOLDCalendarEvent.h */,
+				72DCC842190EE25B00B07D58 /* GOLDCalendarEvent.m */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72DCC843190EE25B00B07D58 /* GOLDCalendarEvent.m in Sources */,
 				BDF2411A18BA76B7004E3BB9 /* GOLDCalendarPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,18 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <EventKit/EventKit.h>
 #import "GOLDPlugInsController.h"
 #import "GOLDProtocols.h"
 
 @interface GOLDCalendarPlugin : NSObject <GOLDPlugIn>
 
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
-@property (nonatomic, retain) NSString *bundleIdentifier;
-@property (nonatomic, retain) NSArray *dataCache;
-
-- (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
-- (NSString *)name;
-- (NSArray *)configurations;
-- (void)executeWithConfiguration:(NSDictionary *)configuration;
+@property (nonatomic, retain) EKEventStore *eventStore;
 
 @end
