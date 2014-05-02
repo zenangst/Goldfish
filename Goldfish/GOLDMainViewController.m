@@ -58,7 +58,38 @@ static const float kTableViewMaxWidth = 350.0f;
     [self.window setFrameAutosaveName:@"MainFrame"];
     [self.window setDelegate:self];
 
-    NSRect splitViewFrame = NSMakeRect(0, 0, CGRectGetWidth([[self.window contentView] frame]), CGRectGetHeight([[self.window contentView] frame]));
+    NSView *titleBarView = self.window.titleBarView;
+    [titleBarView setAutoresizesSubviews:YES];
+    [titleBarView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
+
+    NSSize segementedSize = NSMakeSize(166.f, 60.f);
+
+    CGFloat x =  NSMidX(titleBarView.bounds) - (segementedSize.width / 2.f);
+    CGFloat y =  NSMidY(titleBarView.bounds) - (segementedSize.height / 2.f);
+
+    NSRect segementedFrame = NSMakeRect(x,y, segementedSize.width, segementedSize.height);
+
+    NSSegmentedControl *segmentedControl = [[NSSegmentedControl alloc] initWithFrame:segementedFrame];
+    [segmentedControl setSegmentCount:3];
+    [segmentedControl setSegmentStyle:NSSegmentStyleTexturedSquare];
+
+    [segmentedControl setWidth:30.0f forSegment:0];
+    [segmentedControl setImage:[NSImage imageNamed:@"NSGoLeftTemplate"] forSegment:0];
+
+    [segmentedControl setWidth:100.0f forSegment:1];
+
+    [segmentedControl setWidth:30.0f forSegment:2];
+    [segmentedControl setImage:[NSImage imageNamed:@"NSGoRightTemplate"] forSegment:2];
+
+    [segmentedControl setAutoresizingMask:NSViewMinXMargin|NSViewMaxXMargin];
+
+    [[segmentedControl cell] setTrackingMode:NSSegmentSwitchTrackingMomentary];
+
+    [titleBarView addSubview:segmentedControl];
+
+    x = CGRectGetWidth([[self.window contentView] frame]);
+    y = CGRectGetHeight([[self.window contentView] frame]);
+    NSRect splitViewFrame = NSMakeRect(0, 0, x, y);
     NSSplitView *splitView = [[NSSplitView alloc] initWithFrame:splitViewFrame];
     [splitView setAutosaveName:@"MainSplitView"];
     [splitView setIdentifier:@"MainSplitView"];
@@ -141,21 +172,24 @@ static const float kTableViewMaxWidth = 350.0f;
 	return NO;
 }
 
-- (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMax ofSubviewAt:(NSInteger)dividerIndex {
+- (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMax
+         ofSubviewAt:(NSInteger)dividerIndex {
     if (dividerIndex == 0) {
     	proposedMax = kTableViewMaxWidth;
     }
     return proposedMax;
 }
 
-- (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMin ofSubviewAt:(NSInteger)dividerIndex {
+- (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMin
+         ofSubviewAt:(NSInteger)dividerIndex {
     if (dividerIndex == 0) {
         proposedMin = kTableViewMinWidth;
     }
     return proposedMin;
 }
 
-- (CGFloat)splitView:(NSSplitView *)splitView constrainSplitPosition:(CGFloat)proposedPosition ofSubviewAt:(NSInteger)dividerIndex {
+- (CGFloat)splitView:(NSSplitView *)splitView constrainSplitPosition:(CGFloat)proposedPosition
+         ofSubviewAt:(NSInteger)dividerIndex {
     if (proposedPosition > kTableViewMaxWidth)
         return 200.0f;
     if (proposedPosition < kTableViewMinWidth)
@@ -209,7 +243,7 @@ static const float kTableViewMaxWidth = 350.0f;
 
         __block NSMutableArray *plugInData = [[NSMutableArray alloc] init];
 
-        [loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, NSObject<GOLDPlugIn> *plugIn, BOOL *stop) {
+        [loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, id <GOLDPlugIn> plugIn, BOOL *stop) {
             NSArray *configurations = [plugIn configurations];
 
             [configurations enumerateObjectsUsingBlock:^(NSDictionary *configuration, NSUInteger idx, BOOL *stop) {
@@ -227,7 +261,8 @@ static const float kTableViewMaxWidth = 350.0f;
         }];
 
         if ([plugInData count]) {
-            NSSortDescriptor *sortByStartDateProperty = [NSSortDescriptor sortDescriptorWithKey:@"startDate" ascending:NO];
+            NSSortDescriptor *sortByStartDateProperty;
+            sortByStartDateProperty = [NSSortDescriptor sortDescriptorWithKey:@"startDate" ascending:NO];
             [plugInData sortUsingDescriptors:@[sortByStartDateProperty]];
 
             self.dataSource = [plugInData copy];

@@ -18,6 +18,9 @@
     if (self) {
         self.plugInsController = aPlugInsController;
         self.eventStore = [[EKEventStore alloc] init];
+        // Request permission to the calendar
+        [self.eventStore requestAccessToEntityType:EKEntityTypeEvent completion:nil];
+
     }
     return self;
 }
