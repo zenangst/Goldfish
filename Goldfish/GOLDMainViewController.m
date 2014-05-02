@@ -202,23 +202,24 @@ static const float kTableViewMaxWidth = 350.0f;
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    NSView *cellView = (NSView*)[tableView makeViewWithIdentifier:@"PlugnInView"
-                                                            owner:[tableView delegate]];
-    if (!cellView) {
-        id <GOLDDataEntry> dataEntry = self.dataSource[row];
+    static NSString *cellIdentifier = @"PlugnInView";
+    NSTableCellView *cellView = (NSTableCellView*)[tableView makeViewWithIdentifier:cellIdentifier
+                                                                              owner:self];
 
+    if (cellView == nil) {
+        id <GOLDDataEntry> dataEntry = self.dataSource[row];
         if (dataEntry.plugInName) {
             id <GOLDPlugIn> plugIn = [GOLDPlugInsLoader sharedLoader].loadedPlugIns[dataEntry.plugInName];
-            NSView *plugInView;
+            NSTableCellView *plugInView;
             id entry = self.dataSource[row];
 
             if ([plugIn respondsToSelector:@selector(mainView:)]) {
-                plugInView = [plugIn mainView:entry];
+                plugInView = (NSTableCellView *)[plugIn mainView:entry];
             } else {
-                plugInView = [self defaultMainView:entry];
+                plugInView = (NSTableCellView *)[self defaultMainView:entry];
             }
 
-            [plugInView setIdentifier:@"PlugnInView"];
+            [plugInView setIdentifier:cellIdentifier];
             cellView = plugInView;
         }
     }
