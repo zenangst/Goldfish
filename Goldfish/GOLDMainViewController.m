@@ -48,6 +48,7 @@ static const float kTableViewMaxWidth = 350.0f;
     NSRect frame = NSMakeRect(0, 0, 320, 240);
 
     self.window = [[GOLDWindow alloc] initWithContentRect:frame];
+    [[self.window contentView] setAutoresizesSubviews:YES];
     self.windowController = [[NSWindowController alloc] initWithWindow:self.window];
 
     [self.windowController loadWindow];
