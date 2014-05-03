@@ -22,9 +22,10 @@
     [preferencesWindowController loadWindow];
 
     self.mainViewController = [[GOLDMainViewController alloc] init];
-    [self.mainViewController showWindow];
     [[GOLDPlugInsLoader sharedLoader] loadPlugIns];
     [self.mainViewController refreshDataSources];
+    [self.mainViewController showWindow];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
