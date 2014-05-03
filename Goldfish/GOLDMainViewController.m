@@ -275,6 +275,25 @@ static const float kTableViewMaxWidth = 350.0f;
 - (NSView *)defaultMainView:(NSObject<GOLDDataEntry> *)entry plugIn:(id<GOLDPlugIn>)plugIn
 {
     NSView *mainView = [[NSView alloc] init];
+    [mainView setAutoresizingMask:kCALayerWidthSizable|kCALayerHeightSizable];
+    [mainView setAutoresizesSubviews:YES];
+
+    if ([plugIn respondsToSelector:@selector(color)]) {
+        NSDictionary *colors = [plugIn color];
+
+        CGFloat red = [colors[@"red"] floatValue];
+        CGFloat blue = [colors[@"blue"] floatValue];
+        CGFloat green = [colors[@"green"] floatValue];
+        CGFloat alpha = 0.1f;
+
+        CGColorRef backgroundColor = CGColorCreateGenericRGB(red,green,blue,alpha);
+        CALayer *viewLayer = [CALayer layer];
+        [viewLayer setBackgroundColor:backgroundColor];
+        [mainView setWantsLayer:YES];
+        [mainView setLayer:viewLayer];
+        CGColorRelease(backgroundColor);
+    }
+
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss ZZZZ"];
 

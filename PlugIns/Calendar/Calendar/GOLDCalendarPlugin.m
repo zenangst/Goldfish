@@ -29,6 +29,15 @@
 	return @"Calendar";
 }
 
+- (NSDictionary *)color
+{
+    return @{
+        @"red"   : @0.910f,
+        @"green" : @0.537f,
+        @"blue"  : @0.541f
+    };
+}
+
 - (NSArray *)configurations
 {
     return @[

@@ -27,6 +27,15 @@
     return @"Git";
 }
 
+- (NSDictionary *)color
+{
+    return @{
+        @"red"   : @0.902f,
+        @"green" : @0.725f,
+        @"blue"  : @0.616f
+    };
+}
+
 - (NSArray *)configurations
 {
     return @[

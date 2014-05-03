@@ -25,6 +25,7 @@
 + (BOOL)singleton;
 - (NSView *)mainView:(NSDictionary *)entry;
 - (NSView *)preferenceView;
+- (NSDictionary *)color;
 
 @end
 

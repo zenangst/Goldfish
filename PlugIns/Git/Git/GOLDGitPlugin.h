@@ -17,6 +17,7 @@
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
 - (NSString *)name;
+- (NSDictionary *)color;
 - (NSArray *)executeWithConfiguration:(NSDictionary *)configuration;
 - (NSView *)preferenceView;
 
