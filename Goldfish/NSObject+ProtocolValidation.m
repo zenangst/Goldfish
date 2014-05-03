@@ -18,7 +18,6 @@
         @"initWithPlugInsController:", @"name", @"configurations",
         @"executeWithConfiguration:",
         @"bundleIdentifier", @"setBundleIdentifier:",
-        @"dataCache"
     ];
 
     return [self conformsToProtocol:NSProtocolFromString(@"GOLDPlugIn")

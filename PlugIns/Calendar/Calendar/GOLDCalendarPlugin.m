@@ -11,7 +11,7 @@
 
 @implementation GOLDCalendarPlugin
 
-@synthesize plugInsController, bundleIdentifier, dataCache, eventStore;
+@synthesize plugInsController, bundleIdentifier, eventStore;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController {
     self = [super init];
@@ -38,7 +38,7 @@
     ];
 }
 
-- (void)executeWithConfiguration:(NSDictionary *)configuration
+- (NSArray *)executeWithConfiguration:(NSDictionary *)configuration
 {
     NSMutableArray *entries = [[NSMutableArray alloc] init];
 
@@ -60,7 +60,7 @@
         [entries addObject:entry];
     }];
 
-    self.dataCache = [entries copy];
+    return [entries copy];
 }
 
 - (NSView *)preferenceView

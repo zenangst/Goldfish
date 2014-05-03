@@ -38,7 +38,7 @@
     ];
 }
 
-- (void)executeWithConfiguration:(NSDictionary *)configuration
+- (NSArray *)executeWithConfiguration:(NSDictionary *)configuration
 {
     NSString *gitPath = @"/usr/bin/git";
     NSArray *arguments;
@@ -73,8 +73,9 @@
                 [entries addObject:dataEntry];
             }
         }];
-        self.dataCache = [entries copy];
+        return [entries copy];
     }
+    return nil;
 }
 
 - (NSView *)preferenceView

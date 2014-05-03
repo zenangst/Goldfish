@@ -216,7 +216,7 @@ static const float kTableViewMaxWidth = 350.0f;
             if ([plugIn respondsToSelector:@selector(mainView:)]) {
                 plugInView = (NSTableCellView *)[plugIn mainView:entry];
             } else {
-                plugInView = (NSTableCellView *)[self defaultMainView:entry];
+                plugInView = (NSTableCellView *)[self defaultMainView:entry plugIn:plugIn];
             }
 
             [plugInView setIdentifier:cellIdentifier];
@@ -248,16 +248,13 @@ static const float kTableViewMaxWidth = 350.0f;
         [loadedPlugIns enumerateKeysAndObjectsUsingBlock:^(NSString *plugInName, id <GOLDPlugIn> plugIn, BOOL *stop) {
             NSArray *configurations = [plugIn configurations];
 
-            [configurations enumerateObjectsUsingBlock:^(NSDictionary *configuration, NSUInteger idx, BOOL *stop) {
-                [plugIn executeWithConfiguration:configuration];
-            }];
 
-            if ([plugIn respondsToSelector:NSSelectorFromString(@"dataCache")]
-            && plugIn.dataCache) {
-                BOOL dataCacheIsValid = [[plugIn.dataCache firstObject] conformsToDataEntryProtocol];
+            for (NSDictionary *configuration in configurations) {
+                NSArray *dataCache = [plugIn executeWithConfiguration:configuration];
+                BOOL dataCacheIsValid = [[dataCache firstObject] conformsToDataEntryProtocol];
 
                 if (dataCacheIsValid) {
-                    [plugInData addObjectsFromArray:plugIn.dataCache];
+                    [plugInData addObjectsFromArray:dataCache];
                 }
             }
         }];
@@ -275,7 +272,7 @@ static const float kTableViewMaxWidth = 350.0f;
 
 #pragma mark Fallback for plug-ins without mainView
 
-- (NSView *)defaultMainView:(NSObject<GOLDDataEntry> *)entry
+- (NSView *)defaultMainView:(NSObject<GOLDDataEntry> *)entry plugIn:(id<GOLDPlugIn>)plugIn
 {
     NSView *mainView = [[NSView alloc] init];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];

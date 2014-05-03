@@ -14,11 +14,10 @@
 
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
 @property (nonatomic, retain) NSString *bundleIdentifier;
-@property (nonatomic, retain) NSArray *dataCache;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
 - (NSString *)name;
-- (void)executeWithConfiguration:(NSDictionary *)configuration;
+- (NSArray *)executeWithConfiguration:(NSDictionary *)configuration;
 - (NSView *)preferenceView;
 
 @end

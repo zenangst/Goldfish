@@ -14,12 +14,11 @@
 @required
 
 @property (nonatomic, retain) NSString *bundleIdentifier;
-@property (nonatomic, retain) NSArray *dataCache;
 
 - (id)initWithPlugInsController:(GOLDPlugInsController *)plugInsController;
 - (NSString *)name;
 - (NSArray *)configurations;
-- (void)executeWithConfiguration:(NSDictionary *)configuration;
+- (NSArray *)executeWithConfiguration:(NSDictionary *)configuration;
 
 @optional
 
