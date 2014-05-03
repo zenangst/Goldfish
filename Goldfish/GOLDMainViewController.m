@@ -59,6 +59,47 @@ static const float kTableViewMaxWidth = 350.0f;
     [self.window setFrameAutosaveName:@"MainFrame"];
     [self.window setDelegate:self];
 
+    [self configureToolBar];
+
+    NSSplitView *splitView = [self splitView];
+    NSScrollView *scrollView = [self scrollView];
+    self.tableView = [self historyView];
+
+    NSTableColumn *column = [[NSTableColumn alloc] init];
+    [column setResizingMask:NSTableColumnAutoresizingMask];
+    [column setEditable:NO];
+    [column setIdentifier:@"Column"];
+    [column sizeToFit];
+    [self.tableView addTableColumn:column];
+
+    NSClipView *clipView = [self clipView];
+    [clipView setDocumentView:self.tableView];
+    [clipView setBounds:[scrollView frame]];
+
+    [scrollView setContentView:clipView];
+    [[scrollView contentView] setCopiesOnScroll:NO];
+    [[scrollView contentView] setDrawsBackground:NO];
+    [scrollView setDrawsBackground:NO];
+
+    self.previewView = [[NSView alloc] init];
+    CGColorRef backgroundColor = CGColorCreateGenericRGB(1.0, 1.0, 0.0, 0.4);
+    CALayer *viewLayer = [CALayer layer];
+    [viewLayer setBackgroundColor:backgroundColor];
+    [self.previewView setWantsLayer:YES];
+    [self.previewView setLayer:viewLayer];
+    CGColorRelease(backgroundColor);
+
+    [splitView addSubview:scrollView];
+    [splitView addSubview:self.previewView];
+
+    [splitView setAutoresizingMask:kCALayerWidthSizable|kCALayerHeightSizable];
+    [splitView setAutoresizesSubviews:YES];
+
+    [[self.window contentView] addSubview:splitView];
+}
+
+- (void)configureToolBar
+{
     NSView *titleBarView = self.window.titleBarView;
     [titleBarView setAutoresizesSubviews:YES];
     [titleBarView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
@@ -87,9 +128,12 @@ static const float kTableViewMaxWidth = 350.0f;
     [[segmentedControl cell] setTrackingMode:NSSegmentSwitchTrackingMomentary];
 
     [titleBarView addSubview:segmentedControl];
+}
 
-    x = CGRectGetWidth([[self.window contentView] frame]);
-    y = CGRectGetHeight([[self.window contentView] frame]);
+- (NSSplitView *)splitView
+{
+    CGFloat x = CGRectGetWidth([[self.window contentView] frame]);
+    CGFloat y = CGRectGetHeight([[self.window contentView] frame]);
     NSRect splitViewFrame = NSMakeRect(0, 0, x, y);
     NSSplitView *splitView = [[NSSplitView alloc] initWithFrame:splitViewFrame];
     [splitView setAutosaveName:@"MainSplitView"];
@@ -98,7 +142,11 @@ static const float kTableViewMaxWidth = 350.0f;
     [splitView setDelegate:self];
     [splitView setDividerStyle:NSSplitViewDividerStylePaneSplitter];
     [splitView setAutoresizesSubviews:YES];
+    return splitView;
+}
 
+- (NSScrollView *)scrollView
+{
     NSScrollView *scrollView = [[NSScrollView alloc] init];
     [scrollView setHasVerticalScroller:YES];
     [scrollView setHasHorizontalScroller:YES];
@@ -106,48 +154,33 @@ static const float kTableViewMaxWidth = 350.0f;
     [scrollView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
     [scrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [scrollView setAcceptsTouchEvents:YES];
+    return scrollView;
+}
 
-    self.tableView = [[NSTableView alloc] init];
-    [self.tableView setAutosaveName:@"HistoryView"];
-    [self.tableView setDelegate:self];
-    [self.tableView setDataSource:self];
-    [self.tableView setAllowsEmptySelection:NO];
-    [self.tableView setRowHeight:32.0f];
-    [self.tableView setHeaderView:nil];
-    [self.tableView setUsesAlternatingRowBackgroundColors:YES];
-    [self.tableView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
-
-    NSTableColumn *column = [[NSTableColumn alloc] init];
-    [column setEditable:NO];
-    [column setIdentifier:@"Column"];
-    [self.tableView addTableColumn:column];
-
+- (NSClipView *)clipView
+{
     NSClipView *clipView = [[NSClipView alloc] init];
     [clipView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
     [clipView setAutoresizesSubviews:YES];
-    [clipView setDocumentView:self.tableView];
-    [clipView setBounds:[scrollView frame]];
+    return clipView;
+}
 
-    [scrollView setContentView:clipView];
-    [[scrollView contentView] setCopiesOnScroll:NO];
-    [[scrollView contentView] setDrawsBackground:NO];
-    [scrollView setDrawsBackground:NO];
-
-    self.previewView = [[NSView alloc] init];
-    CGColorRef backgroundColor = CGColorCreateGenericRGB(1.0, 1.0, 0.0, 0.4);
-    CALayer *viewLayer = [CALayer layer];
-    [viewLayer setBackgroundColor:backgroundColor];
-    [self.previewView setWantsLayer:YES];
-    [self.previewView setLayer:viewLayer];
-    CGColorRelease(backgroundColor);
-
-    [splitView addSubview:scrollView];
-    [splitView addSubview:self.previewView];
-
-    [splitView setAutoresizingMask:kCALayerWidthSizable|kCALayerHeightSizable];
-    [splitView setAutoresizesSubviews:YES];
-
-    [[self.window contentView] addSubview:splitView];
+- (NSTableView *)historyView
+{
+    if (self.tableView == nil) {
+        NSTableView *tableView = [[NSTableView alloc] init];
+        [tableView setAutosaveName:@"HistoryView"];
+        [tableView setDelegate:self];
+        [tableView setDataSource:self];
+        [tableView setAllowsEmptySelection:NO];
+        [tableView setRowHeight:32.0f];
+        [tableView setHeaderView:nil];
+        /* [tableView setUsesAlternatingRowBackgroundColors:YES]; */
+        /* [tableView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList]; */
+        [tableView setColumnAutoresizingStyle:NSTableViewUniformColumnAutoresizingStyle];
+        return tableView;
+    }
+    return self.tableView;
 }
 
 #pragma mark Window Delegate
@@ -239,7 +272,6 @@ static const float kTableViewMaxWidth = 350.0f;
 
 - (void)refreshDataSources
 {
-    // TODO Discuss with Tim if it might have some implications that all plug-in configurations share the same data cache
     dispatch_async(self.plugInQueue, ^{
         NSDictionary *loadedPlugIns = [GOLDPlugInsLoader sharedLoader].loadedPlugIns;
 
