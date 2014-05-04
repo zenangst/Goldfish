@@ -15,10 +15,6 @@
 @property (nonatomic, retain) GOLDPlugInsController *plugInsController;
 @property (nonatomic, retain) NSString *bundleIdentifier;
 
-- (id)initWithPlugInsController:(GOLDPlugInsController *)aPlugInsController;
-- (NSString *)name;
-- (NSDictionary *)color;
-- (NSArray *)executeWithConfiguration:(NSDictionary *)configuration;
 - (NSView *)preferenceView;
 
 @end
