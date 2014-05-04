@@ -267,7 +267,7 @@ static const float kTableViewMaxWidth = 350.0f;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-	return self.dataSource.count;
+	return [self.dataSource count];
 }
 
 - (void)refreshDataSources
