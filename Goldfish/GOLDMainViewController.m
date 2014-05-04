@@ -311,7 +311,6 @@ static const float kTableViewMaxWidth = 350.0f;
     [mainView setAutoresizesSubviews:YES];
 
     if ([plugIn respondsToSelector:@selector(color)]) {
-        // TODO Refactor to use NSColor instead of dictionary
         NSColor *color = [plugIn color];
         CALayer *viewLayer = [CALayer layer];
         [viewLayer setBackgroundColor:[color CGColor]];
