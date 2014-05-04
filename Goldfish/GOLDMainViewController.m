@@ -251,7 +251,6 @@ static const float kTableViewMaxWidth = 350.0f;
             } else {
                 plugInView = (NSTableCellView *)[self defaultMainView:entry plugIn:plugIn];
             }
-
             [plugInView setIdentifier:cellIdentifier];
             cellView = plugInView;
         }
@@ -304,9 +303,9 @@ static const float kTableViewMaxWidth = 350.0f;
 
 #pragma mark Fallback for plug-ins without mainView
 
-- (NSView *)defaultMainView:(NSObject<GOLDDataEntry> *)entry plugIn:(id<GOLDPlugIn>)plugIn
+- (NSTableCellView *)defaultMainView:(NSObject<GOLDDataEntry> *)entry plugIn:(id<GOLDPlugIn>)plugIn
 {
-    NSView *mainView = [[NSView alloc] init];
+    NSTableCellView *mainView = [[NSTableCellView alloc] init];
     [mainView setAutoresizingMask:kCALayerWidthSizable|kCALayerHeightSizable];
     [mainView setAutoresizesSubviews:YES];
 
