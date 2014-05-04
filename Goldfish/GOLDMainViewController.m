@@ -82,7 +82,7 @@ static const float kTableViewMaxWidth = 350.0f;
     [scrollView setDrawsBackground:NO];
 
     self.previewView = [[NSView alloc] init];
-    CGColorRef backgroundColor = CGColorCreateGenericRGB(1.0, 1.0, 0.0, 0.4);
+    CGColorRef backgroundColor = CGColorCreateGenericRGB(1.0f, 1.0f, 0.0f, 0.4f);
     CALayer *viewLayer = [CALayer layer];
     [viewLayer setBackgroundColor:backgroundColor];
     [self.previewView setWantsLayer:YES];
