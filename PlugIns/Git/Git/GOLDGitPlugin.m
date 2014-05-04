@@ -29,7 +29,7 @@
 
 - (NSColor *)color
 {
-    return [NSColor colorWithCalibratedRed:0.902 green:0.725 blue:0.616 alpha:1];
+    return [NSColor colorWithCalibratedRed:0.902f green:0.725f blue:0.616f alpha:0.3f];
 }
 
 - (NSArray *)configurations
