@@ -27,13 +27,9 @@
     return @"Git";
 }
 
-- (NSDictionary *)color
+- (NSColor *)color
 {
-    return @{
-        @"red"   : @0.902f,
-        @"green" : @0.725f,
-        @"blue"  : @0.616f
-    };
+    return [NSColor colorWithCalibratedRed:0.902 green:0.725 blue:0.616 alpha:1];
 }
 
 - (NSArray *)configurations

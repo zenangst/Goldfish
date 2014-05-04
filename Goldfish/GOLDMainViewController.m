@@ -311,19 +311,12 @@ static const float kTableViewMaxWidth = 350.0f;
     [mainView setAutoresizesSubviews:YES];
 
     if ([plugIn respondsToSelector:@selector(color)]) {
-        NSDictionary *colors = [plugIn color];
-
-        CGFloat red = [colors[@"red"] floatValue];
-        CGFloat blue = [colors[@"blue"] floatValue];
-        CGFloat green = [colors[@"green"] floatValue];
-        CGFloat alpha = 0.1f;
-
-        CGColorRef backgroundColor = CGColorCreateGenericRGB(red,green,blue,alpha);
+        // TODO Refactor to use NSColor instead of dictionary
+        NSColor *color = [plugIn color];
         CALayer *viewLayer = [CALayer layer];
-        [viewLayer setBackgroundColor:backgroundColor];
+        [viewLayer setBackgroundColor:[color CGColor]];
         [mainView setWantsLayer:YES];
         [mainView setLayer:viewLayer];
-        CGColorRelease(backgroundColor);
     }
 
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];

@@ -29,13 +29,9 @@
 	return @"Calendar";
 }
 
-- (NSDictionary *)color
+- (NSColor *)color
 {
-    return @{
-        @"red"   : @0.910f,
-        @"green" : @0.537f,
-        @"blue"  : @0.541f
-    };
+    return [NSColor colorWithCalibratedRed:0.910 green:0.537 blue:0.541 alpha:1];
 }
 
 - (NSArray *)configurations
