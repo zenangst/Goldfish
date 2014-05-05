@@ -310,9 +310,8 @@ static const float kTableViewMaxWidth = 350.0f;
     [mainView setAutoresizesSubviews:YES];
 
     if ([plugIn respondsToSelector:@selector(color)]) {
-        NSColor *color = [plugIn color];
         CALayer *viewLayer = [CALayer layer];
-        [viewLayer setBackgroundColor:[color CGColor]];
+        [viewLayer setBackgroundColor:[[plugIn color] CGColor]];
         [mainView setWantsLayer:YES];
         [mainView setLayer:viewLayer];
     }
