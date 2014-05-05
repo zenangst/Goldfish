@@ -240,11 +240,11 @@ static const float kTableViewMaxWidth = 350.0f;
                                                                               owner:self];
 
     if (cellView == nil) {
-        id <GOLDDataEntry> dataEntry = self.dataSource[row];
+        id <GOLDDataEntry> dataEntry = self.dataSource[(NSUInteger)row];
         if (dataEntry.plugInName) {
             id <GOLDPlugIn> plugIn = [GOLDPlugInsLoader sharedLoader].loadedPlugIns[dataEntry.plugInName];
             NSTableCellView *plugInView;
-            id entry = self.dataSource[row];
+            id entry = self.dataSource[(NSUInteger)row];
 
             if ([plugIn respondsToSelector:@selector(mainView:)]) {
                 plugInView = (NSTableCellView *)[plugIn mainView:entry];
@@ -266,7 +266,7 @@ static const float kTableViewMaxWidth = 350.0f;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-	return [self.dataSource count];
+	return (NSInteger)[self.dataSource count];
 }
 
 - (void)refreshDataSources
