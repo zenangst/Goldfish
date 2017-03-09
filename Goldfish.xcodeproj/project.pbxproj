@@ -249,7 +249,7 @@
 		BDF9A84B1E71D23B00E184BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XVAH95CHDC;
 				INFOPLIST_FILE = Resources/Info.plist;
@@ -263,7 +263,7 @@
 		BDF9A84C1E71D23B00E184BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XVAH95CHDC;
 				INFOPLIST_FILE = Resources/Info.plist;
