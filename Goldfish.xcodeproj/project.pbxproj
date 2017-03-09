@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDF9A8411E71D23B00E184BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9A8401E71D23B00E184BF /* AppDelegate.swift */; };
-		BDF9A8431E71D23B00E184BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8421E71D23B00E184BF /* Assets.xcassets */; };
-		BDF9A8461E71D23B00E184BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8441E71D23B00E184BF /* MainMenu.xib */; };
+		BDF9A8561E71D48E00E184BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8501E71D48E00E184BF /* Assets.xcassets */; };
+		BDF9A8571E71D48E00E184BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8511E71D48E00E184BF /* MainMenu.xib */; };
+		BDF9A8591E71D48E00E184BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9A8551E71D48E00E184BF /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BDF9A83D1E71D23B00E184BF /* Goldfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goldfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDF9A8401E71D23B00E184BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDF9A8421E71D23B00E184BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BDF9A8451E71D23B00E184BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		BDF9A8471E71D23B00E184BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDF9A8501E71D48E00E184BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDF9A8521E71D48E00E184BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BDF9A8531E71D48E00E184BF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDF9A8551E71D48E00E184BF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +34,8 @@
 		BDF9A8341E71D23B00E184BF = {
 			isa = PBXGroup;
 			children = (
-				BDF9A83F1E71D23B00E184BF /* Goldfish */,
+				BDF9A84F1E71D48E00E184BF /* Resources */,
+				BDF9A8541E71D48E00E184BF /* Sources */,
 				BDF9A83E1E71D23B00E184BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,15 +48,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BDF9A83F1E71D23B00E184BF /* Goldfish */ = {
+		BDF9A84F1E71D48E00E184BF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BDF9A8401E71D23B00E184BF /* AppDelegate.swift */,
-				BDF9A8421E71D23B00E184BF /* Assets.xcassets */,
-				BDF9A8441E71D23B00E184BF /* MainMenu.xib */,
-				BDF9A8471E71D23B00E184BF /* Info.plist */,
+				BDF9A8501E71D48E00E184BF /* Assets.xcassets */,
+				BDF9A8511E71D48E00E184BF /* MainMenu.xib */,
+				BDF9A8531E71D48E00E184BF /* Info.plist */,
 			);
-			path = Goldfish;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDF9A8541E71D48E00E184BF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9A8551E71D48E00E184BF /* AppDelegate.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,8 +126,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF9A8431E71D23B00E184BF /* Assets.xcassets in Resources */,
-				BDF9A8461E71D23B00E184BF /* MainMenu.xib in Resources */,
+				BDF9A8561E71D48E00E184BF /* Assets.xcassets in Resources */,
+				BDF9A8571E71D48E00E184BF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,17 +138,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF9A8411E71D23B00E184BF /* AppDelegate.swift in Sources */,
+				BDF9A8591E71D48E00E184BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BDF9A8441E71D23B00E184BF /* MainMenu.xib */ = {
+		BDF9A8511E71D48E00E184BF /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BDF9A8451E71D23B00E184BF /* Base */,
+				BDF9A8521E71D48E00E184BF /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -244,7 +252,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XVAH95CHDC;
-				INFOPLIST_FILE = Goldfish/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Goldfish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -258,7 +266,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XVAH95CHDC;
-				INFOPLIST_FILE = Goldfish/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Goldfish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +293,7 @@
 				BDF9A84C1E71D23B00E184BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
