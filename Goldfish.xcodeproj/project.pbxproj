@@ -7,345 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C630FD3559147318D8B96DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEE99504F7141B3839302AA /* libPods.a */; };
-		BD270ABD18B7AF2100B81773 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ABC18B7AF2100B81773 /* Cocoa.framework */; };
-		BD270ADC18B7AF2100B81773 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ADB18B7AF2100B81773 /* XCTest.framework */; };
-		BD270ADD18B7AF2100B81773 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD270ABC18B7AF2100B81773 /* Cocoa.framework */; };
-		BD5806C918F4784F00C90CF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806C818F4784F00C90CF5 /* main.m */; };
-		BD5806CC18F4785D00C90CF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD5806CA18F4785D00C90CF5 /* InfoPlist.strings */; };
-		BD5806CF18F4786800C90CF5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BD5806CD18F4786800C90CF5 /* Credits.rtf */; };
-		BD5806D718F4787F00C90CF5 /* GOLDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806D418F4787F00C90CF5 /* GOLDAppDelegate.m */; };
-		BD5806D818F4787F00C90CF5 /* GOLDPlugInsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */; };
-		BD5806D918F4787F00C90CF5 /* GOLDPlugInsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */; };
-		BD5806DB18F4788B00C90CF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5806DA18F4788B00C90CF5 /* Images.xcassets */; };
-		BD59DD901916E34B009F6F2F /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BD59DD8F1916E34B009F6F2F /* Warnings.xcconfig */; };
-		BD664A8218FC6BF0009C0503 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD664A8118FC6BF0009C0503 /* MainMenu.xib */; };
-		BD7D08E818F47BA200A93971 /* GoldfishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7D08E718F47BA200A93971 /* GoldfishTests.m */; };
-		BD7D08ED18F47BC800A93971 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD7D08EB18F47BC800A93971 /* InfoPlist.strings */; };
-		BD7FF48618FE81BF009F4B68 /* GOLDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7FF48518FE81BF009F4B68 /* GOLDMainViewController.m */; };
-		BD7FF48818FE8E68009F4B68 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7FF48718FE8E68009F4B68 /* QuartzCore.framework */; };
-		BD90AD3818FC541D000515D6 /* GOLDPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD90AD3718FC541D000515D6 /* GOLDPreferencesViewController.m */; };
-		BD90AD3C18FC5692000515D6 /* GOLDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BD90AD3B18FC5692000515D6 /* GOLDWindow.m */; };
-		BDDE4B8318BD1FDD00DFF497 /* Git.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B7B18BD1EF500DFF497 /* Git.bundle */; };
-		BDDE4B9418BD353A00DFF497 /* Calendar.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDE4B9118BD352500DFF497 /* Calendar.bundle */; };
-		BDEA00C71908E2DA00D263FE /* NSObject+ProtocolValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEA00C61908E2DA00D263FE /* NSObject+ProtocolValidation.m */; };
+		BDF9A8411E71D23B00E184BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9A8401E71D23B00E184BF /* AppDelegate.swift */; };
+		BDF9A8431E71D23B00E184BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8421E71D23B00E184BF /* Assets.xcassets */; };
+		BDF9A8461E71D23B00E184BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8441E71D23B00E184BF /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BD270ADE18B7AF2100B81773 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD270AB118B7AF2100B81773 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD270AB818B7AF2100B81773;
-			remoteInfo = "Hyper Active";
-		};
-		BDDE4B7A18BD1EF500DFF497 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BDDE4B6118BD1EF400DFF497;
-			remoteInfo = Git;
-		};
-		BDDE4B8118BD1FDA00DFF497 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BDDE4B6018BD1EF400DFF497;
-			remoteInfo = Git;
-		};
-		BDDE4B9018BD352500DFF497 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BDF240FB18BA7641004E3BB9;
-			remoteInfo = Calendar;
-		};
-		BDDE4B9218BD353600DFF497 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BDF240FA18BA7641004E3BB9;
-			remoteInfo = Calendar;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		BDF2411E18BA7720004E3BB9 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				BDDE4B9418BD353A00DFF497 /* Calendar.bundle in CopyFiles */,
-				BDDE4B8318BD1FDD00DFF497 /* Git.bundle in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		0FEE99504F7141B3839302AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD270AB918B7AF2100B81773 /* Goldfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goldfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD270ABC18B7AF2100B81773 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		BD270ABF18B7AF2100B81773 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		BD270AC018B7AF2100B81773 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		BD270AC118B7AF2100B81773 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BD270ADA18B7AF2100B81773 /* GoldfishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldfishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD270ADB18B7AF2100B81773 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BD5806C518F4782D00C90CF5 /* Goldfish-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Goldfish-Info.plist"; path = "Goldfish/Goldfish-Info.plist"; sourceTree = SOURCE_ROOT; };
-		BD5806C718F4784600C90CF5 /* Goldfish-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Goldfish-Prefix.pch"; path = "Goldfish/Goldfish-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		BD5806C818F4784F00C90CF5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Goldfish/main.m; sourceTree = SOURCE_ROOT; };
-		BD5806CB18F4785D00C90CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Goldfish/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		BD5806CE18F4786800C90CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Goldfish/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
-		BD5806D018F4787F00C90CF5 /* GOLDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDProtocols.h; path = Goldfish/GOLDProtocols.h; sourceTree = SOURCE_ROOT; };
-		BD5806D118F4787F00C90CF5 /* GOLDPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsController.h; path = Goldfish/GOLDPlugInsController.h; sourceTree = SOURCE_ROOT; };
-		BD5806D218F4787F00C90CF5 /* GOLDPlugInsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPlugInsLoader.h; path = Goldfish/GOLDPlugInsLoader.h; sourceTree = SOURCE_ROOT; };
-		BD5806D318F4787F00C90CF5 /* GOLDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDAppDelegate.h; path = Goldfish/GOLDAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		BD5806D418F4787F00C90CF5 /* GOLDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDAppDelegate.m; path = Goldfish/GOLDAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPlugInsController.m; path = Goldfish/GOLDPlugInsController.m; sourceTree = SOURCE_ROOT; };
-		BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPlugInsLoader.m; path = Goldfish/GOLDPlugInsLoader.m; sourceTree = SOURCE_ROOT; };
-		BD5806DA18F4788B00C90CF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Goldfish/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		BD59DD8F1916E34B009F6F2F /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
-		BD664A8118FC6BF0009C0503 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Goldfish/MainMenu.xib; sourceTree = SOURCE_ROOT; };
-		BD7D08E718F47BA200A93971 /* GoldfishTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoldfishTests.m; path = GoldfishTests/GoldfishTests.m; sourceTree = SOURCE_ROOT; };
-		BD7D08E918F47BC200A93971 /* GoldfishTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoldfishTests-Info.plist"; path = "GoldfishTests/GoldfishTests-Info.plist"; sourceTree = SOURCE_ROOT; };
-		BD7D08EC18F47BC800A93971 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GoldfishTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		BD7FF48418FE81BF009F4B68 /* GOLDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLDMainViewController.h; sourceTree = "<group>"; };
-		BD7FF48518FE81BF009F4B68 /* GOLDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLDMainViewController.m; sourceTree = "<group>"; };
-		BD7FF48718FE8E68009F4B68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BD90AD3618FC541D000515D6 /* GOLDPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDPreferencesViewController.h; path = Goldfish/GOLDPreferencesViewController.h; sourceTree = SOURCE_ROOT; };
-		BD90AD3718FC541D000515D6 /* GOLDPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDPreferencesViewController.m; path = Goldfish/GOLDPreferencesViewController.m; sourceTree = SOURCE_ROOT; };
-		BD90AD3A18FC5692000515D6 /* GOLDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLDWindow.h; path = Goldfish/GOLDWindow.h; sourceTree = SOURCE_ROOT; };
-		BD90AD3B18FC5692000515D6 /* GOLDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLDWindow.m; path = Goldfish/GOLDWindow.m; sourceTree = SOURCE_ROOT; };
-		BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Git.xcodeproj; path = PlugIns/Git/Git.xcodeproj; sourceTree = "<group>"; };
-		BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Calendar.xcodeproj; path = PlugIns/Calendar/Calendar.xcodeproj; sourceTree = "<group>"; };
-		BDEA00C51908E2DA00D263FE /* NSObject+ProtocolValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ProtocolValidation.h"; sourceTree = "<group>"; };
-		BDEA00C61908E2DA00D263FE /* NSObject+ProtocolValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ProtocolValidation.m"; sourceTree = "<group>"; };
-		CF4259B29B6947759F5806BE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		BDF9A83D1E71D23B00E184BF /* Goldfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goldfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF9A8401E71D23B00E184BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDF9A8421E71D23B00E184BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDF9A8451E71D23B00E184BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BDF9A8471E71D23B00E184BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BD270AB618B7AF2100B81773 /* Frameworks */ = {
+		BDF9A83A1E71D23B00E184BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7FF48818FE8E68009F4B68 /* QuartzCore.framework in Frameworks */,
-				BD270ABD18B7AF2100B81773 /* Cocoa.framework in Frameworks */,
-				6C630FD3559147318D8B96DC /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD270AD718B7AF2100B81773 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD270ADD18B7AF2100B81773 /* Cocoa.framework in Frameworks */,
-				BD270ADC18B7AF2100B81773 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD270AB018B7AF2100B81773 = {
+		BDF9A8341E71D23B00E184BF = {
 			isa = PBXGroup;
 			children = (
-				BD59DD8F1916E34B009F6F2F /* Warnings.xcconfig */,
-				BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */,
-				BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */,
-				BD270AC218B7AF2100B81773 /* Goldfish */,
-				BD270AE018B7AF2100B81773 /* GoldfishTests */,
-				BD270ABB18B7AF2100B81773 /* Frameworks */,
-				BD270ABA18B7AF2100B81773 /* Products */,
-				CF4259B29B6947759F5806BE /* Pods.xcconfig */,
+				BDF9A83F1E71D23B00E184BF /* Goldfish */,
+				BDF9A83E1E71D23B00E184BF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BD270ABA18B7AF2100B81773 /* Products */ = {
+		BDF9A83E1E71D23B00E184BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD270AB918B7AF2100B81773 /* Goldfish.app */,
-				BD270ADA18B7AF2100B81773 /* GoldfishTests.xctest */,
+				BDF9A83D1E71D23B00E184BF /* Goldfish.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD270ABB18B7AF2100B81773 /* Frameworks */ = {
+		BDF9A83F1E71D23B00E184BF /* Goldfish */ = {
 			isa = PBXGroup;
 			children = (
-				BD7FF48718FE8E68009F4B68 /* QuartzCore.framework */,
-				BD270ABC18B7AF2100B81773 /* Cocoa.framework */,
-				BD270ADB18B7AF2100B81773 /* XCTest.framework */,
-				BD270ABE18B7AF2100B81773 /* Other Frameworks */,
-				0FEE99504F7141B3839302AA /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BD270ABE18B7AF2100B81773 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BD270ABF18B7AF2100B81773 /* AppKit.framework */,
-				BD270AC018B7AF2100B81773 /* CoreData.framework */,
-				BD270AC118B7AF2100B81773 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		BD270AC218B7AF2100B81773 /* Goldfish */ = {
-			isa = PBXGroup;
-			children = (
-				BD8A2F4B190859620029A3DD /* Categories */,
-				BD7CA6B818FC4F1500F52B11 /* Protocols */,
-				BD90AD3918FC542E000515D6 /* Controllers */,
-				BD5806D318F4787F00C90CF5 /* GOLDAppDelegate.h */,
-				BD5806D418F4787F00C90CF5 /* GOLDAppDelegate.m */,
-				BD90AD3A18FC5692000515D6 /* GOLDWindow.h */,
-				BD90AD3B18FC5692000515D6 /* GOLDWindow.m */,
-				BD5806D218F4787F00C90CF5 /* GOLDPlugInsLoader.h */,
-				BD5806D618F4787F00C90CF5 /* GOLDPlugInsLoader.m */,
-				BD664A8118FC6BF0009C0503 /* MainMenu.xib */,
-				BD5806DA18F4788B00C90CF5 /* Images.xcassets */,
-				BD270AC318B7AF2100B81773 /* Supporting Files */,
+				BDF9A8401E71D23B00E184BF /* AppDelegate.swift */,
+				BDF9A8421E71D23B00E184BF /* Assets.xcassets */,
+				BDF9A8441E71D23B00E184BF /* MainMenu.xib */,
+				BDF9A8471E71D23B00E184BF /* Info.plist */,
 			);
 			path = Goldfish;
-			sourceTree = SOURCE_ROOT;
-		};
-		BD270AC318B7AF2100B81773 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BD5806C518F4782D00C90CF5 /* Goldfish-Info.plist */,
-				BD5806C818F4784F00C90CF5 /* main.m */,
-				BD5806CA18F4785D00C90CF5 /* InfoPlist.strings */,
-				BD5806C718F4784600C90CF5 /* Goldfish-Prefix.pch */,
-				BD5806CD18F4786800C90CF5 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BD270AE018B7AF2100B81773 /* GoldfishTests */ = {
-			isa = PBXGroup;
-			children = (
-				BD7D08E718F47BA200A93971 /* GoldfishTests.m */,
-				BD270AE118B7AF2100B81773 /* Supporting Files */,
-			);
-			path = GoldfishTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		BD270AE118B7AF2100B81773 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BD7D08EB18F47BC800A93971 /* InfoPlist.strings */,
-				BD7D08E918F47BC200A93971 /* GoldfishTests-Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BD7CA6B818FC4F1500F52B11 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				BD5806D018F4787F00C90CF5 /* GOLDProtocols.h */,
-				BDEA00C51908E2DA00D263FE /* NSObject+ProtocolValidation.h */,
-				BDEA00C61908E2DA00D263FE /* NSObject+ProtocolValidation.m */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		BD8A2F4B190859620029A3DD /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		BD90AD3918FC542E000515D6 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BD5806D118F4787F00C90CF5 /* GOLDPlugInsController.h */,
-				BD5806D518F4787F00C90CF5 /* GOLDPlugInsController.m */,
-				BD90AD3618FC541D000515D6 /* GOLDPreferencesViewController.h */,
-				BD90AD3718FC541D000515D6 /* GOLDPreferencesViewController.m */,
-				BD7FF48418FE81BF009F4B68 /* GOLDMainViewController.h */,
-				BD7FF48518FE81BF009F4B68 /* GOLDMainViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		BDDE4B7718BD1EF500DFF497 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BDDE4B7B18BD1EF500DFF497 /* Git.bundle */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BDDE4B8D18BD352500DFF497 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BDDE4B9118BD352500DFF497 /* Calendar.bundle */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD270AB818B7AF2100B81773 /* Goldfish */ = {
+		BDF9A83C1E71D23B00E184BF /* Goldfish */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD270AEA18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Goldfish" */;
+			buildConfigurationList = BDF9A84A1E71D23B00E184BF /* Build configuration list for PBXNativeTarget "Goldfish" */;
 			buildPhases = (
-				7E3DEDAAE2914CD1B1D2F7F9 /* Check Pods Manifest.lock */,
-				BD270AB518B7AF2100B81773 /* Sources */,
-				BD270AB618B7AF2100B81773 /* Frameworks */,
-				BD270AB718B7AF2100B81773 /* Resources */,
-				BDF2411E18BA7720004E3BB9 /* CopyFiles */,
-				55B6445D13C542378C1B6FA8 /* Copy Pods Resources */,
+				BDF9A8391E71D23B00E184BF /* Sources */,
+				BDF9A83A1E71D23B00E184BF /* Frameworks */,
+				BDF9A83B1E71D23B00E184BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BDDE4B9318BD353600DFF497 /* PBXTargetDependency */,
-				BDDE4B8218BD1FDA00DFF497 /* PBXTargetDependency */,
 			);
 			name = Goldfish;
-			productName = "Hyper Active";
-			productReference = BD270AB918B7AF2100B81773 /* Goldfish.app */;
+			productName = Goldfish;
+			productReference = BDF9A83D1E71D23B00E184BF /* Goldfish.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BD270AD918B7AF2100B81773 /* GoldfishTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BD270AED18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "GoldfishTests" */;
-			buildPhases = (
-				BD270AD618B7AF2100B81773 /* Sources */,
-				BD270AD718B7AF2100B81773 /* Frameworks */,
-				BD270AD818B7AF2100B81773 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BD270ADF18B7AF2100B81773 /* PBXTargetDependency */,
-			);
-			name = GoldfishTests;
-			productName = "Hyper ActiveTests";
-			productReference = BD270ADA18B7AF2100B81773 /* GoldfishTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BD270AB118B7AF2100B81773 /* Project object */ = {
+		BDF9A8351E71D23B00E184BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = GOLD;
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = Goldfish;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Christoffer Winterkvist";
 				TargetAttributes = {
-					BD270AD918B7AF2100B81773 = {
-						TestTargetID = BD270AB818B7AF2100B81773;
+					BDF9A83C1E71D23B00E184BF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XVAH95CHDC;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = BD270AB418B7AF2100B81773 /* Build configuration list for PBXProject "Goldfish" */;
+			buildConfigurationList = BDF9A8381E71D23B00E184BF /* Build configuration list for PBXProject "Goldfish" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -353,342 +103,190 @@
 				en,
 				Base,
 			);
-			mainGroup = BD270AB018B7AF2100B81773;
-			productRefGroup = BD270ABA18B7AF2100B81773 /* Products */;
+			mainGroup = BDF9A8341E71D23B00E184BF;
+			productRefGroup = BDF9A83E1E71D23B00E184BF /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = BDDE4B8D18BD352500DFF497 /* Products */;
-					ProjectRef = BDDE4B8C18BD352500DFF497 /* Calendar.xcodeproj */;
-				},
-				{
-					ProductGroup = BDDE4B7718BD1EF500DFF497 /* Products */;
-					ProjectRef = BDDE4B7618BD1EF500DFF497 /* Git.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				BD270AB818B7AF2100B81773 /* Goldfish */,
-				BD270AD918B7AF2100B81773 /* GoldfishTests */,
+				BDF9A83C1E71D23B00E184BF /* Goldfish */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		BDDE4B7B18BD1EF500DFF497 /* Git.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Git.bundle;
-			remoteRef = BDDE4B7A18BD1EF500DFF497 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BDDE4B9118BD352500DFF497 /* Calendar.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Calendar.bundle;
-			remoteRef = BDDE4B9018BD352500DFF497 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		BD270AB718B7AF2100B81773 /* Resources */ = {
+		BDF9A83B1E71D23B00E184BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD5806CF18F4786800C90CF5 /* Credits.rtf in Resources */,
-				BD59DD901916E34B009F6F2F /* Warnings.xcconfig in Resources */,
-				BD5806DB18F4788B00C90CF5 /* Images.xcassets in Resources */,
-				BD5806CC18F4785D00C90CF5 /* InfoPlist.strings in Resources */,
-				BD664A8218FC6BF0009C0503 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD270AD818B7AF2100B81773 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD7D08ED18F47BC800A93971 /* InfoPlist.strings in Resources */,
+				BDF9A8431E71D23B00E184BF /* Assets.xcassets in Resources */,
+				BDF9A8461E71D23B00E184BF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		55B6445D13C542378C1B6FA8 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E3DEDAAE2914CD1B1D2F7F9 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		BD270AB518B7AF2100B81773 /* Sources */ = {
+		BDF9A8391E71D23B00E184BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDEA00C71908E2DA00D263FE /* NSObject+ProtocolValidation.m in Sources */,
-				BD90AD3818FC541D000515D6 /* GOLDPreferencesViewController.m in Sources */,
-				BD90AD3C18FC5692000515D6 /* GOLDWindow.m in Sources */,
-				BD5806D718F4787F00C90CF5 /* GOLDAppDelegate.m in Sources */,
-				BD5806C918F4784F00C90CF5 /* main.m in Sources */,
-				BD5806D818F4787F00C90CF5 /* GOLDPlugInsController.m in Sources */,
-				BD7FF48618FE81BF009F4B68 /* GOLDMainViewController.m in Sources */,
-				BD5806D918F4787F00C90CF5 /* GOLDPlugInsLoader.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD270AD618B7AF2100B81773 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD7D08E818F47BA200A93971 /* GoldfishTests.m in Sources */,
+				BDF9A8411E71D23B00E184BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BD270ADF18B7AF2100B81773 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD270AB818B7AF2100B81773 /* Goldfish */;
-			targetProxy = BD270ADE18B7AF2100B81773 /* PBXContainerItemProxy */;
-		};
-		BDDE4B8218BD1FDA00DFF497 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Git;
-			targetProxy = BDDE4B8118BD1FDA00DFF497 /* PBXContainerItemProxy */;
-		};
-		BDDE4B9318BD353600DFF497 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Calendar;
-			targetProxy = BDDE4B9218BD353600DFF497 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		BD5806CA18F4785D00C90CF5 /* InfoPlist.strings */ = {
+		BDF9A8441E71D23B00E184BF /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BD5806CB18F4785D00C90CF5 /* en */,
+				BDF9A8451E71D23B00E184BF /* Base */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BD5806CD18F4786800C90CF5 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD5806CE18F4786800C90CF5 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		BD7D08EB18F47BC800A93971 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD7D08EC18F47BC800A93971 /* en */,
-			);
-			name = InfoPlist.strings;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BD270AE818B7AF2100B81773 /* Debug */ = {
+		BDF9A8481E71D23B00E184BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD59DD8F1916E34B009F6F2F /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		BD270AE918B7AF2100B81773 /* Release */ = {
+		BDF9A8491E71D23B00E184BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD59DD8F1916E34B009F6F2F /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
-		BD270AEB18B7AF2100B81773 /* Debug */ = {
+		BDF9A84B1E71D23B00E184BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF4259B29B6947759F5806BE /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				INFOPLIST_FILE = "Goldfish/Goldfish-Info.plist";
-				PRODUCT_NAME = Goldfish;
-				WRAPPER_EXTENSION = app;
+				DEVELOPMENT_TEAM = XVAH95CHDC;
+				INFOPLIST_FILE = Goldfish/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Goldfish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		BD270AEC18B7AF2100B81773 /* Release */ = {
+		BDF9A84C1E71D23B00E184BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF4259B29B6947759F5806BE /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
-				INFOPLIST_FILE = "Goldfish/Goldfish-Info.plist";
-				PRODUCT_NAME = Goldfish;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		BD270AEE18B7AF2100B81773 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Goldfish.app/Contents/MacOS/Goldfish";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "GoldfishTests/GoldfishTests-Info.plist";
-				PRODUCT_NAME = GoldfishTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		BD270AEF18B7AF2100B81773 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Goldfish.app/Contents/MacOS/Goldfish";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Goldfish/Goldfish-Prefix.pch";
-				INFOPLIST_FILE = "GoldfishTests/GoldfishTests-Info.plist";
-				PRODUCT_NAME = GoldfishTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				DEVELOPMENT_TEAM = XVAH95CHDC;
+				INFOPLIST_FILE = Goldfish/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Goldfish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD270AB418B7AF2100B81773 /* Build configuration list for PBXProject "Goldfish" */ = {
+		BDF9A8381E71D23B00E184BF /* Build configuration list for PBXProject "Goldfish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD270AE818B7AF2100B81773 /* Debug */,
-				BD270AE918B7AF2100B81773 /* Release */,
+				BDF9A8481E71D23B00E184BF /* Debug */,
+				BDF9A8491E71D23B00E184BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD270AEA18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "Goldfish" */ = {
+		BDF9A84A1E71D23B00E184BF /* Build configuration list for PBXNativeTarget "Goldfish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD270AEB18B7AF2100B81773 /* Debug */,
-				BD270AEC18B7AF2100B81773 /* Release */,
+				BDF9A84B1E71D23B00E184BF /* Debug */,
+				BDF9A84C1E71D23B00E184BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BD270AED18B7AF2100B81773 /* Build configuration list for PBXNativeTarget "GoldfishTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD270AEE18B7AF2100B81773 /* Debug */,
-				BD270AEF18B7AF2100B81773 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BD270AB118B7AF2100B81773 /* Project object */;
+	rootObject = BDF9A8351E71D23B00E184BF /* Project object */;
 }
