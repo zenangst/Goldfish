@@ -6,9 +6,31 @@ enum PluginError: Error {
   case conformFailed
 }
 
+struct PluginContainer {
+  let path: String
+  var plugin: Plugin
+  var bundle: Bundle
+}
+
 class PluginLoader {
 
-  var plugins: [Plugin] = []
+  var plugins: [PluginContainer] = []
+
+  func loadPlugins(fileLoader: FileLoader, _ completion: (() -> Void)? = nil) throws {
+    do {
+      let plugins = try fileLoader.contents()
+
+      for plugin in plugins {
+        do {
+          try load(plugin: plugin, at: .documents)
+        } catch let error as PluginError  {
+          throw error
+        }
+      }
+    }
+
+    completion?()
+  }
 
   func load(plugin: String, at path: Path) throws {
     let pluginPath = path.rawValue
@@ -27,7 +49,9 @@ class PluginLoader {
       throw PluginError.conformFailed
     }
 
-    plugins.append(plugin)
+    let container = PluginContainer(path: pluginPath,
+                                          plugin: plugin,
+                                          bundle: bundle)
+    plugins.append(container)
   }
-
 }
