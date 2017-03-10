@@ -6,6 +6,12 @@ enum PluginError: Error {
   case conformFailed
 }
 
+struct PluginContainer {
+  let path: String
+  var plugin: Plugin
+  var bundle: Bundle
+}
+
 class PluginLoader {
 
   var plugins: [Plugin] = []
