@@ -14,7 +14,7 @@ struct PluginContainer {
 
 class PluginLoader {
 
-  var plugins: [PluginContainer] = []
+  var pluginContainers: [PluginContainer] = []
 
   func loadPlugins(fileLoader: FileLoader, _ completion: (() -> Void)? = nil) throws {
     do {
@@ -52,6 +52,6 @@ class PluginLoader {
     let container = PluginContainer(path: pluginPath,
                                           plugin: plugin,
                                           bundle: bundle)
-    plugins.append(container)
+    pluginContainers.append(container)
   }
 }
