@@ -6,6 +6,8 @@ let pluginLoader = PluginLoader()
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+  var directoryWather: DirectoryWatcher?
+
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     do {
       try pluginLoader.loadPlugins(fileLoader: fileLoader) { [weak self] in
@@ -30,7 +32,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func didFinishLoadingPlugins() {
-    print("Tada!")
+    directoryWather = DirectoryWatcher(path: .documents, pluginsDidChange)
+  }
+
+  func pluginsDidChange(watcher: DirectoryWatcher) {
+    /// Implement reloading bundles.
   }
 }
 

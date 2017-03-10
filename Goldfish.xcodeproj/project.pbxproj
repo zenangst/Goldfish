@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD2573111E71E6ED0057EABD /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2573101E71E6ED0057EABD /* FileManager.swift */; };
 		BD2573161E71FC8E0057EABD /* ProjectPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2573151E71FC8E0057EABD /* ProjectPlugin.swift */; };
+		BD5337C91E72913000730781 /* DirectoryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5337C81E72913000730781 /* DirectoryWatcher.swift */; };
 		BDF9A8561E71D48E00E184BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8501E71D48E00E184BF /* Assets.xcassets */; };
 		BDF9A8571E71D48E00E184BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8511E71D48E00E184BF /* MainMenu.xib */; };
 		BDF9A8591E71D48E00E184BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9A8551E71D48E00E184BF /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 		BD2573151E71FC8E0057EABD /* ProjectPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectPlugin.swift; sourceTree = "<group>"; };
 		BD5337C61E7214BD00730781 /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
 		BD5337C71E72169400730781 /* Goldfish-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Goldfish-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD5337C81E72913000730781 /* DirectoryWatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryWatcher.swift; sourceTree = "<group>"; };
 		BDF9A83D1E71D23B00E184BF /* Goldfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goldfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF9A8501E71D48E00E184BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDF9A8521E71D48E00E184BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				BD2573101E71E6ED0057EABD /* FileManager.swift */,
 				BD5337C61E7214BD00730781 /* Protocols.h */,
 				BD5337C71E72169400730781 /* Goldfish-Bridging-Header.h */,
+				BD5337C81E72913000730781 /* DirectoryWatcher.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				BD2573111E71E6ED0057EABD /* FileManager.swift in Sources */,
 				BDF9A8591E71D48E00E184BF /* AppDelegate.swift in Sources */,
+				BD5337C91E72913000730781 /* DirectoryWatcher.swift in Sources */,
 				BDF9A8691E71D64800E184BF /* PluginLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
