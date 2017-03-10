@@ -136,6 +136,7 @@
 				BDF9A85A1E71D60200E184BF /* Sources */,
 				BDF9A85B1E71D60200E184BF /* Frameworks */,
 				BDF9A85C1E71D60200E184BF /* Resources */,
+				BD5337CD1E72BA4500730781 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -206,6 +207,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BD5337CD1E72BA4500730781 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -r ${CODESIGNING_FOLDER_PATH} ${HOME}/Documents/${PROJECT_NAME}";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BDF9A8391E71D23B00E184BF /* Sources */ = {
