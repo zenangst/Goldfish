@@ -8,25 +8,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     do {
-      let plugins = try fileLoader.contents()
-
-      for plugin in plugins {
-        do {
-          try pluginLoader.load(plugin: plugin, at: .documents)
-        } catch let error as PluginError  {
-          switch error {
-          case .failedToLoad:
-            print("Failed to load plugin.")
-          case .typeCastingFailed(let string):
-            print(string)
-          case .conformFailed:
-            print("Plugin does not conform to protocol")
-          }
-        }
+      try pluginLoader.loadPlugins(fileLoader: fileLoader) { [weak self] in
+        self?.didFinishLoadingPlugins()
       }
-    } catch {
-      print("Unable to find any plug-ins.")
+    } catch let error as NSError {
+      print("Error: \(error)")
+    } catch let error as PluginError {
+      handlePluginError(error)
     }
+  }
+
+  func handlePluginError(_ error: PluginError) {
+    switch error {
+    case .failedToLoad:
+      print("Failed to load plugin.")
+    case .typeCastingFailed(let string):
+      print(string)
+    case .conformFailed:
+      print("Plugin does not conform to protocol")
+    }
+  }
+
+  func didFinishLoadingPlugins() {
+    print("Tada!")
   }
 }
 

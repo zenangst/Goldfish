@@ -52,7 +52,7 @@ class FileLoader {
       }
 
       return results
-    } catch let error {
+    } catch let error as NSError {
       throw FileLoaderError.fileLoaderError(error)
     }
   }
