@@ -9,13 +9,15 @@
 #ifndef Protocols_h
 #define Protocols_h
 
-@import Foundation;
+@import Cocoa;
 
 @protocol Plugin <NSObject>
 
 @property (nonatomic, copy, readonly) NSString *name;
 @property (nonatomic, copy, readonly) NSString *version;
-@property (nonatomic, copy, readonly) NSDictionary *data;
+@property (nonatomic, readonly) NSViewController *controller;
+
+- (void)pluginDidLoad;
 
 @end
 
