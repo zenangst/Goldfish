@@ -13,11 +13,12 @@
 
 @protocol Plugin <NSObject>
 
-@property (nonatomic, copy, readonly) NSString *name;
-@property (nonatomic, copy, readonly) NSString *version;
-@property (nonatomic, readonly) NSViewController *controller;
+@property (nonatomic, copy, readonly) NSString * _Nonnull name;
+@property (nonatomic, copy, readonly) NSString * _Nonnull version;
+@property (nonatomic, readonly) NSViewController * _Nullable controller;
 
 - (void)pluginDidLoad;
+- (void)pluginDidAppear;
 
 @end
 
