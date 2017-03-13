@@ -43,8 +43,12 @@ class FileLoader {
   }
 
   func contents(of path: Path = .documents, _ includeElement: (String) throws -> Bool = defaultQuery) throws -> [String] {
+    return try contents(of: path.rawValue, includeElement)
+  }
+
+  func contents(of path: String, _ includeElement: (String) throws -> Bool = defaultQuery) throws -> [String] {
     do {
-      let contents = try FileManager.default.contentsOfDirectory(atPath: path.rawValue)
+      let contents = try FileManager.default.contentsOfDirectory(atPath: path)
       let results = try contents.filter(includeElement)
 
       if results.isEmpty {
