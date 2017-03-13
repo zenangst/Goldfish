@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
 
   s.osx.deployment_target = '10.11'
   s.requires_arc = true
-  s.osx.source_files = 'include.h'
-  s.public_header_files = 'include.h'
+  s.osx.source_files = 'Goldfish-Include.h'
+  s.public_header_files = 'Goldfish-Include.h'
 
   s.frameworks = 'Foundation'
 end
