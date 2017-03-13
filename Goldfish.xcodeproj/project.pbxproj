@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD2573111E71E6ED0057EABD /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2573101E71E6ED0057EABD /* FileManager.swift */; };
-		BD2573161E71FC8E0057EABD /* ProjectPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2573151E71FC8E0057EABD /* ProjectPlugin.swift */; };
+		BD2573111E71E6ED0057EABD /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2573101E71E6ED0057EABD /* FileLoader.swift */; };
 		BD5337C91E72913000730781 /* DirectoryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5337C81E72913000730781 /* DirectoryWatcher.swift */; };
-		BD5337D21E72C1A600730781 /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5337D01E72C15B00730781 /* ProjectController.swift */; };
 		BDF9A8561E71D48E00E184BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8501E71D48E00E184BF /* Assets.xcassets */; };
 		BDF9A8571E71D48E00E184BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF9A8511E71D48E00E184BF /* MainMenu.xib */; };
 		BDF9A8591E71D48E00E184BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9A8551E71D48E00E184BF /* AppDelegate.swift */; };
@@ -18,31 +16,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD2573101E71E6ED0057EABD /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
-		BD2573151E71FC8E0057EABD /* ProjectPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectPlugin.swift; sourceTree = "<group>"; };
+		BD2573101E71E6ED0057EABD /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
 		BD5337C61E7214BD00730781 /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
 		BD5337C71E72169400730781 /* Goldfish-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Goldfish-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD5337C81E72913000730781 /* DirectoryWatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryWatcher.swift; sourceTree = "<group>"; };
-		BD5337D01E72C15B00730781 /* ProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		BDF9A83D1E71D23B00E184BF /* Goldfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goldfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF9A8501E71D48E00E184BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDF9A8521E71D48E00E184BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BDF9A8531E71D48E00E184BF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDF9A8551E71D48E00E184BF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDF9A85E1E71D60200E184BF /* Project.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDF9A8661E71D62A00E184BF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDF9A8681E71D64800E184BF /* PluginLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BDF9A83A1E71D23B00E184BF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDF9A85B1E71D60200E184BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,7 +45,6 @@
 				BDF9A84F1E71D48E00E184BF /* Resources */,
 				BDF9A8541E71D48E00E184BF /* Sources */,
 				BDF9A83E1E71D23B00E184BF /* Products */,
-				BDF9A8641E71D62A00E184BF /* Bundles */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				BDF9A83D1E71D23B00E184BF /* Goldfish.app */,
-				BDF9A85E1E71D60200E184BF /* Project.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,30 +71,12 @@
 			children = (
 				BDF9A8551E71D48E00E184BF /* AppDelegate.swift */,
 				BDF9A8681E71D64800E184BF /* PluginLoader.swift */,
-				BD2573101E71E6ED0057EABD /* FileManager.swift */,
+				BD2573101E71E6ED0057EABD /* FileLoader.swift */,
 				BD5337C61E7214BD00730781 /* Protocols.h */,
 				BD5337C71E72169400730781 /* Goldfish-Bridging-Header.h */,
 				BD5337C81E72913000730781 /* DirectoryWatcher.swift */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		BDF9A8641E71D62A00E184BF /* Bundles */ = {
-			isa = PBXGroup;
-			children = (
-				BDF9A8651E71D62A00E184BF /* Project */,
-			);
-			path = Bundles;
-			sourceTree = "<group>";
-		};
-		BDF9A8651E71D62A00E184BF /* Project */ = {
-			isa = PBXGroup;
-			children = (
-				BDF9A8661E71D62A00E184BF /* Info.plist */,
-				BD2573151E71FC8E0057EABD /* ProjectPlugin.swift */,
-				BD5337D01E72C15B00730781 /* ProjectController.swift */,
-			);
-			path = Project;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,24 +99,6 @@
 			productReference = BDF9A83D1E71D23B00E184BF /* Goldfish.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BDF9A85D1E71D60200E184BF /* Project */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDF9A8631E71D60200E184BF /* Build configuration list for PBXNativeTarget "Project" */;
-			buildPhases = (
-				BDF9A85A1E71D60200E184BF /* Sources */,
-				BDF9A85B1E71D60200E184BF /* Frameworks */,
-				BDF9A85C1E71D60200E184BF /* Resources */,
-				BD5337CD1E72BA4500730781 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Project;
-			productName = Project;
-			productReference = BDF9A85E1E71D60200E184BF /* Project.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,12 +112,6 @@
 					BDF9A83C1E71D23B00E184BF = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XVAH95CHDC;
-						ProvisioningStyle = Automatic;
-					};
-					BDF9A85D1E71D60200E184BF = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = XVAH95CHDC;
-						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -187,7 +130,6 @@
 			projectRoot = "";
 			targets = (
 				BDF9A83C1E71D23B00E184BF /* Goldfish */,
-				BDF9A85D1E71D60200E184BF /* Project */,
 			);
 		};
 /* End PBXProject section */
@@ -202,49 +144,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDF9A85C1E71D60200E184BF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		BD5337CD1E72BA4500730781 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -r ${CODESIGNING_FOLDER_PATH} ${HOME}/Documents/${PROJECT_NAME}";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BDF9A8391E71D23B00E184BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD2573111E71E6ED0057EABD /* FileManager.swift in Sources */,
+				BD2573111E71E6ED0057EABD /* FileLoader.swift in Sources */,
 				BDF9A8591E71D48E00E184BF /* AppDelegate.swift in Sources */,
 				BD5337C91E72913000730781 /* DirectoryWatcher.swift in Sources */,
 				BDF9A8691E71D64800E184BF /* PluginLoader.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDF9A85A1E71D60200E184BF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD2573161E71FC8E0057EABD /* ProjectPlugin.swift in Sources */,
-				BD5337D21E72C1A600730781 /* ProjectController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +269,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XVAH95CHDC;
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks ${HOME}/Documents/${PROJECT_NAME}/Projects.bundle/Contents/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Goldfish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Goldfish-Bridging-Header.h";
@@ -374,48 +284,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XVAH95CHDC;
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks ${HOME}/Documents/${PROJECT_NAME}/Projects.bundle/Contents/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Goldfish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Goldfish-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		BDF9A8611E71D60200E184BF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XVAH95CHDC;
-				INFOPLIST_FILE = "$(SRCROOT)/Bundles/Project/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Goldfish.Project;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Goldfish-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		BDF9A8621E71D60200E184BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XVAH95CHDC;
-				INFOPLIST_FILE = "$(SRCROOT)/Bundles/Project/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.Goldfish.Project;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Goldfish-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -436,15 +309,6 @@
 			buildConfigurations = (
 				BDF9A84B1E71D23B00E184BF /* Debug */,
 				BDF9A84C1E71D23B00E184BF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDF9A8631E71D60200E184BF /* Build configuration list for PBXNativeTarget "Project" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDF9A8611E71D60200E184BF /* Debug */,
-				BDF9A8621E71D60200E184BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
