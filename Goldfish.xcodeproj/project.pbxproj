@@ -17,7 +17,6 @@
 
 /* Begin PBXFileReference section */
 		BD2573101E71E6ED0057EABD /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
-		BD5337C61E7214BD00730781 /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
 		BD5337C71E72169400730781 /* Goldfish-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Goldfish-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD5337C81E72913000730781 /* DirectoryWatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryWatcher.swift; sourceTree = "<group>"; };
 		BDF9A83D1E71D23B00E184BF /* Goldfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goldfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +25,7 @@
 		BDF9A8531E71D48E00E184BF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDF9A8551E71D48E00E184BF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDF9A8681E71D64800E184BF /* PluginLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginLoader.swift; sourceTree = "<group>"; };
+		D558C3E71E76EE32007D8180 /* include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = include.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +42,7 @@
 		BDF9A8341E71D23B00E184BF = {
 			isa = PBXGroup;
 			children = (
+				D558C3E71E76EE32007D8180 /* include.h */,
 				BDF9A84F1E71D48E00E184BF /* Resources */,
 				BDF9A8541E71D48E00E184BF /* Sources */,
 				BDF9A83E1E71D23B00E184BF /* Products */,
@@ -72,7 +73,6 @@
 				BDF9A8551E71D48E00E184BF /* AppDelegate.swift */,
 				BDF9A8681E71D64800E184BF /* PluginLoader.swift */,
 				BD2573101E71E6ED0057EABD /* FileLoader.swift */,
-				BD5337C61E7214BD00730781 /* Protocols.h */,
 				BD5337C71E72169400730781 /* Goldfish-Bridging-Header.h */,
 				BD5337C81E72913000730781 /* DirectoryWatcher.swift */,
 			);

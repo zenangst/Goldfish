@@ -9,6 +9,6 @@
 #ifndef Goldfish_Bridging_Header_h
 #define Goldfish_Bridging_Header_h
 
-#import "Protocols.h"
+#import "include.h"
 
 #endif /* Goldfish_Bridging_Header_h */
